@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+}
+
+@font-face {
+  font-family: "90s";
+  src: url("./fonts/90s.ttf");
+}
+@font-face {
+  font-family: "medieval";
+  src: url("./fonts/medieval.ttf");
+}
+body {
+  width: 100%;
+  background: url("./assets/cbg_ciel_bleu.jpg") no-repeat center/cover;
+}
+
+header {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1280px;
+  height: 100vh;
+  margin: auto;
+  background: url("./assets/bg_citadel.jpg") no-repeat center/cover;
+  box-shadow: 0 0 15px 5px black;
+}
+header h1,
+header h2,
+header h3 {
+  font-family: "medieval", sans-serif;
+  color: white;
+  text-shadow: 0 0 5px black;
+  text-align: center;
+}
+header h1 {
+  text-decoration: overline;
+  background: url("./assets/cadre_bois.png") no-repeat center/contain;
+  background-size: 100% 100%;
+  padding: 10px 20px 5px;
+}
+header h2 {
+  background: url("./assets/parchemin_med.png") no-repeat center/contain;
+  background-size: 100% 100%;
+  padding: 10px 20px;
+}
+
+.dsp-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.dsp-flex-lg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dsp-flex-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.form {
+  color: brown;
+  font-family: "medieval", sans-serif;
+  max-width: 250px;
+  background: url("./assets/parchemin.png") no-repeat center/contain;
+  background-size: 95% 110%;
+  text-shadow: 0 0 5px white;
+  border-radius: 10px;
+}
+.form h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  background: url("./assets/cadre_bois.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+.form label {
+  width: 80%;
+  margin: 2px auto 0;
+}
+.form input {
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 2px auto 4px;
+}
+.form a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  color: brown;
+  text-align: right;
+  background: url("./assets/cadre_bois.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+
+.btn-brown, .btn-brown-2 {
+  background-color: brown;
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s;
+  background: url("./assets/rouleau_bottom.png") no-repeat center/contain;
+  background-size: 100% 100%;
+  font-family: "medieval", sans-serif;
+  font-size: 17px;
+  padding: 5px 5px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn-brown {
+  background: url("./assets/rouleau_bottom.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+
+.btn-brown-2 {
+  background: url("./assets/btn_bois_1.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+
+.btn-brown:hover, .btn-brown-2:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
+.optional-panel {
+  max-width: 600px;
+  background: url("./assets/parchemin_med.png") no-repeat center/contain;
+  background-size: 95% 100%;
+  justify-content: center;
+  border-radius: 0 0 50px 50px;
+  padding: 0px 5px 15px;
+}
+.optional-panel h2 {
+  width: 100%;
+  padding: 5px;
+  background: url("./assets/cadre_bois.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+.optional-panel h3 {
+  width: 25%;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.optional-panel button {
+  width: 35%;
+  margin: 5px;
+}
+.optional-panel img {
+  width: 90px;
+  border-radius: 10px;
+  transition: 0.3s;
+  margin: 10px 0 10px;
+}
+.optional-panel img:hover {
+  cursor: pointer;
+  scale: 1.4;
+}
+
+.cont-general {
+  width: 100%;
+}
+
+.general-col1 {
+  width: 70%;
+}
+
+.general-col2 {
+  width: 25%;
+}
+
+.detail-player {
+  width: 100%;
+  padding: 10px 5px;
+  gap: 5px;
+  transition: 0.2s;
+}
+.detail-player h1 {
+  margin: auto;
+  width: 98%;
+  background-color: rgba(0, 0, 0, 0.466);
+  padding: 5px 0 0px;
+  font-size: 20px;
+  box-shadow: 0 0 10px 2px black;
+  border-radius: 10px;
+}
+.detail-player .player-avatar {
+  margin: auto;
+  width: 49%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background: url("./assets/parchemin_med.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+.detail-player .player-avatar img {
+  width: 75px;
+}
+.detail-player .player-competence {
+  margin: auto;
+  width: 49%;
+  height: 100%;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 5px;
+  background: url("./assets/parchemin_med.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+.detail-player .player-competence button {
+  margin: auto;
+  width: 80%;
+}
+
+.narratif, .choice {
+  width: 100%;
+  background: url("./assets/parchemin_med.png") no-repeat center/contain;
+  background-size: 100% 100%;
+}
+.narratif h2, .choice h2 {
+  padding: 5px 10px;
+  background: url("./assets/cadre_bois.png") no-repeat center/contain;
+  background-size: 100% 100%;
+  box-shadow: 0 0 10px 2px black;
+  border-radius: 10px;
+}
+.narratif .narratif-content::-webkit-scrollbar,
+.narratif .choice-content::-webkit-scrollbar, .choice .narratif-content::-webkit-scrollbar,
+.choice .choice-content::-webkit-scrollbar {
+  width: 5px;
+}
+.narratif .narratif-content::-webkit-scrollbar-track,
+.narratif .choice-content::-webkit-scrollbar-track, .choice .narratif-content::-webkit-scrollbar-track,
+.choice .choice-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.narratif .narratif-content::-webkit-scrollbar-thumb,
+.narratif .choice-content::-webkit-scrollbar-thumb, .choice .narratif-content::-webkit-scrollbar-thumb,
+.choice .choice-content::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+.narratif .narratif-content, .narratif .choice-content, .choice .narratif-content, .choice .choice-content {
+  overflow-y: auto;
+  gap: 5px;
+  padding: 10px 20px 20px;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.narratif .narratif-content p, .narratif .choice-content p, .choice .narratif-content p, .choice .choice-content p {
+  padding: 0 20px;
+  font-family: "90s", sans-serif;
+  text-align: center;
+}
+.narratif .narratif-content button, .narratif .choice-content button, .choice .narratif-content button, .choice .choice-content button {
+  margin: auto;
+}
+.narratif button, .choice button {
+  font-size: 16px;
+}
+
+.narratif {
+  height: 57vh;
+}
+.narratif .narratif-content {
+  height: 50vh;
+}
+
+.choice {
+  height: 24vh;
+}
+.choice .choice-content {
+  height: 17vh;
+}
+
+.general-col2 {
+  background: url("./assets/parchemin.png") no-repeat center/contain;
+  background-size: 100% 100%;
+  padding: 0 10px;
+}
+.general-col2 .list-inventaire {
+  justify-content: center;
+}
+.general-col2 .list-inventaire .inventaire-scroll::-webkit-scrollbar {
+  width: 5px;
+  gap: 5px;
+}
+.general-col2 .list-inventaire .inventaire-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.general-col2 .list-inventaire .inventaire-scroll::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+.general-col2 .list-inventaire .inventaire-scroll {
+  width: 100%;
+  height: 92vh;
+  gap: 5px;
+  overflow-y: auto;
+}
+.general-col2 .list-inventaire .stick {
+  position: sticky;
+  top: 5px;
+}
+.general-col2 .list-inventaire h2 {
+  width: 100%;
+  background: url("./assets/cadre_bois.png") no-repeat center/contain;
+  background-size: 100% 100%;
+  box-shadow: 0 0 10px 2px black;
+  border-radius: 10px;
+}
+.general-col2 .list-inventaire h3 {
+  width: 100%;
+  background: url("./assets/rouleau_bottom.png") no-repeat center/contain;
+  background-size: 100% 100%;
+  padding: 5px 0;
+}
+.general-col2 .list-inventaire p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "medieval", sans-serif;
+  border: 1px solid brown;
+  padding: 2px 5px;
+  border-radius: 10px;
+  color: brown;
+}
+
+@media screen and (max-width: 700px) {
+  .avatar {
+    display: none;
+  }
+  .detail-player .player-avatar {
+    width: 100%;
+  }
+  .detail-player .player-avatar h1, .detail-player .player-avatar h2 {
+    width: auto;
+    padding: 5px 10px;
+  }
+  .detail-player .player-competence {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .detail-player .player-competence button {
+    width: auto;
+  }
+  .cont-general {
+    position: relative;
+  }
+  .general-col1 {
+    width: 100%;
+  }
+  .general-col2 {
+    display: none;
+  }
+  .narratif-content p {
+    font-size: 10px;
+  }
+  .narratif {
+    height: 57vh;
+  }
+  .narratif .narratif-content {
+    height: 50vh;
+  }
+  .choice {
+    height: 25vh;
+  }
+  .choice .choice-content {
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 520px) {
+  .narratif {
+    height: 48vh;
+  }
+  .narratif .narratif-content {
+    height: 41vh;
+  }
+  .choice {
+    height: 35vh;
+  }
+  .choice .choice-content {
+    height: 29vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
