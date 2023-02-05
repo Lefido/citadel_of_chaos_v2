@@ -7,7 +7,7 @@ const choice_content = document.querySelector(".choice-content");
 
 var list_btn_choice;
 
-let num_etape = 5;
+let num_etape = 1;
 
 affiche_etape(num_etape)
 
