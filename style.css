@@ -36,8 +36,8 @@ header h1,
 header h2,
 header h3 {
   font-family: "medieval", sans-serif;
-  color: white;
-  text-shadow: 0 0 5px black;
+  color: black;
+  text-shadow: 0 0 5px white;
   text-align: center;
 }
 header h1 {
@@ -47,7 +47,7 @@ header h1 {
   padding: 10px 20px 5px;
 }
 header h2 {
-  background: url("./assets/parchemin_med.png") no-repeat center/contain;
+  background: url("./assets/bouclier.png") no-repeat center/contain;
   background-size: 100% 100%;
   padding: 10px 20px;
 }
@@ -72,9 +72,9 @@ header h2 {
 }
 
 .form {
-  color: brown;
+  color: black;
   font-family: "medieval", sans-serif;
-  max-width: 250px;
+  max-width: 300px;
   background: url("./assets/parchemin.png") no-repeat center/contain;
   background-size: 95% 110%;
   text-shadow: 0 0 5px white;
@@ -107,7 +107,7 @@ header h2 {
   align-items: center;
   padding: 0 10px;
   width: 100%;
-  color: brown;
+  color: black;
   text-align: right;
   background: url("./assets/cadre_bois.png") no-repeat center/contain;
   background-size: 100% 100%;
@@ -116,24 +116,28 @@ header h2 {
 .btn-brown, .btn-brown-2 {
   background-color: brown;
   border-radius: 10px;
-  color: white;
   transition: 0.2s;
   background: url("./assets/rouleau_bottom.png") no-repeat center/contain;
   background-size: 100% 100%;
   font-family: "medieval", sans-serif;
   font-size: 17px;
   padding: 5px 5px;
-  text-shadow: 1px 1px 2px black;
 }
 
 .btn-brown {
+  color: black;
+  text-shadow: 1px 1px 2px white;
   background: url("./assets/rouleau_bottom.png") no-repeat center/contain;
   background-size: 100% 100%;
+  padding: 5px 20px;
 }
 
 .btn-brown-2 {
+  color: white;
+  text-shadow: 1px 1px 2px black;
   background: url("./assets/btn_bois_1.png") no-repeat center/contain;
   background-size: 100% 100%;
+  padding: 5px 5px;
 }
 
 .btn-brown:hover, .btn-brown-2:hover {
@@ -265,8 +269,8 @@ header h2 {
   overflow-y: auto;
   gap: 5px;
   padding: 10px 20px 20px;
-  color: white;
-  text-shadow: 1px 1px 5px black;
+  color: black;
+  text-shadow: 1px 1px 2px white;
   letter-spacing: 1px;
   line-height: 25px;
 }
