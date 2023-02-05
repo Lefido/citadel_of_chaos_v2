@@ -1,0 +1,77 @@
+
+
+
+.bouclier-gris {
+
+    background: url("../assets/bouclier.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    box-shadow: 0 0 20px 2px white;
+    border-radius: 50%;
+
+}
+
+.cadre-bois {
+
+    background: url("../assets/cadre_bois.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    box-shadow: 0 0 20px 2px white;
+    border-radius: 10px;
+}
+
+.cadre-gris {
+
+    background: url("../assets/cadre_bois_gris.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    box-shadow: 0 0 20px 2px white;
+    border-radius: 10px;
+}
+
+
+.parchemin-1 {
+
+    background: url("../assets/parchemin.png") no-repeat center / contain;
+    background-size: 100% 100%;
+}
+
+.parchemin-2 {
+
+    background: url("../assets/parchemin_med.png") no-repeat center / contain;
+    background-size: 100% 100%;
+}
+
+.btn-1, .btn-2 {
+
+    border-radius: 10px;
+    transition: 0.2s;
+    font-family: "medieval", sans-serif;
+    font-size: 17px;
+    padding: 5px 5px;
+    
+    
+
+}
+
+.btn-1 {
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    background: url("../assets/rouleau_bottom.png") no-repeat center / contain;
+    padding: 5px 20px;
+    background-size: 100% 100%;
+}
+
+.btn-2 {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background: url("../assets/btn_bois_1.png") no-repeat center / contain;
+    padding: 5px 5px;
+    background-size: 100% 100%;
+    box-shadow: 0 0 20px 2px white;
+
+}
+
+.btn-1:hover, .btn-2:hover {
+    cursor: pointer;
+    scale: 1.02;
+
+}
+

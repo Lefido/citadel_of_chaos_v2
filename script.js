@@ -51,7 +51,7 @@ function etape_pathways(pathways) {
   for (let pathway in pathways) {
     let btn_choice = document.createElement("button");
 
-    btn_choice.classList.add("btn-brown-2");
+    btn_choice.classList.add("btn-2");
     btn_choice.classList.add("btn-choice");
     btn_choice.dataset.next_etape = pathway;
     btn_choice.innerHTML = pathways[pathway].content;
