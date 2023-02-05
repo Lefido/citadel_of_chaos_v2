@@ -39,7 +39,7 @@
     background-size: 100% 100%;
 }
 
-.btn-1, .btn-2 {
+.btn-1, .btn-2, .btn-magie {
 
     border-radius: 10px;
     transition: 0.2s;
@@ -69,7 +69,16 @@
 
 }
 
-.btn-1:hover, .btn-2:hover {
+.btn-magie {
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    background: url("../assets/btn_magie.png") no-repeat center / contain;
+    padding: 10px 10px 10px 15px;
+    background-size: 100% 100%;
+
+}
+
+.btn-1:hover, .btn-2:hover, .btn-magie:hover {
     cursor: pointer;
     scale: 1.02;
 
