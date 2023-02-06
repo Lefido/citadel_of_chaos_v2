@@ -1,0 +1,17 @@
+Objets obtenus dès le début du jeu :
+- une armure de cuir
+- une lanterne
+
+Etape 17 : un flacon de liquide vert translucide
+
+Etape 89 : un bocal avec l'homme-araignée dedans
+
+Etape 91 : perte de la brosse, possibilité de récupérer la Toison d'Or si l'on est chanceux
+
+Etape 93 : une bouteille d’Essence de Berce
+
+Etape 96 : perte d'une pépite d'or (attention : peut provenir d'un sort d'illusion)
+
+Etape 102 : acquisition d'une amulette enchantée, perte possible d'un autre objet
+
+Etape 105 : un echantillon de vin qui lance un jet de flamme quand on le recrache, utilisable une fois seulement 

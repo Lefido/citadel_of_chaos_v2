@@ -1,0 +1,21 @@
+Etape 66 : Rétablissement des points d'habileté et d'endurance à leur niveau initial et ajout d'1 point de chance.
+
+Etape 67 : perte de 4 points d’ENDURANCE
+
+Etape 85 : perte de 2 points d'ENDURANCE
+
+Etape 87 : perte de 2 points d’ENDURANCE
+
+Etape 88 : une action répétée qui peut coûter 1 point d’ENDURANCE à chaque fois
+
+Etape 92 : ajout de 2 points d’ENDURANCE
+
+Etape 94 : perte d'1 point d'ENDURANCE
+
+Etape 97 : perte d'1 point d'ENDURANCE à partir de cette étape, et ce jusqu'à ce que le personnage puisse boire
+
+Etape 120 : ajout 2 points d’ENDURANCE et 3 points de CHANCE
+
+Etape 121 : perte d'1 point d’ENDURANCE
+
+Etape 129 : perte d'1 point d'HABILETE

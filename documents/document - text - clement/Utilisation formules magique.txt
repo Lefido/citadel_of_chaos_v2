@@ -1,0 +1,29 @@
+Etape 9 : Formule d'illusion
+
+Etape 24 : Formule de Protection
+
+Etape 28 : Formule de feu
+
+Etape 33 : Formule de lévitation
+
+Etape 43 : formule de faiblesse
+
+Etape 70 : Formule de lévitation
+
+Etape 85 : Formule de feu
+
+Etape 88 : si utilisation de formule de force rdv au 170
+
+Etape 103 : probable utilisation d'une formule de lévitation
+
+Etape 113 : formule de faiblesse
+
+Etape 114 : Formule de feu
+
+Etape 117 : Impossibilité d'utiliser la magie jusqu'à nouvel ordre
+
+Etape 128 : formule de télépathie 
+
+Etape 130 : utilisation d'une formule magique non précisée
+
+Etape 133 : Formule de force

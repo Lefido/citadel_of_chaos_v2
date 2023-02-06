@@ -1,0 +1,11 @@
+Morts : 
+
+- Etape 61
+- Etape 82
+- Etape 103
+- Etape 119
+- Etape 283
+
+Arrêt du jeu mais pas de mort : 
+
+- Etape 65
