@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,31 +14,33 @@
 
         <h1 class="cadre-bois">CITADEL OF CHAOS</h1>
 
-        <form action="./home.html" class="dsp-flex form parchemin-1">
+        <div class="dsp-flex form parchemin-1 zoom-in">
 
             <h2 class="cadre-bois">New account</h2>
 
             <label for="name">Name</label>
             <input type="text" id="name">
 
-            <label for="name">Password</label>
-            <input type="password" id="name">
+            <label for="mail">Email</label>
+            <input type="email" id="mail">
 
-            <label for="name">Confirm password</label>
-            <input type="password" id="name">
+            <label for="psw1">Password</label>
+            <input type="password" id="psw1">
 
-            <input class="btn-1" type="submit" id="name" value="Enregistrer">
+            <label for="psw2">Confirm password</label>
+            <input type="password" id="psw2">
+
+            <button  class="btn-1" id="valider">Enregistrer</button>
 
             <a href="./index.html" class="cadre-bois">Login</a>
 
-        </form>
+        </div>
 
 
 
     </header>
 
-    
-    <script src="script.js" type="module"></script>
+    <script src="./script/new_user.js" type="module"></script>
     
 </body>
 </html>

@@ -1,0 +1,51 @@
+
+
+.zoom {
+   animation: zoom 2s infinite ease-in-out ;
+}
+
+@keyframes zoom {
+    0% {
+      scale: 1;
+    }
+  
+    50% {
+     scale: 1.4;
+    }
+    100% {
+        scale: 1;
+    }
+  }
+
+.shadow {
+    animation: shadow 3s infinite ease-in-out ;
+}
+
+@keyframes shadow {
+    0% {
+      box-shadow: 0 0 10px 2px white;
+    }
+  
+    50% {
+        box-shadow: 0 0 20px 2px white;
+    }
+    100% {
+        box-shadow: 0 0 10px 2px white;
+    }
+  }
+
+  .zoom-in {
+    animation: zoom-in 1s ;
+  }
+
+  @keyframes zoom-in {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+
