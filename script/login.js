@@ -22,6 +22,7 @@ btn_connexion.addEventListener('click', function(){
 
     }
 
+    
     if (userName.value == listUsers[userName.value].name && userPsw.value === listUsers[userName.value].psw ) {
 
         console.log("Connexion réussie")
