@@ -1,7 +1,7 @@
 
 import listUsers from "../script.js"
 
-console.log(listUsers["lefido"])
+console.log(listUsers)
 
 let userName = document.querySelector('#name')
 let usermail = document.querySelector('#mail')
@@ -39,20 +39,21 @@ btn_connexion.addEventListener('click', function(){
 
     console.log("Enregistrement réussie")
 
-    let user = {
-        name: userName.value,
-        mail: usermail.value,
-        psw: userPsw1.value,
+    var user = userName.value + ":" +  {
+            name: userName.value,
+            mail: usermail.value,
+            psw: userPsw1.value
+        }
 
-    }
-
+    console.log(user)
+        
     listUsers.push(user)
 
     console.log(listUsers)
 
     setTimeout(function() {
 
-        window.location.href= './index.html'
+        // window.location.href= './index.html'
 
     }, 10000)
 

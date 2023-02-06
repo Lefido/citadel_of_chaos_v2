@@ -1,15 +1,14 @@
 
-let listUsers =
+let listUsers = [
   {
     "lefido" : {
       name: "lefido",
       mail: "lefido@hotmail.com",
-      psw: "301172"
+      psw: "Lefido@301172"
     }
-  };
+  }];
 
 
-  
 export default listUsers;
 
 let url = "./json/script_citadel_arrange.json";
@@ -37,12 +36,6 @@ affiche_etape(num_etape)
 break
 
 }
-
-// let num_etape = 1;
-
-// affiche_etape(num_etape)
-
-
 
 function affiche_etape(num_etape) {
 
