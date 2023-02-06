@@ -1,0 +1,78 @@
+ Lorsque vous effectuerez le choix de vos Formules magiques, sélectionnez les suivantes :
+- Faiblesse (2 Formules)
+- Force (1 Formule)
+- Lévitation (1 Formule)
+- Or du Sot (1 Formule)
+- Protection (1 Formule)
+- Télépathie (1 Formule)
+Utilisez le reste de vos points de MAGIE pour acquérir des Formules de CHANCE, d’ENDURANCE et d’HABILETE.
+
+--------------------------------------------------
+1 		Prétendez être un herboriste.
+261 	  	Choisissez « Kylltrog ».
+81 	  	Poursuivez.
+251 	  	Marchez sur la pointe des pieds en direction d’un groupe de créatures.
+321 	  	Approchez-vous des créatures rassemblées autour du feu.
+339 	  	Asseyez-vous auprès d’eux sans demander de permission.
+134 	  	Insistez pour qu’ils vous répondent.
+60 	  	Combattez avec votre épée.
+213 	  	NAIN (HABILETE 5, ENDURANCE 6).
+  	  	GOBELIN (HABILETE 6, ENDURANCE 4).
+  	  	ORQUE (HABILETE 5, ENDURANCE 7).
+235 	  	Prenez les 8 Pièces d’Or et le pot d’Onguent noir, puis poursuivez en direction des deux hommes qui bavardent près de la torche.
+269 	  	Estimez la dague à 8 Pièces d’Or.
+186 	  	Offrez les 8 Pièces d’Or à l’homme en utilisant la Formule d’Or du Sot.
+15 	  	Poursuivez.
+245 	  	Ignorez la créature pour poursuivre votre chemin.
+161 	  	Montrez votre colère.
+106 	  	Poursuivez.
+218 	  	Frappez trois coups pour appeler le garde.
+118 	  	Vous connaissez le mot de passe.
+273 	  	Le mot de passe est « Cimeterre ».
+371 	  	Poursuivez.
+177 	  	Poursuivez votre chemin vers la porte.
+5 	  	Tirez le cordon.
+40 	  	Faites confiance au bossu pour suivre le chemin qu’il vous indique.
+243 	  	Risquez-vous à entrer dans la pièce sur la pointe des pieds.
+352 	  	Utilisez une Formule Magique.
+11 	  	Utilisez la Formule de Faiblesse.
+152 	  	GARK (HABILETE 5, ENDURANCE 5).
+180 	  	Emportez tous les objets et poursuivez.
+99 	  	Choisissez la porte de droite.
+38 	  	Obéissez à la voix.
+132 	  	Demandez un livre sur les secrets de la Tour Noire.
+238 	  	Demandez à présent au bibliothécaire des ouvrages traitant de Balthus le Terrible.
+18 	  	Quittez la bibliothèque par la porte de derrière.
+31 	  	Poursuivez.
+169 	  	Montez l’escalier de droite.
+197 	  	Poursuivez.
+363 	  	Essayez d’ouvrir la porte de gauche.
+228 	  	Utilisez une Formule de Force.
+170 	  	Lancez le dé autant de fois que nécessaire pour enfoncer la porte.
+292 	  	Dites à la femme que vous venez lui offrir un cadeau.
+42 	  	Offrez-lui la Brosse à Cheveux.
+91 	  	Essayez de prendre la Toison d’Or (Tentez votre Chance jusqu’à y parvenir).
+140 		Essayez d’ouvrir la porte de droite.
+104 	  	Cherchez dans votre Sac un cadeau à faire à l’homme.
+54 	  	Offrez-lui des Pièces d’Or.
+27 	  	Poursuivez.
+206 	  	Poursuivez.
+182 		Cherchez dans votre Sac à Dos un objet qui pourrait vous aider.
+322 	  	Choisissez le pot d’Onguent.
+291 	  	Poursuivez.
+328 		Utilisez pour vous défendre un des objets contenus dans votre Sac à Dos.
+226 		Prenez la Toison d’Or.
+37 	  	Poursuivez.
+229 		Vous connaissez la combinaison. Rendez-vous au 217.
+217 		Utilisez une Formule de Protection.
+293 	  	Poursuivez.
+374 	  	Utilisez ensuite une Formule de Faiblesse.
+158 	  	Poursuivez.
+77 	  	Utilisez une Formule de Télépathie.
+187 	  	Utilisez une Formule de Lévitation.
+279 	  	Dirigez-vous vers la fenêtre.
+78 		Arrachez un rideau pour le jeter à la figure de Balthus.
+124 		Poursuivez.
+400 	  	Vous avez gagné.
+
+

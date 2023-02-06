@@ -1,0 +1,117 @@
+ Quelques conseils :
+ - 	Evitez les combats inutiles (contre l’Homme-Rhino, le golem, etc...).
+ - 	Deux des objets les plus importants sont trouvés dans la cour.
+ - 	Rencontrer le Farfadet n’est pas nécessaire, mais recommandé.
+ - 	Visitez la bibliothèque, ils ont quelques livres intéressants.
+ - 	Evitez le coffre au milieu d’un fossé et les trois coffrets dans la salle du golem.
+ - 	L’hydre peut être tuée à l’aide de 3 formules de Copie Conforme. Encore faut-il que votre copie de l’hydre gagne le combat. Il y a également la Myriade pour essayer de capturer l’hydre mais il faut lancer 1 dé. Le mieux c’est d’utiliser la toison d’or.
+ - 	L’or ne sert pas à grand chose dans cette aventure. On peut s’amuser  dans la salle de jeux (mais on ne peux pas finir l’aventure si on passe par là) mais surtout il sert à passer les Milks.
+
+ 
+
+Les objets, les lieux , les informations indispensables :
+
+Dans La Citadelle du Chaos, seul le mot de passe permettant de pénétrer dans les appartement de Balthus le Terrible est indispensable. Il se trouve dans la Bibliothèque en consultant le livre sur les secrets de la tour noire.
+
+ 
+
+La solution :
+
+Cette solution à été faite avec la correction de l'erreur de la clé en cuivre du paragraphe 235 (voir les erreurs pour La citadelle du Chaos) et suppose que tous vos combats sont réussis. Ce n’est pas grave si votre habileté est faible car en ne fonçant pas sur tout ce qui bouge et en utilisant judicieusement la magie, vous n’aurez pas beaucoup de combats à faire (et encore contre des créatures faibles). Pendant les combats n'hésitez pas à utiliser la Chance pour infliger plus de dégâts, car si vous suivez cette solution, vous n'aurez aucun lancer de dés a faire (et donc pas de "Tentez votre Chance" a faire) en dehors des combats. Pour la magie, pareil, si vous avez obtenu le minimum, c’est suffisant pour terminer le livre. Dans ce cas prenez les formules suivantes :
+2 Faiblesse
+1 Illusion
+1 Protection
+1 Télépathie
+1 Lévitation
+1 Chance
+1 Endurance
+Si vous avez plus de 8 en magie, prenez des formules d’endurance, de chance et d’habileté. Pour le fun vous pouvez aussi prendre une formule de Lévitation en plus pour la fin du paragraphe 400 .
+
+ 
+1 		Prétendez être un herboriste.
+61 		Donnez le nom de "Blag" (vous pouvez donner aussi le nom de Kylltrog, rendez-vous alors au 81).
+394 		Entrez dans la cour.
+251 		Marchez sur la pointe des pieds en direction d'un groupe de créatures.
+321 		Approchez vous des créatures rassemblées autour du feu.
+339 		Asseyez vous auprès d'eux.
+134 	  	Vous obtenez le mot de passe pour entrer dans la tour noir. Insistez pour qu'ils vous répondent.
+60 		Les combattrent à l'épée.
+213 			Habileté 	Endurance 	
+		Nain 	    5 	        6 	
+		Gobelin 	6 	        4 	
+		Orque 	    5 	        7 	
+		N'hésitez pas à utiliser la Chance pendant le combat.
+235 		Prenez la clé de cuivre et le pot d'onguent noir. Poursuivez votre chemin vers la citadelle.
+245 		Ignorez la et poursuivez votre chemin.
+161 		Montrez votre colère.
+106 		Avancez vers l'entrée de la tour noir.
+218 		Frappez trois coups pour appeler le garde.
+118 		Vous connaissez le mot de passe.
+273 		Dites le mot "Cimeterre".
+371 		Vous entrez.
+177 		Poursuivez votre chemin vers la porte.
+5 		Tirez le cordon.
+40 		Lui faire confiance et suivez le chemin qu'il vous indique.
+243 		Entrez dans la pièce sur la pointe des pieds.
+352 		Utilisez une formule magique.
+11 		Utilisez Faiblesse.
+152 		Gark     Habileté 5, Endurance 5
+		Pensez à utiliser la chance durant le combat.
+180 		Prenez les 6 pièces d'or et la brosse à cheveux ouvragée. Poursuivez votre chemin.
+99 		Choisissez la porte de droite.
+38 		Obéissez à la voix.
+132 		Demandez un livre sur les secrets de la tour noire.
+238 		Notez que le code de la combinaison est le 217. Demandez des ouvrages traitant de Balthus le Terrible.
+18 		Notez que la lumière du soleil est un véritable poison pour Balthus. Allez chercher un autre livre qui pourrait vous aider.
+84 		Des Orques vous assomment.
+234 		Mangez le repas (+2 endurance).
+397 		Utilisez une formule magique.
+193 		Utilisez l'illusion.
+35 		Faites lui croire qu'un ennemi l'attaque.
+364 		Sortez de la cellule.
+174 		Enfoncez la porte.
+268 		N'utilisez pas de formule de protection.
+359 		Tournez vous vers la silhouette endormie.
+29 		Tirez votre épée.
+131 		Demandez lui votre chemin.
+348 		Choisissez la porte de votre choix, elles mènent toutes les trois au même endroit.
+188 		Tirez votre épée et frappez à l'aveuglette.
+51 		Ne rien faire.
+280 		Vous vous évanouissez.
+323 		Prenez l'épée magique et le miroir d'argent. Prenez la porte à poignée de cuivre (+1 en force d'attaque).
+144 		Attendez que le petit personnage vous adresse la parole.
+56 		Goûtez au vin rouge.
+120 		Repartez (+2 endurance et +3 chance).
+95 		Engagez vous dans le passage.
+367 		Ouvrez lentement la porte.
+308 		Entrez dans la chambre obscure.
+257 		Courez vers l'autre porte.
+237 		Entrez dans la grande pièce éclairée.
+169 		Montez l'escalier de droite.
+197 		Montez jusqu'au balcon.
+363 		Ouvrez la porte de gauche.
+228 		Utilisez la clef de cuivre.
+296 		Entrez dans la pièce.
+292 		Dites lui que vous venez lui offrir un cadeau.
+42 		Offrez-lui la brosse à cheveux.
+91 		Prenez la toison d'or (il faut tentez sa chance et être chanceux). Quittez la pièce.
+140 		Ouvrez la porte de gauche.
+25 		Allez vers la porte sans vouloir ouvrir le coffre.
+206 		Entrez dans la pièce.
+182 		Cherchez dans votre sac à dos un objet qui pourrait vous aider (-1 habileté, -2 endurance et -1 chance, malheureusement on ne peut pas y couper).
+322 		Donnez le pot d'onguent.
+291 		Sortez de la pièce.
+328 		Utilisez pour vous défendre un des objets contenus dans votre sac à dos.
+226 		Utilisez la toison d'or.
+37 		Sortez de la pièce.
+229 		Ouvrez la porte avec la combinaison obtenue dans la bibliothèque.
+217 		Utilisez une formule de faiblesse.
+293 		Inspectez la pièce.
+374 		Utilisez une formule de faiblesse.
+158 		Préparez vous à combattre Balthus le Terrible.
+77 		Utilisez une formule de télépathie.
+187 		Utilisez une formule de lévitation.
+279 		Dirigez vous vers la fenêtre.
+78 		Arrachez un rideau et lui jeter à la figure.
+124 		Balthus le Terrible est vaincu.
+400 		Vous avez rempli votre mission.

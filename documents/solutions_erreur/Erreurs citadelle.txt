@@ -1,0 +1,18 @@
+- 235 : Il est indiqué "vous trouvez 8 pièces d'or et une de cuivre". Ainsi on croit qu'on a trouvé 8 pièces d'or et 1 pièce de cuivre, ce qui est faux. Il faut donc plutôt lire "vous avez trouvé 8 pièces d'or et une clé de cuivre". Le mot "clé" a été oublié entre "une" et "cuivre". Du coup il était impossible de trouver la clé de cuivre. Elle ouvre la porte au paragraphe 228 et ouvre également le garde-manger au paragraphe 249. Bien sur la clé n'est pas obligatoire car on peut défoncer les deux portes mais avec un risque de perte de points d'endurance. Voici le texte original de la version anglaise :
+
+"Going through the pockets of the creatures you find 8 Gold Pieces, a copper-coloured key, and a jar of dark, creamy ointment".
+
+En Fouillant les poches des créatures, vous y trouvez 8 Pièces d'Or, une clé en cuivre et un pot contenant de l'onguent noir et crémeux.
+(merci à Demian Katz, webmaster du site http://www.gamebooks.org/, pour avoir fourni le texte original)
+
+ 
+
+- Il n'y a aucun paragraphe qui renvoie vers le 258. Il concerne la rencontre que l'on fait avec les petites créatures après la grande salle à manger en prenant la porte du milieu (à partir du paragraphe 64). Heureusement il n'y a rien d'intéressant au paragraphe 258 et son oublie ne gène pas au bon déroulement de l'histoire.
+
+ 
+
+- Lorsqu'on part de la bibliothèque ( à partir des paragraphes 18, 238 et 326), on est renvoyé vers le paragraphe 31 où il est indiqué que l'on vient de la salle de jeux. Cela vient du fait que la bibliothèque et la salle de jeux donnent sur le même paragraphe lorsqu'on les quitte. mais ça ne gène pas au bon écoulement de l'aventure. Mais vous pouvez remplacer la première phrase du paragraphe 31 par "Vous quittez la pièce par la porte du fond".
+
+ 
+
+- 368 : A la fin du paragraphe, il faut lire "Rendez-vous au 15" (attention cette erreur ne concerne que la toute première édition sans logo. Par la suite elle a été corrigé). 

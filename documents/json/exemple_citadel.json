@@ -1,0 +1,44 @@
+{
+  "1": {
+    "type": "",
+    "content": "",
+    "characteristics": {
+      "ability_max": -1,
+      "ability_current": 1,
+      "stamina_max": 8,
+      "stamina_current": 6,
+      "magic_max": 5,
+      "magic_current": 4,
+      "chance_max": 5,
+      "chance_current": 4
+    },
+    "pathways": {
+      "2": {
+        "content": "",
+        "items_required": [
+          "Epée",
+          "Pot d'onguent"
+        ],
+        "magic_spell_required": [
+          "Or du sot",
+          "Lévitation"
+        ],
+        "isSuccessByDefault": true,
+        "isFailByDefault": false,
+        "isEscapeByDefault": true
+      },
+      "2": {
+
+      }
+    },
+    "number_of_rounds": 3,
+    "isEscapable": true,
+    "ennemies": [
+      {
+        "name": "Calacorm",
+        "ability": 6,
+        "stamina": 7
+      }
+    ]
+  }
+}

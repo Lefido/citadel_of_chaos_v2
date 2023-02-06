@@ -2213,22 +2213,535 @@
 
     "111" :
     {
-        "step_type" : "chance",
+        "step_type" : "narrative",
         "content" : "Vous avez évité le regard de la Gorgone. Vous êtes maintenant à l'abri dans un coin de la pièce, cachant votre visage avec votre bras. Mais que faire ?",
 
         "pathways":
         {
             "251":
             {
-                "content" : "Vous trouvez un nom qui leur est familier et ils vous laissent entrer."
+                "content" : "Si vous avez un mirroir en argent, vous pouvez le sortir de votre sac a dos et le diriger vers la gorgone.",
+                
+                "inventory_required" :
+                [
+                    "silver_mirror"
+                ]
             },
             "288":
             {
-                "content" : "Vous leur donner un nom inconnu et ils s'approchent de vous, prêts à combattre. Impossible de leur échapper."
+                "content" : "Vous n'avez pas de miroir."
+            }
+        }
+    },
+
+    "112" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous vous libérez des anneaux du Boa d'Egout et vous parvenez ensuite à traverser la rivière nauséabonde sans autre incident, mais vous espérez bien pouvoir prendre un bain au plus vite ! Vous poursuivez votre chemin jusqu'à un carrefour.",
+
+        "pathways":
+        {
+            "367":
+            {
+                "content" : "Continuer tout droit."
+            },
+            "212":
+            {
+                "content" : "Continuer a gauche."
+            }
+        }
+    },
+
+    "113" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous utilisez contre le Sorcier la Formule de Faiblesse. Aussitôt, il s'immobilise et vous fixe du regard. Son visage est devenu différent, il exprime la souffrance. Il frissonne de la tête aux pieds, son corps est secoué de convulsions. ",
+
+        "pathways":
+        {
+            "388":
+            {
+                "content" : "Attendre et voir ce qu'il se passe."
+            },
+            "145":
+            {
+                "content" : "Continuer a gauche."
+            }
+        }
+    },
+
+    "114" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous pointez votre index vers la base du Tentacule, et vous prononcez la Formule Magique. Un éclair de lumière jaillit aussitôt du trou, et un nuage de fumée s'élève. Le Tentacule se met à trembler, puis il relâche son étreinte et se retire sous terre. Vous frottez votre jambe engourdie et vous vous dirigez vers l'entrée de la Tour Noire.",
+
+        "pathways":
+        {
+            "218":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "115" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous êtes en fâcheuse posture. Balthus le Terrible s'est précipité dans votre direction et il est déjà sur vous.",
+
+        "pathways":
+        {
+            "373":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "116" :
+    {
+        "step_type" : "narrative",
+        "content" : "Votre bras surpuissant saisit et tire la poignée qui vous reste dans la main. Vous donnez alors un coup de poing en plein milieu de la porte. Le bois craque et cède ; vous pouvez passer à présent. ",
+
+        "pathways":
+        {
+            "210":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "117" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous tirez votre épée, le Sorcier aussi. Vous êtes trop près l'un de l'autre à présent pour utiliser vos pouvoirs magiques et vous allez devoir livrer le Combat le plus rude depuis le début de votre aventure. ",
+
+        "pathways":
+        {
+            "337":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "118" :
+    {
+        "step_type" : "narrative",
+        "content" : "La porte s'ouvre et une créature bestiale apparaît. Elle est dotée d'une corne pointue au milieu du front, et sa peau ressemble à une cuirasse. Elle grogne et vous demande le mot de passe. Le connaissez-vous ?",
+
+        "pathways":
+        {
+            "273":
+            {
+                "content" : "Vous connaissez le mot de passe."
+            },
+            "198":
+            {
+                "content" : "Vous ne connaissez pas le mot de passe, vous devez trouver une astuce pour passer."
+            }
+        }
+    },
+
+    "119" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous revenez à la charge contre le puissant Sorcier. Mais il a disparu ! Vous faites volte-face. Il est derrière vous, une dague à la main. Vous essayez d'éviter l'arme, mais trop tard, la lame s'enfonce dans votre dos ! Vous avez échoué dans votre mission.",
+
+        "pathways":
+        {
+            "0":
+            {
+                "content" : "Terminer l'aventure.",
+                "is_end_of_the_game": true
+            }
+ 
+        }
+    },
+
+    "120" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous goûtez le vin rouge et vous hochez la tête. Il est vraiment excellent, rafraîchissant, avec un goût fruité. Vous y goûtez à nouveau. Vous avez la tête plus légère. Ajoutez 2 points à votre total d'ENDURANCE et 3 points à votre total de CHANCE, pour avoir découvert un si délicieux breuvage. Vous remerciez l'Elfe Noir, et vous repartez. ",
+        "characteristic_balance" : 
+        {               
+            "life_current" : 2,
+            "chance_current" : 3
+        },
+
+        "pathways":
+        {
+            "95":
+            {
+                "content" : "Continuer"
+            }
+ 
+        }
+    },
+    
+    "121" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous foncez sur la porte, et, soudain, elle s'ouvre ! Sur votre lancée, vous bondissez dans la pièce et vous tombez la tête la première ! Déduisez 1 point de votre total d'ENDURANCE, car vous vous êtes écorché les genoux sur le sol rocheux. ",
+        "characteristic_balance" : 
+        {               
+            "life_current" : -1
+        },
+
+        "pathways":
+        {
+            "257":
+            {
+                "content" : "Continuer"
+            }
+ 
+        }
+    },
+
+    "122" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous tentez une ruse simple pour la tromper, mais elle ne s'y laisse pas prendre et elle vous empêchera d'aller plus loin, à moins que vous n'utilisiez vos pouvoirs magiques. ",
+
+        "pathways":
+        {
+            "47":
+            {
+                "content" : "Continuer"
+            }
+ 
+        }
+    },
+
+    "123" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous vous concentrez sur l'esprit du Calacorm. Vous distinguez alors un plateau rempli de serpents morts, puis une créature à la peau grise, sans doute la femelle du Calacorm. Vous éprouvez ensuite une grande satisfaction à voir une malheureuse créature attachée à un mur, tandis qu'on lui fait rôtir les orteils à l'aide d'une torche enflammée. A nouveau le plateau de serpents morts. De toute évidence, le Calacorm n'a en tête que les menus plaisirs qui peuvent égayer parfois sa misérable vie. Vous n'avez rien appris sur ce qu'il fallait faire pour lui échapper.",
+
+        "pathways":
+        {
+            "211":
+            {
+                "content" : "Utiliser une formule d'or du sot.",
+                "formula_balance" : 
+                {
+                    "formula_gold" : -1
+                }
+            },
+            "35":
+            {
+                "content" : "Utiliser une formule d'illusion.",
+                "formula_balance" : 
+                {
+                    "formula_illusion" : -1
+                }
+            },
+            "283":
+            {
+                "content" : "Vous ne possédéz aucune de ces deux formules."
+            }
+ 
+        }
+    },
+
+    "124" :
+    {
+        "step_type" : "narrative",
+        "content" : "Les rideaux arrachés, la lumière du jour pénètre dans la pièce. Vous aviez perdu toute notion de temps depuis votre entrée dans la Citadelle, et le soleil est bien venu après tant d'heures passées dans les ténèbres. Un coup sourd vous fait vous retourner. Le sorcier est affaissé sur le sol. Vous avancez d'un pas, et il pousse un cri à vous glacer le sang. « Les rideaux !... Imbécile !... » bredouille-t-il d'une voix mourante. La clarté du jour diminue rapidement ses forces, et il tente désespérément de ramper vers l'ombre. Mais il est trop faible pour bouger et il s'écroule sur le sol, face contre terre.",
+
+        "pathways":
+        {
+            "400":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "125" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous vous enfuyez en courant, et trois flèches venues de nulle part jaillissent vers vous.  Déduisez 2 points de votre total d'ENDURANCE, avant de vous mettre à l'abri. ",
+
+        "pathways":
+        {
+            "209":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "126" :
+    {
+        "step_type" : "narrative",
+        "content" : "Le moment de panique passé, vous vous arrêtez pour réfléchir. Devant vous, se trouvent deux passages, l'un vers la gauche, l'autre vers la droite. Vous entendez des bruits de pas. Trois créatures débouchent peu après du passage de gauche et vous comprenez alors que l'expression « bruits de pas » ne leur convient pas exactement.",
+
+        "pathways":
+        {
+            "316":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "127" :
+    {
+        "step_type" : "narrative",
+        "content" : "Elle lève la tête et appelle à l'aide. Le linge pendu sur la corde se met aussitôt à s'agiter. Plusieurs pièces de vêtement quittent alors la corde et s'élancent sur vous. Il s'agit de FANTÔMES à tête de mort. « Protégez moi, mes fils et mes filles ! » crie-t-elle. Soudain, les vêtements vous cernent. Certains vous fouettent de leurs manches, vous infligeant des douleurs cuisantes. Une autre paire de manches entoure votre cou et commence à le serrer. Vous agitez votre épée en tout sens, mais sans atteindre les Fantômes. Si vous ne voulez pas mourir étranglé, il va falloir utiliser la magie pour vous libérer, à moins que vous ne préfériez offrir un cadeau à la femme. Qu'allez-vous faire ?",
+
+        "pathways":
+        {
+            "316":
+            {
+                "content" : "Offrir quelques baies.",
+                "inventory_required" :
+                [
+                    "berry"
+                ]
+            },
+            "387":
+            {
+                "content" : "Offrir un mirroir en argent.",
+                "inventory_required" :
+                [
+                    "silver_mirror"
+                ]
+            },
+            "240":
+            {
+                "content" : "Utiliser une formule de feu.",
+                "formula_balance" : 
+                {
+                    "formula_fire" : -1
+                }
+            },
+            "194":
+            {
+                "content" : "Vous n'avez rien a offrir et n'avez pas cette formule."
+            }
+        }
+    },
+
+    "128" :
+    {
+        "step_type" : "narrative",
+        "content" : "La Formule Magique fait son effet, et vous recevez les ondes psychiques du Gark. Il a peur que son capitaine ne découvre qu'il était endormi à son poste de garde, laissant ainsi entrer un intrus. Il éprouve également un étrange respect pour une Brosse à Cheveux ciselée qui se trouve apparemment dans la pièce. Mais c'est tout ce que vous parvenez à lire dans ses pensées. Vous devez maintenant vous défendre contre la créature. Allez-vous utiliser :",
+
+        "pathways":
+        {
+            "336":
+            {
+                "content" : "Votre épée."
+            },
+            "36":
+            {
+                "content" : "Une formule d'or du sot.",
+                "formula_balance" : 
+                {
+                    "formula_gold" : -1
+                }
+            },
+            "152":
+            {
+                "content" : "Utiliser une formule de faiblesse.",
+                "formula_balance" : 
+                {
+                    "formula_weakness" : -1
+                }
+            }
+        }
+    },
+
+    "129" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous vous acharnez quelques instants à essayer d'ouvrir le coffret, mais sans succès. Vous prenez alors votre épée et vous tentez de le briser, mais vous ne parvenez qu'à abîmer votre lame. Déduisez 1 point de votre total d'HABILETÉ. Le coffret est toujours fermé. Allez-vous essayer d'ouvrir :",
+
+        "pathways":
+        {
+            "260":
+            {
+                "content" : "Le premier coffret."
+            },
+            "370":
+            {
+                "content" : "Le troisième coffret."
+            },
+            "237":
+            {
+                "content" : "Vous préférer abandonner ces coffrets et poursuivre votre chemin."
+            }
+        }
+    },
+
+    "130" :
+    {
+        "step_type" : "narrative",
+        "content" : "La formule magique reste sans effet.",
+
+        "pathways":
+        {
+            "333":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "131" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous tirez aussitôt votre épée du fourreau en la pointant vers le Farfadet. Mais ce dernier jette un simple coup d'œil à la lame, et vous vous apercevez avec horreur qu'elle se ramollit jusqu'à pendre de la garde comme une ceinture de cuir. A l'évidence, vous n'arriverez à rien en vous montrant agressif avec le Farfadet. Demandez-lui plutôt votre chemin. ",
+
+        "pathways":
+        {
+            "348":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "132" :
+    {
+        "step_type" : "narrative",
+        "content" : "Vous entrez dans une bibliothèque. Les quatre murs, du sol au plafond, sont couverts d'étagères remplies de livres. Au centre de la pièce, des tables et des chaises sont alignées. Tout au fond, un homme à la peau sombre lève les yeux de son livre. Il porte de petites lunettes. Derrière lui, se trouve une porte. « Eh bien ! qu'y a-t-il ? vous demande-t-il d'un ton sec. Quel livre cherchez-vous ? » Vous examinez alors les étagères en lisant les étiquettes qui y sont apposées. Qu'allez-vous lui demander :",
+
+        "pathways":
+        {
+            "18":
+            {
+                "content" : "La biographie de Balthus le terrible."
+            },
+            "238":
+            {
+                "content" : "Les secrets de la tour noir."
+            },
+            "375":
+            {
+                "content" : "La description des créatures du Royaume du pic de la roche."
+            }
+        }
+    },
+
+    "133" :
+    {
+        "step_type" : "chance",
+        "content" : "Vous prononcez la Formule Magique et votre force soudaine vous permet de franchir facilement le fossé. Vous vous retrouvez alors sur « l'île » et vous forcez la fermeture du coffre. Mais vous poussez un juron en n'y découvrant que de la grenaille de plomb. L'effet de la Formule de Force commence à faiblir, et vous vous hâtez de sauter à nouveau le fossé en direction de l'autre porte. Tentez votre chance, arriverez vous a sauter le fossé de nouveau ?",
+
+        "pathways":
+        {
+            "206":
+            {
+                "content" : "Vous arrivez a sauter le fossé.",
+                "is_victory_default" : true,
+                "is_fail_default" : false
+            },
+            "82":
+            {
+                "content" : "Vous n'avez plus assez de force pour sauter le fossé.",
+                "is_victory_default" : false,
+                "is_fail_default" : true
+            }
+        }
+    },
+
+    "134" :
+    {
+        "step_type" : "narrative",
+        "content" : "Ils sont déconcertés par votre audace. Plutôt que d'attendre leur réaction, vous allez directement au but et vous leur demandez comment on entre dans la Tour Noire. Ils désignent simplement l'entrée principale, visiblement impressionnés par votre assurance et chuchotent entre eux ; puis l'Orque vous donne le mot de passe qui vous permettra d'être admis à l'intérieur : « Cimeterre ». Vous leur demandez ce qu'ils savent de la fiole contenue dans le coffret, et ils commencent alors à s'agiter. ",
+
+        "pathways":
+        {
+            "60":
+            {
+                "content" : "Vous insistez pour qu'ils vous répondent."
+            },
+            "269":
+            {
+                "content" : "Les laisser et rejoindre les deux hommes que vous avez vus precedemment."
+            },
+            "245":
+            {
+                "content" : "Vous hâter vers la tour noir."
+            }
+        }
+    },
+
+    "135" :
+    {
+        "step_type" : "narrative",
+        "content" : "Les Miks sont passés maîtres en matière d'Illusion, et ils peuvent prendre n'importe quelle forme. On ne sait d'ailleurs pas quel est leur véritable aspect, car il en est peu qui les ont vus sous leur apparence normale. Selon des sources sûres, ils ressemblent à des elfes. C'est un peuple très agressif dont l'arme favorite est un Couteau-Aiguille (une dague fine comme un poinçon) avec lequel ils se battent corps à corps. Bien qu'ils puissent prendre n'importe quelle forme (homme, bête ou objet), ils sont incapables d'utiliser le métal pour se déguiser. Ils sont également incapables de transformer autre chose qu'eux-mêmes. ",
+
+        "pathways":
+        {
+            "326":
+            {
+                "content" : "Continuer"
+            }
+        }
+    },
+
+    "136" :
+    {
+        "step_type" : "narrative",
+        "content" : "Les vieilles femmes protestent énergiquement, mais vous leur expliquez que vous avez des ordres et vous commencez à examiner la cuisine. Qu'allez-vous inspecter en premier ?",
+
+        "pathways":
+        {
+            "17":
+            {
+                "content" : "Les placards."
+            },
+            "167":
+            {
+                "content" : "Le bouillon dans le chaudron."
+            },
+            "389":
+            {
+                "content" : "La viande qui cuit a la broche."
+            }
+        }
+    },
+
+    "137" :
+    {
+        "step_type" : "narrative",
+        "content" : "L'homme est vieux, et on l'a frappé à la tête avec une massue. Il vous demande un remède, mais vous n'en n'avez pas. Vous pourriez cependant utiliser une Formule d'Endurance pour le soigner ; il vous propose en échange de vous offrir son aide. ",
+
+        "pathways":
+        {
+            "383":
+            {
+                "content" : "Vous acceptez de l'aider."
+            },
+            "14":
+            {
+                "content" : "Vous le laissez là et reprenez votre chemin."
+            }
+        }
+    },
+
+    "138" :
+    {
+        "step_type" : "narrative",
+        "content" : "«Que voulez-vous que je fasse de ça?» s'exclame-t-elle. A nouveau, ses yeux deviennent rouge foncé, et elle lance des jets de flamme dans votre direction. ",
+
+        "pathways":
+        {
+            "383":
+            {
+                "content" : "Vous acceptez de l'aider."
+            },
+            "14":
+            {
+                "content" : "Vous le laissez là et reprenez votre chemin."
             }
         }
     }
-    
 
     
 
