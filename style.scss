@@ -18,15 +18,14 @@ border: none;
 }
   
 @font-face {
-font-family: "medieval";
-src: url("./fonts/medieval.ttf");
+    font-family: "medieval";
+    src: url("./fonts/medieval.ttf");
 }
 
 body {
 
     width: 100%;
     background: url("./assets/cbg_ciel_bleu.jpg") no-repeat center/ cover;
-
 
 }
 
@@ -71,8 +70,6 @@ header {
     
 }
 
-
-
 .dsp-flex {
 
     display: flex;
@@ -96,11 +93,9 @@ header {
     justify-content: space-between;
     flex-direction: column;
 
-
 }
 
 .form {
-
 
     color: black;
     font-family: "medieval", sans-serif;
@@ -113,8 +108,7 @@ header {
         text-align: center;
         margin-bottom: 10px;
         font-size: 30px;
-
-        
+  
     }
 
     label {
@@ -122,7 +116,6 @@ header {
         margin: 2px auto 0;
        
     }
-
 
     input {
         width: 80%;
@@ -147,8 +140,6 @@ header {
     }
 
 }
-
-
 
 .optional-panel {
 
@@ -193,7 +184,6 @@ header {
         
     }
 
-
 }
 
 .cont-general {
@@ -237,7 +227,6 @@ header {
         justify-content: space-around;
         padding: 10px;
 
-
         img {
             width: 75px;
         }
@@ -260,9 +249,7 @@ header {
             width: 80%;
         }
 
-
     }
-
 
 }
 
@@ -310,13 +297,11 @@ header {
                 font-family: "90s", sans-serif;
                 text-align: center;
                 
-    
             }
 
             button {
                 margin: auto;
             }
-
 
         }
 
@@ -411,9 +396,6 @@ header {
 
     }
 
-   
-
-
 }
 
 @media screen and (max-width:700px){
@@ -490,7 +472,6 @@ header {
 
     }
    
-    
 }
 
 @media screen and (max-width:520px) {
