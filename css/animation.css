@@ -177,6 +177,48 @@
 
 }
 
+.start-top {
+
+  animation: start-top 2s ;
+
+}
+
+@keyframes start-top {
+  from {
+    
+    opacity: 0;
+    transform: translatey(-200%);
+     
+  }
+
+  to {
+    transform: translateX(0%);
+     opacity: 1;
+  }
+
+}
+
+.start-bottom {
+
+  animation: start-bottom 2s ;
+
+}
+
+@keyframes start-bottom {
+  from {
+    
+    opacity: 0;
+    transform: translatey(200%);
+     
+  }
+
+  to {
+    transform: translateX(0%);
+     opacity: 1;
+  }
+
+}
+
 
 
 

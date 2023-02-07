@@ -36,7 +36,9 @@ header {
 }
 header h1,
 header h2,
-header h3 {
+header h3,
+header h4,
+header p {
   font-family: "medieval", sans-serif;
   color: black;
   text-shadow: 0 0 5px white;
