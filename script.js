@@ -1,12 +1,12 @@
 
-let listUsers = [
+let listUsers =
   {
     "lefido" : {
       name: "lefido",
       mail: "lefido@hotmail.com",
-      psw: "Lefido@301172"
+      psw: "301172"
     }
-  }];
+  };
 
 
 export default listUsers;
