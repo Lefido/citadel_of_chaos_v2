@@ -41,11 +41,142 @@
   @keyframes zoom-in {
     from {
         scale: 0;
+        opacity: 0;
+        
     }
 
     to {
         scale: 1;
+        opacity: 1;
+        
     }
+
 }
+
+.zoom-out {
+  animation: zoom-out 1.5s ;
+}
+
+@keyframes zoom-out {
+  from {
+      scale: 3;
+      opacity: 0;
+     
+  }
+
+  to {
+      scale: 1;
+      opacity: 1;
+     
+  }
+
+}
+
+.allumage {
+
+  animation: allumage 4s ;
+
+}
+
+@keyframes allumage {
+  from {
+      /* scale: 1; */
+      opacity: 0;
+     
+  }
+
+  to {
+      /* scale: 0; */
+      opacity: 1;
+     
+  }
+
+}
+
+.extinction {
+
+  animation: extinction 1s ;
+
+}
+
+@keyframes extinction {
+  from {
+      /* scale: 1; */
+      opacity: 1;
+     
+  }
+
+  to {
+      /* scale: 0; */
+      opacity: 0;
+     
+  }
+
+}
+
+.destruction {
+
+  animation: destruction 1s ;
+
+}
+
+@keyframes destruction {
+  from {
+      scale: 1;
+      /* opacity: 1; */
+     
+  }
+
+  to {
+      scale: 0;
+      /* opacity: 0; */
+     
+  }
+
+}
+
+.start-left {
+
+  animation: start-left 2s ;
+
+}
+
+@keyframes start-left {
+  from {
+    
+    opacity: 0;
+    transform: translateX(-200%);
+     
+  }
+
+  to {
+    transform: translateX(0%);
+     opacity: 1;
+  }
+
+}
+
+.start-right {
+
+  animation: start-right 2s ;
+
+}
+
+@keyframes start-right {
+  from {
+    
+    opacity: 0;
+    transform: translateX(200%);
+     
+  }
+
+  to {
+    transform: translateX(0%);
+     opacity: 1;
+  }
+
+}
+
+
 
 

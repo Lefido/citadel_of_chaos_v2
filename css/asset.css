@@ -73,6 +73,15 @@
     background-size: 100% 100%;
 }
 
+.parchemin-3 {
+
+    background: url("../assets/parchemin_3.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    font-family: "medieval", sans-serif;
+    
+}
+
+
 .btn-1, .btn-2, .btn-magie, .btn-objet {
 
     border-radius: 10px;
