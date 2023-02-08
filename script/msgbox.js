@@ -16,7 +16,7 @@ export default function msgBox(nameNoeud ,titleMsg, contentMsg) {
     box.classList.add('parchemin-3')
 
     let titleBox = document.createElement("h3");
-    titleBox.innerHTML = "~ " + titleMsg + " ~";
+    titleBox.innerHTML = titleMsg;
     titleBox.style.borderBottom = "1px solid gray"
     titleBox.style.padding = "5px 0 0"
     
