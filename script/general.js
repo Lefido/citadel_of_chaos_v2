@@ -32,7 +32,7 @@ function affiche_etape(num_etape) {
 function etape_narratif(narratif) {
 
   narratif_content.classList.remove("extinction")
-  narratif_content.classList.add("allumage")
+  narratif_content.classList.add("deroulant")
   
   narratif_content.innerHTML = "";
 
@@ -65,7 +65,7 @@ function etape_pathways(pathways) {
     element.addEventListener("click", function () {
 
       narratif_content.classList.add("extinction")
-      narratif_content.classList.remove("allumage")
+      narratif_content.classList.remove("deroulant")
 
       let btn_selction = element.dataset.next_etape
 

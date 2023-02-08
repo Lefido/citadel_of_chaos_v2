@@ -278,3 +278,27 @@
   }
 
 }
+
+.deroulant {
+
+  animation: deroulant 2s;
+
+}
+
+@keyframes deroulant {
+  
+from {
+  height: 0px;
+  /* background-color: rgba(165, 42, 42, 0.418); */
+  border-bottom: 5px solid transparent;
+  border-radius: 10px;
+  /* box-shadow: 4px 4px 5px 2px brown; */
+}
+
+to {
+
+  height: 100%;
+
+}
+
+}
