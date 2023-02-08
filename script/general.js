@@ -31,8 +31,9 @@ function affiche_etape(num_etape) {
 
 function etape_narratif(narratif) {
 
-  narratif_content.classList.remove("extinction")
-  narratif_content.classList.add("deroulant")
+  narratif_content.classList.remove("deroulant-gauche")
+  narratif_content.classList.add("deroulant-bas")
+  narratif_content.scrollTop = 0;
   
   narratif_content.innerHTML = "";
 
@@ -64,8 +65,8 @@ function etape_pathways(pathways) {
 
     element.addEventListener("click", function () {
 
-      narratif_content.classList.add("extinction")
-      narratif_content.classList.remove("deroulant")
+      narratif_content.classList.add("deroulant-gauche")
+      narratif_content.classList.remove("deroulant-bas")
 
       let btn_selction = element.dataset.next_etape
 
