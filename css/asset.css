@@ -167,5 +167,30 @@
     scale: 0.9;
 }
 
+.masqued {
+
+   animation: masqued 1s forwards;
+
+}
+
+@keyframes masqued {
+
+    from {
+        scale: 1;
+    }
+
+    to {
+        
+        scale: 0;
+        display: none;
+
+    }
+    
+}
+
+
+
+
+
 
 

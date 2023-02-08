@@ -55,6 +55,8 @@ header h2 {
 .dsp-flex-row {
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-between;
 }
 
 .dsp-flex {

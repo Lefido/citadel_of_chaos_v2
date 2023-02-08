@@ -244,3 +244,36 @@
   }
 
 }
+
+.rotate-zoom {
+
+  animation: rotate-zoom 2s forwards;
+
+}
+
+
+@keyframes rotate-zoom {
+
+  0% {
+    scale: 0;
+    rotate: 8turn;
+    text-shadow: 0 0 5px red;
+
+  }
+  25% {
+    scale: 2;
+    
+  }
+  50% {
+    scale: 4;
+    
+  }
+  75% {
+    scale: 2;
+
+  }
+  100% {
+    scale: 1;
+  }
+
+}
