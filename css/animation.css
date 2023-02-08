@@ -219,6 +219,28 @@
 
 }
 
+.perso-actif {
+
+  background-color: rgba(165, 42, 42, 0.308);
+  /* border-bottom: 1px solid brown; */
+  animation: perso-actif 1s infinite;
+}
 
 
+@keyframes perso-actif {
+  0% {
+     /* box-shadow: 0 0 5px 0px brown; */
+     scale: 1;
+  }
 
+  50% {
+      /* box-shadow: 0 0 25px 2px brown; */
+      scale: 1.05;
+  }
+
+  100% {
+      /* box-shadow: 0 0 5px 0px brown; */
+      scale: 1;
+  }
+
+}

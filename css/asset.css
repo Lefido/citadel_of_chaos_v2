@@ -113,7 +113,7 @@
     color: black;
     text-shadow: 1px 1px 2px white;
     background: url("../assets/btn_magie_old.png") no-repeat center / contain;
-    padding: 15px 20px 10px 20px;
+    padding: 10px 20px;
     background-size: 100% 100%;
 
 }
@@ -167,8 +167,5 @@
     scale: 0.9;
 }
 
-.perso-actif {
 
-    background-color: rgba(165, 42, 42, 0.527);
-}
 
