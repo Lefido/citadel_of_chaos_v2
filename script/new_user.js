@@ -19,6 +19,12 @@ btn_connexion.addEventListener('click', function(){
         return
     }
 
+    if (userName.value.length < 6 ) {
+        console.log("Utilisateur trop court")
+        msgBox("header", "Information","Nom d'utilisateur trop court, 6 caractères minimum" )
+        return
+    }
+
     if (usermail.value === "") {
         console.log("Veuillez saisir un mail")
         msgBox("header", "Information","Veuillez saisir un email" )
@@ -30,6 +36,14 @@ btn_connexion.addEventListener('click', function(){
         msgBox("header", "Information","Veuillez saisir un mot de passe" )
         return
     }
+
+    if (userPsw1.value.length < 8 ) {
+        console.log("Mot de passe trop court")
+        msgBox("header", "Information","Mot de passe trop court, 8 caractères minimum" )
+        return
+    }
+
+
 
     if (userPsw2.value === "") {
         console.log("Veuillez confirmer le mot de passe")

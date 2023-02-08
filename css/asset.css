@@ -81,8 +81,7 @@
     
 }
 
-
-.btn-1, .btn-2, .btn-magie, .btn-objet {
+.btn-1, .btn-2, .btn-magie, .btn-objet, .btn-choice {
 
     border-radius: 10px;
     transition: 0.2s;
@@ -113,7 +112,7 @@
 .btn-magie {
     color: black;
     text-shadow: 1px 1px 2px white;
-    background: url("../assets/btn_magie.png") no-repeat center / contain;
+    background: url("../assets/btn_magie_old.png") no-repeat center / contain;
     padding: 15px 20px 10px 20px;
     background-size: 100% 100%;
 
@@ -128,10 +127,48 @@
 
 }
 
-.btn-1:hover, .btn-2:hover, .btn-magie:hover, .btn-objet:hover {
-    cursor: pointer;
-    /* scale: 1.04; */
-    rotate: 2deg;
+.btn-choice {
 
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background: url("../assets/btn_bois_1.png") no-repeat center / contain;
+    padding: 5px 5px;
+    background-size: 100% 100%;
+    box-shadow: 0 0 20px 2px white;
+
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    cursor: pointer;
+    scale: 0.9;
+    /* rotate: 2deg; */
+    box-shadow: 0 0 20px 2px black;
+
+}
+
+.btn-objet:hover {
+    cursor: pointer;
+    background-color: rgba(165, 42, 42, 0.473);
+    box-shadow: 0 0 20px 2px brown;
+    scale: 0.9;
+}
+
+.btn-magie:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 0, 0.466);
+    box-shadow: 0 0 20px 2px yellow;
+    scale: 0.9;
+}
+
+.btn-choice:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px 2px black;
+    scale: 0.9;
+}
+
+.perso-actif {
+
+    background-color: rgba(165, 42, 42, 0.527);
 }
 
