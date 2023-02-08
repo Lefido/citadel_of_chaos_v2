@@ -13,6 +13,7 @@ var list_btn_pathways;
 let current_html = window.location.pathname
 
 console.log("Page en cours :", current_html)
+console.log(list_etape);
 
 let num_etape = 1;
 
@@ -25,7 +26,6 @@ function affiche_etape(num_etape) {
 
   etape_narratif(etape.content);
   etape_pathways(etape.pathways);
-
 
 }
 
