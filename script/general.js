@@ -31,6 +31,9 @@ function affiche_etape(num_etape) {
 
 function etape_narratif(narratif) {
 
+  narratif_content.classList.remove("extinction")
+  narratif_content.classList.add("allumage")
+  
   narratif_content.innerHTML = "";
 
   let new_narratif = document.createElement("p");
@@ -48,6 +51,7 @@ function etape_pathways(pathways) {
     let btn_choice = document.createElement("button");
     // btn_choice.classList.add("btn-2");
     btn_choice.classList.add("btn-choice");
+    btn_choice.classList.add("zoom-in");
     btn_choice.dataset.next_etape = pathway;
     btn_choice.innerHTML = pathways[pathway].content;
     choice_content.append(btn_choice);
@@ -60,8 +64,30 @@ function etape_pathways(pathways) {
 
     element.addEventListener("click", function () {
 
-      console.log("J'ai cliqué sur l'étape", element.dataset.next_etape);
-      affiche_etape(element.dataset.next_etape)
+      narratif_content.classList.add("extinction")
+      narratif_content.classList.remove("allumage")
+
+      let btn_selction = element.dataset.next_etape
+
+      console.log("J'ai cliqué sur l'étape", btn_selction);
+
+      element.classList.add('destruction')
+
+      list_btn_pathways = document.querySelectorAll(".btn-choice");
+
+
+
+      list_btn_pathways.forEach((element) => {
+        element.classList.add('extinction')
+      })
+
+      setTimeout(function() {
+
+        affiche_etape(btn_selction)
+
+      }, 800)
+
+      // affiche_etape(element.dataset.next_etape)
     
     });
   

@@ -11,7 +11,6 @@ let userPsw = document.querySelector('#psw')
 let btn_connexion = document.querySelector('#valider')
 let header = document.querySelector('header')
 
-
 btn_connexion.addEventListener('click', function(){
 
     if (userName.value == "") {
