@@ -131,8 +131,15 @@ playGame.addEventListener('click', function() {
 
     }
 
-    window.location.href= './general.html';
+    msgBox("header", "C'est partie !", "Lancement de la partie...")
 
+    setTimeout( function() {
+
+        window.location.href= './general.html';
+
+
+    }, 2000)
+   
 })
 
 
