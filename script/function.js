@@ -12,8 +12,6 @@ export { updateToken,
 
 import msgBox from "./msgbox.js";
 
-
-
 function updateToken() {
 
     let token = localStorage.getItem('tokencitadel');
