@@ -1,8 +1,9 @@
 
-import listUsers from "../script.js"
+
 import msgBox from "./msgbox.js"
 
-console.log(listUsers)
+import { createUser } from "./function.js"
+
 
 let userName = document.querySelector('#name')
 let usermail = document.querySelector('#mail')
@@ -57,32 +58,34 @@ btn_connexion.addEventListener('click', function(){
         return
     }
 
-    console.log("Enregistrement réussie")
-    msgBox("header", "Création de votre compte réussie !","Retour à la page d'accueil pour vous connecter" )
 
-    var user = userName.value + ":" +  {
-            name: userName.value,
-            mail: usermail.value,
-            psw: userPsw1.value
+    // Création de l'objet du nouvel utilisateur
+
+    let userData = {
+        "pseudo" : userName.value,
+        "mail" : usermail.value,
+        "password" : userPsw1.value
         }
 
-    console.log(user)
+    
+    const newUser = createUser(userData); 
+
+    console.log("Reponse NewUser" , newUser);
+
+
+    // if (newUser === true) {
         
-    // listUsers.push(user)
+    //     msgBox("header", "Création de votre compte réussie !","Retour à la page d'accueil pour vous connecter" )
 
-    console.log(listUsers)
+    //     setTimeout(function() {
+    //         window.location.href= './index.html'
+    //     }, 3500)
+    
+    // } else {
 
-    setTimeout(function() {
+    //     msgBox("header", "Erreur !","Nom d'utilisateur existant" )
 
-        window.location.href= './index.html'
-
-    }, 3500)
-
-
+    // }
 
 })
-
-
-
-
 

@@ -1,15 +1,5 @@
 
-let listUsers =
-  {
-    "1" : {
-      name: "1",
-      mail: "lefido@hotmail.com",
-      psw: "1"
-    }
-  };
 
-
-export default listUsers;
 
 let url = "./json/script_citadel_arrange.json";
 let response = await fetch(url);
