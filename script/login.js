@@ -13,7 +13,7 @@ if (token != "") {
 
     console.log("Transformation du token en format text en JSON" ,tokenParse)
 
-    getUser(tokenParse)
+    // getUser(tokenParse)
 
 }
 
