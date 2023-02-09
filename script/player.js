@@ -119,14 +119,14 @@ playGame.addEventListener('click', function() {
 
     if(numPlayer === 0) {
 
-        msgBox("header", "Information", "Veuillez sélectionner un Avatar");
+        msgBox("header", "Oups !!", "Tu as oublié des sélectionner ton avatar");
         return
  
      }
 
     if(habilite === 0 || endurance === 0 || chance === 0) {
 
-        msgBox("header", "Information", "Tout les dés n'ont pas été lancé");
+        msgBox("header", "Oups !!", "Tu n'as pas lancé tout les dés");
         return
 
     }
