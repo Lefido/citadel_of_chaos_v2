@@ -1,7 +1,6 @@
 
 
-import msgBox from "./msgbox.js"
-
+import { msgBox } from "./msgbox.js"
 import { createUser } from "./function.js"
 
 
@@ -68,9 +67,8 @@ btn_connexion.addEventListener('click', function(){
         }
 
     
-    const newUser = createUser(userData); 
+   createUser(userData); 
 
-    console.log("Reponse NewUser" , newUser);
 
 
     // if (newUser === true) {

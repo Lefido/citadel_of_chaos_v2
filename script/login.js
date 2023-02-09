@@ -1,21 +1,22 @@
 
 
-import msgBox from "./msgbox.js"
 
-import {setToken, updateToken, delToken, LoginUser } from "./function.js"
-import { routeur } from "./routeur.js"
+import {loginUser, updateToken, getUser, delToken } from "./function.js"
 
-// updateToken()
+// delToken()
 
-// delToken("tokencitadel")
-// let token = updateToken()
+let token = updateToken()
 
-// if(token != null) {
+if (token != "") {
 
-//     console.log("Token existant")
-//     routeur('./home.html')
+    let tokenParse = JSON.parse(token)
 
-// }
+    console.log("Transformation du token en format text en JSON" ,tokenParse)
+
+    getUser(tokenParse)
+
+}
+
 
 
 let userName = document.querySelector('#name')
@@ -45,28 +46,8 @@ btn_connexion.addEventListener('click', function(){
         "password" : userPsw.value
     }
 
+    loginUser(userData)
 
 
-
-
-    msgBox("header", "Youpi !", "Connexion réussie, chargement de votre position")
-
-    setTimeout(() => {
-
-        console.log("Connexion réussie");
-
-        setToken(responsApi);
-
-        window.location.href= './home.html';
-        
-    }, 2000);
-
-
-
-        console.log("Erreur utilisateur ou mot de passe");
-        msgBox("header", "Erreur !", "Utilisateur ou mot de passe");
-
-
-    
     
 })
