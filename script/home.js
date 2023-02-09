@@ -23,7 +23,7 @@ new_game.addEventListener("click", function() {
 
     console.log("J'ai cliqué sur start")
 
-    msgBox("header", "Lancement du nouvelle partie", "Chargement des paramètres...")
+    msgBox("header", "Préparation d'une nouvelle partie", "Chargement des paramètres...")
 
     setTimeout(function() {
         window.location.href= './player.html'
