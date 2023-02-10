@@ -1,8 +1,11 @@
 
 
-import { msgBox } from "./msgbox.js"
-import { createUser } from "./function.js"
+import { loadListUser, loadUserDefault, saveListUSer, delListUser } from "./gaming.js"
 
+import { msgBox } from "./msgbox.js"
+import { createUser, reGex } from "./function.js"
+
+// delListUser()
 
 let userName = document.querySelector('#name')
 let usermail = document.querySelector('#mail')
@@ -57,8 +60,10 @@ btn_connexion.addEventListener('click', function(){
         return
     }
 
+    // Controle Regex
+    // reGex(userPsw1.value)
 
-    // Création de l'objet du nouvel utilisateur
+    // Création de l'objet utilisateur
 
     let userData = {
         "pseudo" : userName.value,
@@ -66,8 +71,45 @@ btn_connexion.addEventListener('click', function(){
         "password" : userPsw1.value
         }
 
-    
-   createUser(userData); 
+    createUser(userData); 
+   
+    let listUser = loadListUser()
+
+    if (listUser.length === 0) {
+
+        let newUser = loadUserDefault(userName.value, usermail.value)
+        listUser.push(newUser)
+        saveListUSer(JSON.stringify(listUser))
+
+    } else {
+
+        
+        let userExist = false
+
+        listUser = JSON.parse(listUser)
+
+        for (let user in listUser) {
+
+             (listUser[user].pseudo === userName.value) ? userExist = true : userExist = false
+
+        }
+
+        if (userExist) {
+
+            console.log("User ", userName.value, "existant")
+
+        } else {
+            
+            let newUser = loadUserDefault(userName.value, usermail.value)
+            listUser.push(newUser)
+            saveListUSer(JSON.stringify(listUser))
+
+        }
+
+    }
+
+
+
 
 
 

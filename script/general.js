@@ -1,7 +1,8 @@
 
 
 
-let url = "./json/script_citadel_arrange.json";
+// let url = "./json/script_citadel_arrange.json";
+let url = "./json/chaos_citadel_script.json";
 let response = await fetch(url);
 let list_etape = await response.json(); // lire le corps de réponse et analyser en JSON
 

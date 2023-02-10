@@ -7,24 +7,32 @@ export { updateToken,
     routeur,
     createUser,
     loginUser,
-    getUser
+    getUser,
+    reGex
 }
 
 import msgBox from "./msgbox.js";
 
 function updateToken() {
 
-    let token = localStorage.getItem('tokencitadel');
-    console.log("Extraction du token en format text du localStorage :",token)
+  let token = localStorage.getItem('tokencitadel');
+
+  if (token === null) {
+
+    console.log("Aucun token trouvé !")
+  } else {
+
+    console.log("Token trouvé :")
     return token;
 
+  }
+ 
 }
 
 function setToken(token) {
 
-    
     localStorage.setItem('tokencitadel', token);
-    console.log("Token enregistré au format text dans le localStorage: ", token)
+    console.log("Enregistrement token dans localStorage: ", token)
 
 }
 
@@ -60,7 +68,8 @@ function createUser(userData) {
         setTimeout(function() {
 
             routeur('./index.html')
-            // window.location.href= 
+
+            // window.location.href= './index.html'
         }, 3500)
     
     } else {
@@ -86,9 +95,8 @@ function loginUser(userData) {
 
     .then((data) => {
 
-      console.log(data)
-
-        let result;
+  
+      let result;
 
       for(let reponse in data) {
 
@@ -98,8 +106,9 @@ function loginUser(userData) {
 
       if (result === "token") {
 
+        console.log(data.token)
 
-        setToken(JSON.stringify(data))
+        setToken(data.token)
 
         msgBox("header", "Youpi !", "Connexion réussie, chargement de votre position")
 
@@ -123,12 +132,20 @@ function loginUser(userData) {
 
 }
 
-function getUser(userData) {
-  
+function getUser(monToken) {
+
+  console.log(monToken);
+
+    let userData = {
+      "token": monToken
+    }
+
+    console.log(userData)
+
       // Fetches the user/create URL
       fetch('http://chaos-citadel.test/user/get_info',
       {
-        method: 'POST', // or 'PUT'
+        method: 'GET', // 'POST' or 'PUT'
         body: JSON.stringify(userData),
       })
       // Turns the response into Json
@@ -136,10 +153,38 @@ function getUser(userData) {
   
       .then((data) => {
   
-        console.log("Get user", data)
+        console.log(data)
         
       })
 
+}
+
+function reGex(getPassword)
+{
+  var pwd = getPassword
+  var listRe = [{
+    re: /[a-zA-Z]/g,
+    count: 4,
+    msg: "Votre mot de passe doit avoir au moins 4 lettres"
+  }, {
+    re: /\d/g,
+    count: 3,
+    msg: "Votre mot de passe doit avoir au moins 3 chiffres"
+  }, {
+    re: /[^A-Za-z0-9]/g,
+    count: 1,
+    msg: "Votre mot de passe doit posséder au moins 1 caractère spécial"
+  }];
+ 
+  for (var i = 0; i < listRe.length; i++) {
+    var item = listRe[i];
+    var match = pwd.match(item.re);
+    if (null === match || match.length < item.count) {
+      msgBox("header", "Oups !!", item.msg )
+      // alert(item.msg);
+      return false;
+    }
+  }
 
 }
 
