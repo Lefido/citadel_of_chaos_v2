@@ -1,7 +1,40 @@
 
-export { saveUser, loadUser, delUser, saveListUSer, loadListUser, delListUser, loadUserDefault}
+export { 
+    searchIdUser,
+    saveUser,
+    loadUser,
+    delUser,
+    saveListUSer,
+    loadListUser,
+    delListUser,
+    loadUserDefault,
+    saveAvatar,
+    loadAvatar,
+    delAvatar
+}
 
 ///////////////////// Gestion de la partie en cours ///////////////
+
+
+function searchIdUser(userGame) {
+
+    let listUser = JSON.parse(loadListUser())
+
+    let id = 0
+
+    for (let user in listUser) {
+
+        if (listUser[user].pseudo === userGame) {
+            id = user
+        }
+
+    }
+
+    console.log("Id:", id, userGame, )
+
+    return id
+
+}
 
 function saveUser(usergame) {
 
@@ -54,6 +87,8 @@ function delListUser() {
 
     console.log("Del listUser")
     localStorage.removeItem("listUser")
+
+    delUser()
 }
 
 function loadUserDefault(pseudo, mail) {
@@ -77,6 +112,27 @@ function loadUserDefault(pseudo, mail) {
 
       return userDefault
 
+}
+
+function saveAvatar(user, numAvatar) {
+
+    console.log("Save Avatar", user);
+    localStorage.setItem("avatar_" + user, numAvatar);
+   
+}
+
+function loadAvatar(user) {
+
+    let numAvatar = localStorage.getItem("avatar_" + user);
+    console.log("load avatar", numAvatar)
+    return numAvatar;
+
+}
+
+function delAvatar(user) {
+
+    console.log("Del numAvatar")
+    localStorage.removeItem("avatar_" + user)
 }
   
   //////////////////////////////////////////////////////////////////

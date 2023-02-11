@@ -7,7 +7,7 @@ import {loginUser,
     delToken, routeur}
     from "./function.js";
 
-    //  delUser()
+     delUser()
 
     let usergame = loadUser()
     if (usergame !== null) {
@@ -64,7 +64,6 @@ btn_connexion.addEventListener('click', function(){
 
 
     saveUser(userName.value)
-
 
     loginUser(userData);
 

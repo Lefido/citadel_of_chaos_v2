@@ -9,8 +9,12 @@ const new_game = document.querySelector('#new-game')
 const deconnexion = document.querySelector('#deconnexion')
 const user = document.querySelector("#user")
 
+
 let userGame = loadUser()
 let listUser = JSON.parse(loadListUser())
+
+console.log(listUser)
+
 let ficheUser = []
 
 if (userGame !== null) {
