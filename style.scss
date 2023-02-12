@@ -135,18 +135,44 @@ header {
         margin: 2px auto 4px;
     }
 
+    button {
+        margin: 10px 0 10px;
+
+    }
+
+    button:hover {
+
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    button:focus, a:focus {
+        outline: none;
+    }
+
+    
+
     a {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
-        padding: 0 10px;
+        padding: 0 15px;
         width: 100%;
         color: black;
         text-align: right;
-        
+        transition: 0.2s;
+        height: 25px;
         
     }
+
+    a:hover {
+       color: white;
+       text-shadow: 0 0 5px black;
+       font-size: 18px;
+        
+    }
+
+   
 
 }
 
@@ -276,6 +302,7 @@ header {
         .narratif-content::-webkit-scrollbar,
         .choice-content::-webkit-scrollbar {
             width: auto;
+            
           }
           
           .narratif-content::-webkit-scrollbar-track,
@@ -286,7 +313,8 @@ header {
           .narratif-content::-webkit-scrollbar-thumb,
           .choice-content::-webkit-scrollbar-thumb {
             // background-color: white;
-            background: url("./assets/lance_medieval.png") no-repeat center / contain;
+            background: url("./assets/lance_medieval.png") no-repeat;
+            background-size: 100% 100%;
             // border-radius: 20px;
             // background-size: contain contain;
             // border: 1px solid gray;
@@ -385,8 +413,8 @@ header {
           
         .inventaire-scroll::-webkit-scrollbar-thumb {
 
-            background: url("./assets/lance_medieval.png") no-repeat center / contain ;
-            background-size: cover;
+            background: url("./assets/lance_medieval.png") no-repeat ;
+            background-size: 100% 100%
             
         }
 
@@ -478,6 +506,7 @@ header {
     
     .general-col2 {
 
+        
         position: absolute;
         display: none;
         width: 100%;

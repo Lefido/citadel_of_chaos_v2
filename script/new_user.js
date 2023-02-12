@@ -4,8 +4,9 @@ import {
     getListUser, removeListUser, reset
 } from "./gaming.js"
 
-
 import { createUser, reGex } from "./function.js"
+
+import msgBox from "./msgbox.js"
 
 // reset()
 
