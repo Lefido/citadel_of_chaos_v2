@@ -1,5 +1,5 @@
 
-export {msgBox}
+// export {msgBox}
 
 export default function msgBox(nameNoeud ,titleMsg, contentMsg) {
 

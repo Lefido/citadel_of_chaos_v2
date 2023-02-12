@@ -1,5 +1,8 @@
 
+import { listUser, IdUserGame, getToken, UpdateListUser, reset } from "./gaming.js";
 
+
+// reset()
 
 // let url = "./json/script_citadel_arrange.json";
 let url = "./json/chaos_citadel_script.json";
@@ -8,18 +11,39 @@ let list_etape = await response.json(); // lire le corps de réponse et analyser
 
 const narratif_content = document.querySelector(".narratif-content");
 const choice_content = document.querySelector(".choice-content");
+const general_col2 = document.querySelector('.general-col2')
+
+const open_inventaire = document.querySelector('.open-inventaire')
+
+open_inventaire.addEventListener('click', ()=> {
+  general_col2.classList.toggle('cont-visible')
+})
+
+
+const close_inventaire = document.querySelector('.close-inventaire')
+
+close_inventaire.addEventListener('click', ()=> {
+  general_col2.classList.toggle('cont-visible')
+})
+
+
+
 
 var list_btn_pathways;
 
 let current_html = window.location.pathname
 
 console.log("Page en cours :", current_html)
-console.log(list_etape);
+// console.log(list_etape);
 
-let num_etape = 1;
+let token = getToken()
+let userGame = token.user
+let idUser = IdUserGame(userGame)
+let list_User = listUser()
+
+let num_etape = list_User[idUser].current_step
 
 affiche_etape(num_etape)
-
 
 function affiche_etape(num_etape) {
 
@@ -39,7 +63,7 @@ function etape_narratif(narratif) {
   narratif_content.innerHTML = "";
 
   let new_narratif = document.createElement("p");
-  new_narratif.innerHTML = narratif;
+  new_narratif.innerHTML = "(" + num_etape + "). " + narratif;
   narratif_content.appendChild(new_narratif);
 
 }
@@ -71,13 +95,17 @@ function etape_pathways(pathways) {
 
       let btn_selction = element.dataset.next_etape
 
+      num_etape = btn_selction
+
       console.log("J'ai cliqué sur l'étape", btn_selction);
+
+      list_User[idUser].current_step = parseInt(num_etape)
+
+      UpdateListUser(list_User)
 
       element.classList.add('destruction')
 
       list_btn_pathways = document.querySelectorAll(".btn-choice");
-
-
 
       list_btn_pathways.forEach((element) => {
         element.classList.add('extinction')

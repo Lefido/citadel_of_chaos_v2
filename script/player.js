@@ -1,17 +1,12 @@
 
 import msgBox from "./msgbox.js";
 import {
-    searchIdUser, 
-    loadUser,
-    saveAvatar,
-    loadAvatar,
-    delAvatar,
-    loadListUser,
-    saveListUSer,
-    delListUser
-} from "./gaming.js";
-
-// delListUser()
+    getToken,
+    listUser,
+    IdUserGame,
+    UpdateListUser,
+    updateToken
+} from './gaming.js'
 
 const list_competence = document.querySelectorAll('.val-competence')
 const user = document.querySelector('#user')
@@ -19,39 +14,28 @@ const varHabilite = document.querySelector('#habilite')
 const varEndurance = document.querySelector('#endurance')
 const varChance = document.querySelector('#chance')
 
-let usergame = loadUser()
+let infoToken = getToken()
 
-let listUser = JSON.parse(loadListUser())
-console.log(listUser)
+let userGame =  infoToken.user
+let id_img = infoToken.id_img
+let idUser = IdUserGame(userGame)
+let list_User = listUser()
 
-let idUser = searchIdUser(usergame)
+if (list_User[idUser].current_step !== 0) {
+
+    window.location.href= './general.html';
+
+}
+
+user.innerHTML = userGame
 
 // Varibles des compétences
-
-let habilite = 0;
-let endurance = 0;
-let chance = 0;
-
-
-habilite, varHabilite.innerHTML = listUser[idUser].ability_max
-
-endurance, varEndurance.innerHTML = listUser[idUser].life_max
-
-chance, varChance.innerHTML = listUser[idUser].chance_max
-
-
-
-// delAvatar(usergame)
-
-let numAvatar = parseInt(loadAvatar(usergame))
-
-user.innerHTML = usergame
-
-
-console.log(list_competence)
+let numAvatar = id_img
+let habilite = list_User[idUser].ability_current;
+let endurance = list_User[idUser].life_current;
+let chance = list_User[idUser].chance_current;
 
 // Chargement des images pour les avatar
-
 
 let avatar_choice = document.querySelector('.avatar-choice');
 
@@ -65,22 +49,13 @@ for(let i = 1 ; i < 7; i++) {
 
 const list_personnage = document.querySelectorAll('.personnage');
 
-if (numAvatar !== null) {
+list_personnage.forEach((personnage, index) => {
 
-    list_personnage.forEach( (personnage, index) => {
+    if (index + 1 === numAvatar) {
+        personnage.classList.add("perso-actif");
+    }
 
-        console.log(index, numAvatar)
-       
-            if (index + 1 === numAvatar) {
-                personnage.classList.add("perso-actif");
-                console.log("Image", index, "Active")
-       
-            }
-                 
-    })
-
-}
-
+})
 
 
 list_personnage.forEach( (personnage, index) => {
@@ -89,8 +64,6 @@ list_personnage.forEach( (personnage, index) => {
         perso_actif()
         personnage.classList.add("perso-actif");
         numAvatar = index +1 ;
-        saveAvatar(usergame, numAvatar)
-        
         
     })
 })
@@ -121,6 +94,21 @@ function load_img(i) {
 // Detection du boutton lancer de dé
 
 const list_btn_jouer = document.querySelectorAll('.btn-jouer');
+
+if (habilite !== 0) {
+    varHabilite.innerHTML = habilite
+    list_btn_jouer[0].classList.add("masqued")
+}
+
+if (endurance !== 0) {
+    varEndurance.innerHTML = endurance
+    list_btn_jouer[1].classList.add("masqued")
+}
+
+if (chance !== 0) {
+    varChance.innerHTML = chance
+    list_btn_jouer[2].classList.add("masqued")
+}
 
 console.log(list_btn_jouer)
 
@@ -174,8 +162,7 @@ function lance_de() {
 const playGame = document.querySelector('.btn-1');
 
 playGame.addEventListener('click', function() {
-    console.log("Lancement de la partie");
-
+    
     if(numAvatar === 0) {
 
         msgBox("header", "Oups !!", "Tu as oublié des sélectionner ton avatar");
@@ -190,30 +177,26 @@ playGame.addEventListener('click', function() {
 
     }
 
-    listUser[idUser].ability_current = habilite
-    listUser[idUser].ability_max = habilite
-    listUser[idUser].chance_current = chance
-    listUser[idUser].chance_max = chance
-    listUser[idUser].life_current = endurance
-    listUser[idUser].life_max = endurance
+    updateToken(userGame, numAvatar )
 
+    list_User[idUser].ability_current = habilite
+    list_User[idUser].ability_max = habilite
+    list_User[idUser].life_current = endurance
+    list_User[idUser].life_max = endurance
+    list_User[idUser].chance_current = chance
+    list_User[idUser].chance_max = chance
 
-    saveAvatar(usergame, numAvatar)
+    list_User[idUser].current_step = 1
 
-    listUser = JSON.stringify(listUser)
+    UpdateListUser(list_User)
 
-    saveListUSer(listUser)
+    msgBox("header", "C'est partie !", "Lancement de la partie...")
 
-    // listUser = JSON.parse(listUser)
+    setTimeout( function() {
 
-    // msgBox("header", "C'est partie !", "Lancement de la partie...")
+        window.location.href= './general.html';
 
-    // setTimeout( function() {
-
-    //     window.location.href= './general.html';
-
-
-    // }, 2000)
+    }, 2000)
    
 })
 

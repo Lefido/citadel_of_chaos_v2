@@ -1,45 +1,33 @@
 
-import { loadUser, loadListUser, delUser } from "./gaming.js"
-import {routeur} from "./function.js"
 
+import {routeur} from "./function.js"
 import msgBox from "./msgbox.js"
+
+import { getToken, removeToken, IdUserGame, listUser, reset } from "./gaming.js"
+
+// reset()
+
+let infoToken = getToken()
+
+let userGame = infoToken.user
+let id = IdUserGame(userGame)
+
+let detailUsergame = listUser()
 
 const start_game = document.querySelector('#start-game')
 const new_game = document.querySelector('#new-game')
 const deconnexion = document.querySelector('#deconnexion')
 const user = document.querySelector("#user")
 
+user.innerHTML = userGame
 
-let userGame = loadUser()
-let listUser = JSON.parse(loadListUser())
+if (detailUsergame[id].current_step === 0) {
 
-console.log(listUser)
+    start_game.style.display = "none";
 
-let ficheUser = []
-
-if (userGame !== null) {
-
-    user.innerHTML = userGame
-    
-    for (let detailUser in listUser) {
-
-        if (listUser[detailUser].pseudo === userGame) {
-
-            ficheUser.push(listUser[detailUser])
-        }
-
-    }
-
-    if (ficheUser[0].current_step === 0) {
-
-
-        console.log("Masque le bouton continuer la partie")
-        start_game.style.display = "none"
-
-    }
-
+} else {
+    new_game.style.display = "none";
 }
-
 
 start_game.addEventListener("click", function() {
 
@@ -66,8 +54,9 @@ new_game.addEventListener("click", function() {
 
 deconnexion.addEventListener("click", function() {
 
-    delUser()
-    msgBox("header", "Information", "déconnextion encours...")
+    msgBox("header", "Information", "déconnextion en cours...")
+
+    removeToken()
 
     setTimeout(function() {
         routeur('./index.html')

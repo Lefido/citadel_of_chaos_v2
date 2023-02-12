@@ -1,5 +1,16 @@
 
-import { saveUser, loadUser, delUser, saveListUSer } from "./gaming.js";
+//
+
+import {
+    reset,
+    newToken,
+    getToken,
+    removeToken,
+    getListUser
+
+} from "./gaming.js";
+
+import msgBox from "./msgbox.js";
 
 import {loginUser,
     updateToken,
@@ -7,37 +18,22 @@ import {loginUser,
     delToken, routeur}
     from "./function.js";
 
-     delUser()
 
-    let usergame = loadUser()
-    if (usergame !== null) {
-        console.log(usergame)
-        routeur('./home.html')
-    } else {
+// removeToken()
+// reset()
+let token = getToken()
 
-        console.log("userGame none")
+if (token !== null) {
 
-    }
+    routeur('./home.html')
+
+}
+
     
-
-
-
-// delToken()
-
-// let getToken = updateToken();
-
-// if (getToken != "") {
-
-//     getUser(getToken)
-
-// } 
-
-
-
 let userName = document.querySelector('#name');
 let userPsw = document.querySelector('#psw');
 let btn_connexion = document.querySelector('#valider');
-let header = document.querySelector('header');
+
 
 btn_connexion.addEventListener('click', function(){
 
@@ -62,14 +58,8 @@ btn_connexion.addEventListener('click', function(){
     }
 
 
-
-    saveUser(userName.value)
-
     loginUser(userData);
 
-    // userName.value = ""
-    // userPsw.value = ""
-
-
+    newToken(userName.value)
     
 })
