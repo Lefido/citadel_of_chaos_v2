@@ -104,8 +104,9 @@ function loginUser(userData) {
     });
 }
 
+
+
 function getUser(monToken) {
-  // console.log(userData)
 
   console.log("Token envoyé a l'API", monToken);
 
@@ -113,12 +114,8 @@ function getUser(monToken) {
 
   myHeaders.append("Authentication", monToken);
   
-  console.log("MyHeaders :",myHeaders)
-  
   var requestOptions = {
     method: 'GET',
-    redirect: 'follow',
-    CORS : "no-cors",
     Headers : myHeaders
 };
 
