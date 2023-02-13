@@ -1,14 +1,4 @@
 
-//
-
-import {
-    reset,
-    newToken,
-    getToken,
-    removeToken,
-    getListUser
-
-} from "./gaming.js";
 
 import msgBox from "./msgbox.js";
 
@@ -19,13 +9,14 @@ import {loginUser,
     from "./function.js";
 
 
-// removeToken()
-// reset()
-let token = getToken()
+
+let token = updateToken()
 
 if (token !== null) {
 
-    routeur('./home.html')
+    getUser(token)
+
+    // routeur('./home.html')
 
 }
 
@@ -60,6 +51,5 @@ btn_connexion.addEventListener('click', function(){
 
     loginUser(userData);
 
-    newToken(userName.value)
     
 })

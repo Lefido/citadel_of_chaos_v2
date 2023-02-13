@@ -3,23 +3,19 @@
 
 ///////////////////// Gestion de la partie en cours ///////////////
 
-// import { delToken } from "./function";
 
-export {
-    reset,
-    newToken,
-    getToken,
-    removeToken,
-    getListUser,
-    removeListUser,
-    IdUserGame,
-    listUser,
-    UpdateListUser,
-    updateToken
-}
-
-// localStorage.setItem("userGame", usergame);
-// localStorage.getItem("userGame");
+// export {
+//     reset,
+//     newToken,
+//     getToken,
+//     removeToken,
+//     getListUser,
+//     removeListUser,
+//     IdUserGame,
+//     listUser,
+//     UpdateListUser,
+//     updateToken
+// }
 
 function reset() {
 
@@ -154,6 +150,7 @@ function loadUserDefault(pseudo, mail) {
     let userDefault = {
         "pseudo": pseudo,
         "mail": mail,
+        "num_perso": 0,
         "current_step": 0,
         "ability_max": 0,
         "ability_current": 0,

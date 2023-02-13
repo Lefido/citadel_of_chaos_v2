@@ -22,7 +22,7 @@ function updateToken() {
     console.log("Aucun token trouvé !")
   } else {
 
-    console.log("Token trouvé :")
+    console.log("Token trouvé :", token)
     return token;
 
   }
@@ -134,28 +134,24 @@ function loginUser(userData) {
 
 function getUser(monToken) {
 
-  console.log(monToken);
+    // console.log(userData)
 
-    let userData = {
-      "token": monToken
-    }
-
-    console.log(userData)
+        console.log("Token envoyé a l'API", monToken)
 
       // Fetches the user/create URL
       fetch('http://chaos-citadel.test/user/get_info',
       {
         method: 'GET', // 'POST' or 'PUT'
-        body: JSON.stringify(userData),
+        mode: "no-cors",
+        headers : {
+            "Authentication" : monToken
+        }
       })
       // Turns the response into Json
       .then(res => res.json())
-  
       .then((data) => {
-  
         console.log(data)
-        
-      })
+    })
 
 }
 

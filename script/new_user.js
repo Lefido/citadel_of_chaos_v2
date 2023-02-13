@@ -1,8 +1,8 @@
 
 
-import {
-    getListUser, removeListUser, reset
-} from "./gaming.js"
+// import {
+//     getListUser, removeListUser, reset
+// } from "./gaming.js"
 
 import { createUser, reGex } from "./function.js"
 
@@ -79,9 +79,6 @@ btn_connexion.addEventListener('click', function(){
         "password" : userPsw1.value
     }
 
-
-    getListUser(pseudo, mail);
-
     createUser(userData);
 
     userName.value = ""
@@ -89,21 +86,7 @@ btn_connexion.addEventListener('click', function(){
     userPsw1.value = ""
     userPsw2.value = ""
 
-   
 
-    // if (newUser === true) {
-        
-    //     msgBox("header", "Création de votre compte réussie !","Retour à la page d'accueil pour vous connecter" )
-
-    //     setTimeout(function() {
-    //         window.location.href= './index.html'
-    //     }, 3500)
-    
-    // } else {
-
-    //     msgBox("header", "Erreur !","Nom d'utilisateur existant" )
-
-    // }
 
 })
 

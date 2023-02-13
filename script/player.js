@@ -30,7 +30,7 @@ if (list_User[idUser].current_step !== 0) {
 user.innerHTML = userGame
 
 // Varibles des compétences
-let numAvatar = id_img
+let numAvatar = list_User[idUser].num_perso
 let habilite = list_User[idUser].ability_current;
 let endurance = list_User[idUser].life_current;
 let chance = list_User[idUser].chance_current;
@@ -179,13 +179,14 @@ playGame.addEventListener('click', function() {
 
     updateToken(userGame, numAvatar )
 
+
+    list_User[idUser].num_perso = habilite
     list_User[idUser].ability_current = habilite
     list_User[idUser].ability_max = habilite
     list_User[idUser].life_current = endurance
     list_User[idUser].life_max = endurance
     list_User[idUser].chance_current = chance
     list_User[idUser].chance_max = chance
-
     list_User[idUser].current_step = 1
 
     UpdateListUser(list_User)
