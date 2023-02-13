@@ -8,8 +8,6 @@ import {loginUser,
     delToken, routeur}
     from "./function.js";
 
-
-
 let token = updateToken()
 
 if (token !== null) {
@@ -19,29 +17,6 @@ if (token !== null) {
     // routeur('./home.html')
 
 }
-
-////////////////////////////////////
-
-// async function fetchUserJson() {
-
-
-//     var myHeaders = new Headers();
-//     myHeaders.append("Authentication", token);
-  
-//     const response = await fetch("http://chaos-citadel.test/user/get_info", {
-//         method: 'GET',
-//         Headers : myHeaders
-//     });
-//     const myUser = await response.json();
-//     return myUser
-
-// }
-
-// fetchUserJson().then(myUser => {
-//     console.log(myUser)
-// })
-
-///////////////////////////////////
 
     
 let userName = document.querySelector('#name');
