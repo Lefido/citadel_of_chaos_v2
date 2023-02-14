@@ -1,5 +1,5 @@
 
-import { listUser, IdUserGame, getToken, UpdateListUser, reset } from "./gaming.js";
+import {getTokenUser, getListUserBdd, setListUserBdd, idUser } from "./gaming.js";
 
 
 // reset()
@@ -8,6 +8,25 @@ import { listUser, IdUserGame, getToken, UpdateListUser, reset } from "./gaming.
 let url = "./json/chaos_citadel_script.json";
 let response = await fetch(url);
 let list_etape = await response.json(); // lire le corps de réponse et analyser en JSON
+
+let IdUserGame = getTokenUser()
+let bddUser = getListUserBdd()
+
+console.log(bddUser[IdUserGame]);
+
+const imgavatar = document.querySelector('#imgavatar');
+
+let newImg = "./assets/personnage/av_" + bddUser[IdUserGame].num_perso + ".png"
+
+
+imgavatar.src = newImg
+console.log(imgavatar)
+const userName = document.querySelector('#username').innerHTML = bddUser[IdUserGame].pseudo;
+
+const userhabilite = document.querySelector('#userhabilite').innerHTML = bddUser[IdUserGame].ability_current
+const userendurance = document.querySelector('#userendurance').innerHTML = bddUser[IdUserGame].life_current
+const userchance = document.querySelector('#userchance').innerHTML =  bddUser[IdUserGame].chance_current
+
 
 const narratif_content = document.querySelector(".narratif-content");
 const choice_content = document.querySelector(".choice-content");
@@ -26,9 +45,6 @@ close_inventaire.addEventListener('click', ()=> {
   general_col2.classList.toggle('cont-visible')
 })
 
-
-
-
 var list_btn_pathways;
 
 let current_html = window.location.pathname
@@ -36,12 +52,8 @@ let current_html = window.location.pathname
 console.log("Page en cours :", current_html)
 // console.log(list_etape);
 
-let token = getToken()
-let userGame = token.user
-let idUser = IdUserGame(userGame)
-let list_User = listUser()
 
-let num_etape = list_User[idUser].current_step
+let num_etape = bddUser[IdUserGame].current_step
 
 affiche_etape(num_etape)
 
@@ -99,9 +111,9 @@ function etape_pathways(pathways) {
 
       console.log("J'ai cliqué sur l'étape", btn_selction);
 
-      list_User[idUser].current_step = parseInt(num_etape)
+      bddUser[IdUserGame].current_step = num_etape
 
-      UpdateListUser(list_User)
+      setListUserBdd(bddUser)
 
       element.classList.add('destruction')
 

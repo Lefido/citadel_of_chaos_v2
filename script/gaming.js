@@ -1,151 +1,125 @@
 
 
 
-///////////////////// Gestion de la partie en cours ///////////////
+///////////////////// Gestion du gamming ///////////////
 
+export {reset, newUserBdd, idUser, setTokenUser, getTokenUser, removeToken, getListUserBdd, setListUserBdd}
 
-// export {
-//     reset,
-//     newToken,
-//     getToken,
-//     removeToken,
-//     getListUser,
-//     removeListUser,
-//     IdUserGame,
-//     listUser,
-//     UpdateListUser,
-//     updateToken
-// }
+// localStorage.setItem("token", detailToken);
+// localStorage.getItem("token");
 
 function reset() {
 
+    console.log("Suppression BddUser")
+    localStorage.removeItem('bddUser')
     removeToken()
-    removeListUser()
-
-    localStorage.removeItem("token");
-    localStorage.removeItem("listUser")
-
-
-    console.log("Reset Token et listUser")
-}
-
-function updateToken(token, id_img) {
-
-    let detailToken = {
-        "user" : token,
-        "id_img" : id_img
-    }
-
-    detailToken = JSON.stringify(detailToken)
-
-    localStorage.setItem("token", detailToken);
-    console.log("Update token :", detailToken)
-
-}
-
-function newToken(token) {
-
-    let userName = token.toLowerCase()
-
-    let detailToken = {
-        "user" : userName,
-        "id_img" : 0
-    }
-
-    detailToken = JSON.stringify(detailToken)
-
-    localStorage.setItem("token", detailToken);
-    console.log("Save token :", detailToken)
-
-}
-
-function getToken() {
-
-    let userGame = localStorage.getItem("token");
-
-    userGame = JSON.parse(userGame)
-
-    console.log("Load token",userGame)
-
-    return userGame
 
 
 }
 
-function removeToken() {
+function setListUserBdd(bddUser) {
 
-    localStorage.removeItem("token")
-    console.log("Del token")
+    console.log("Save Param User")
+
+    let updateBddUser = bddUser
+
+    updateBddUser = JSON.stringify(updateBddUser)
+
+    localStorage.setItem('bddUser', updateBddUser)
 
 }
 
-function getListUser(pseudo, mail) {
+function getListUserBdd() {
 
-    let listUser = localStorage.getItem("listUser")
+    let listUserBdd = localStorage.getItem('bddUser')
 
-    if(listUser === null) {
-       
-        console.log("Liste vide, on ajoute le 1er user")
-        console.log("Pseudo :", pseudo, "Mail :", mail)
+    listUserBdd = JSON.parse(listUserBdd)
 
-        let newlistUser = []
+    return listUserBdd
 
-        let userDefault = loadUserDefault(pseudo, mail)
+}
 
-        newlistUser.push(userDefault)
+function newUserBdd(user, mail) {
 
-        newlistUser = JSON.stringify(newlistUser)
 
-        localStorage.setItem("listUser", newlistUser )
+     console.log("Lecture Bdd User")
 
-        console.log("Détails de la listUser", listUser)
+    let bddUser = localStorage.getItem('bddUser')
+
+    if (bddUser === null) {
+
+        console.log("BddUser inexistante")
+
+        bddUser = []
+
+        console.log("Création BddUser")
+
+
+        let newUser = loadUserDefault(user, mail)
+
+        bddUser.push(newUser)
+
+        console.log("Ajout user", user, "a bddUser")
+
+        bddUser = JSON.stringify(bddUser)
+
+        console.log("Création BddUser")
+
+        localStorage.setItem('bddUser', bddUser)
+
 
 
     } else {
 
-        listUser = JSON.parse(listUser);
+        console.log('Ouverture bddUSer')
 
-        let existant = false;
+        bddUser = localStorage.getItem('bddUser')
 
-        for (let user in listUser) {
+        bddUser = JSON.parse(bddUser)
 
-            if (listUser[user].pseudo === pseudo) {
-               
-                existant = true;
-            }
+        let newUser = loadUserDefault(user, mail)
 
-        }
+        bddUser.push(newUser)
 
-        if (existant) {
+        console.log("Ajout user", user, "a bddUser")
 
-            console.log("User", pseudo, "existant");
+        bddUser = JSON.stringify(bddUser)
 
-        } else {
-
-            let userDefault = loadUserDefault(pseudo, mail);
-            listUser.push(userDefault);
-            console.log("Détails de la listUser", listUser);
-            listUser = JSON.stringify(listUser);
-            localStorage.setItem("listUser", listUser );
-        }
-
-    
-      
+        localStorage.setItem('bddUser', bddUser)
 
     }
 
+
 }
 
-function removeListUser() {
+function idUser(user) {
 
-    localStorage.removeItem("listUser")
-    console.log("Del listUser")
+    let bddUser = localStorage.getItem('bddUser')
+
+    console.log('Recherche user dans BddUser')
+
+    bddUser = JSON.parse(bddUser)
+
+    let id = 0
+
+    for (let userBdd in bddUser) {
+
+        if (bddUser[userBdd].pseudo === user) {
+            id = userBdd
+        }
+
+    }
+
+    console.log("Id user",user, id)
+
+    return id
+
 
 }
 
 function loadUserDefault(pseudo, mail) {
 
-    console.log("Create newUser")
+    console.log("Create newUser : ", pseudo)
 
     let userDefault = {
         "pseudo": pseudo,
@@ -167,51 +141,29 @@ function loadUserDefault(pseudo, mail) {
 
 }
 
-function IdUserGame(userGame) {
+function setTokenUser(idUser) {
 
-    let listUser = localStorage.getItem("listUser")
-
-    listUser = JSON.parse(listUser)
-
-    let idUser = 0
-
-    for ( let user in listUser) {
-
-        if (listUser[user].pseudo === userGame) {
-            idUser = user
-        }
-    }
-
-    console.log("ID User :", idUser)
-
-    return idUser
+    console.log('Set token :', idUser)
+    localStorage.setItem('tokenUser', idUser)
 
 }
 
-function listUser() {
+function getTokenUser() {
 
-    console.log("List User")
-
-    let listUser = localStorage.getItem("listUser")
-
-    listUser = JSON.parse(listUser)
-
-    console.log(listUser)
-
-    return listUser
+    let token = localStorage.getItem('tokenUser')
+    console.log('Get token :', token)
+    return token
 
 }
 
-function UpdateListUser(listUser) {
+function removeToken() {
 
-    let newListUser = listUser
-    newListUser = JSON.stringify(newListUser)
-
-    localStorage.setItem("listUser", newListUser)
-
-    console.log("Update ListUser")
+    localStorage.removeItem('tokenUser')
+    console.log('Remove token')
 
 }
+
+
 
 
 

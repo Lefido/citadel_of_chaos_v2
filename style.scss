@@ -459,6 +459,77 @@ header {
 
 }
 
+.cont-combat {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+
+    .cont-combat-player, .cont-combat-enemy {
+        width: 25%;
+        // border: 1px solid black;
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .cont-combat-profil, .cont-combat-competence {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+
+            h2, h3 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 85%;
+                margin: auto;
+            }
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                background-color: brown;
+                border-radius: 50%;
+            }
+            
+            img {
+                width: 50%;
+                margin: auto;
+                background-color: rgba(165, 42, 42, 0.534);
+                padding: 10px;
+                border-radius: 50%;
+                box-shadow: 0 0 15px 2px black;
+            }
+
+        }
+
+        
+
+    }
+
+    .cont-combat-central {
+        width: 50%;
+        // border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+
+        .cont-combat-central-haut, .cont-combat-central-bas {
+            width: 100%;
+            height: 50vh;
+            // border: 1px solid black;
+        }
+
+        
+    }
+
+}
+
 
 @media screen and (max-width:700px){
 

@@ -57,8 +57,7 @@ function createUser(userData) {
 
         setTimeout(function () {
           routeur("./index.html");
-
-          // window.location.href= './index.html'
+          window.location.href= './index.html'
         }, 3500);
       } else {
         msgBox("header", "Erreur !", "Nom d'utilisateur existant");
@@ -116,13 +115,16 @@ function getUser(monToken) {
   
   var requestOptions = {
     method: 'GET',
-    Headers : myHeaders
-};
+    Headers: myHeaders,
+    cors: "no-cors"
+  };
 
-fetch("http://chaos-citadel.test/user/get_info", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  console.log(myHeaders.get('Authentication'))
+
+  fetch("http://chaos-citadel.test/user/get_info", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
 
 }
 

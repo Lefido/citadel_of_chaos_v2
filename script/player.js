@@ -1,12 +1,13 @@
 
 import msgBox from "./msgbox.js";
 import {
-    getToken,
-    listUser,
-    IdUserGame,
-    UpdateListUser,
-    updateToken
+   getTokenUser,
+   getListUserBdd,
+   setListUserBdd,
+   reset
 } from './gaming.js'
+
+
 
 const list_competence = document.querySelectorAll('.val-competence')
 const user = document.querySelector('#user')
@@ -14,26 +15,26 @@ const varHabilite = document.querySelector('#habilite')
 const varEndurance = document.querySelector('#endurance')
 const varChance = document.querySelector('#chance')
 
-let infoToken = getToken()
+let idUserGame = getTokenUser()
+let bddUser = getListUserBdd()
 
-let userGame =  infoToken.user
-let id_img = infoToken.id_img
-let idUser = IdUserGame(userGame)
-let list_User = listUser()
+console.log(bddUser[idUserGame])
 
-if (list_User[idUser].current_step !== 0) {
+
+if (bddUser[idUserGame].current_step !== 0) {
 
     window.location.href= './general.html';
 
 }
 
-user.innerHTML = userGame
+user.innerHTML = bddUser[idUserGame].pseudo
 
 // Varibles des compétences
-let numAvatar = list_User[idUser].num_perso
-let habilite = list_User[idUser].ability_current;
-let endurance = list_User[idUser].life_current;
-let chance = list_User[idUser].chance_current;
+let numAvatar = bddUser[idUserGame].num_perso
+let habilite = bddUser[idUserGame].ability_current;
+let endurance = bddUser[idUserGame].life_current;
+let chance = bddUser[idUserGame].chance_current;
+
 
 // Chargement des images pour les avatar
 
@@ -177,19 +178,18 @@ playGame.addEventListener('click', function() {
 
     }
 
-    updateToken(userGame, numAvatar )
 
 
-    list_User[idUser].num_perso = habilite
-    list_User[idUser].ability_current = habilite
-    list_User[idUser].ability_max = habilite
-    list_User[idUser].life_current = endurance
-    list_User[idUser].life_max = endurance
-    list_User[idUser].chance_current = chance
-    list_User[idUser].chance_max = chance
-    list_User[idUser].current_step = 1
+    bddUser[idUserGame].num_perso = numAvatar
+    bddUser[idUserGame].ability_current = habilite
+    bddUser[idUserGame].ability_max = habilite
+    bddUser[idUserGame].life_current = endurance
+    bddUser[idUserGame].life_max = endurance
+    bddUser[idUserGame].chance_current = chance
+    bddUser[idUserGame].chance_max = chance
+    bddUser[idUserGame].current_step = 1
 
-    UpdateListUser(list_User)
+    setListUserBdd(bddUser)
 
     msgBox("header", "C'est partie !", "Lancement de la partie...")
 

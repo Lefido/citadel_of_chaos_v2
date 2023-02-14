@@ -3,25 +3,24 @@
 import {routeur} from "./function.js"
 import msgBox from "./msgbox.js"
 
-import { getToken, removeToken, IdUserGame, listUser, reset } from "./gaming.js"
+import {reset, getTokenUser, getListUserBdd, removeToken} from "./gaming.js"
 
 // reset()
 
-let infoToken = getToken()
 
-let userGame = infoToken.user
-let id = IdUserGame(userGame)
+let idUserGame = getTokenUser()
 
-let detailUsergame = listUser()
+let bddUser = getListUserBdd()
+
 
 const start_game = document.querySelector('#start-game')
 const new_game = document.querySelector('#new-game')
 const deconnexion = document.querySelector('#deconnexion')
 const user = document.querySelector("#user")
 
-user.innerHTML = userGame
+user.innerHTML = bddUser[idUserGame].pseudo
 
-if (detailUsergame[id].current_step === 0) {
+if (bddUser[idUserGame].current_step === 0) {
 
     start_game.style.display = "none";
 

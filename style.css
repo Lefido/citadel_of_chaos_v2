@@ -324,6 +324,59 @@ header h2 {
   text-align: center;
 }
 
+.cont-combat {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+}
+.cont-combat .cont-combat-player, .cont-combat .cont-combat-enemy {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.cont-combat .cont-combat-player .cont-combat-profil, .cont-combat .cont-combat-player .cont-combat-competence, .cont-combat .cont-combat-enemy .cont-combat-profil, .cont-combat .cont-combat-enemy .cont-combat-competence {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+.cont-combat .cont-combat-player .cont-combat-profil h2, .cont-combat .cont-combat-player .cont-combat-profil h3, .cont-combat .cont-combat-player .cont-combat-competence h2, .cont-combat .cont-combat-player .cont-combat-competence h3, .cont-combat .cont-combat-enemy .cont-combat-profil h2, .cont-combat .cont-combat-enemy .cont-combat-profil h3, .cont-combat .cont-combat-enemy .cont-combat-competence h2, .cont-combat .cont-combat-enemy .cont-combat-competence h3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+.cont-combat .cont-combat-player .cont-combat-profil span, .cont-combat .cont-combat-player .cont-combat-competence span, .cont-combat .cont-combat-enemy .cont-combat-profil span, .cont-combat .cont-combat-enemy .cont-combat-competence span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: brown;
+  border-radius: 50%;
+}
+.cont-combat .cont-combat-player .cont-combat-profil img, .cont-combat .cont-combat-player .cont-combat-competence img, .cont-combat .cont-combat-enemy .cont-combat-profil img, .cont-combat .cont-combat-enemy .cont-combat-competence img {
+  width: 50%;
+  margin: auto;
+  background-color: rgba(165, 42, 42, 0.534);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 2px black;
+}
+.cont-combat .cont-combat-central {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cont-combat .cont-combat-central .cont-combat-central-haut, .cont-combat .cont-combat-central .cont-combat-central-bas {
+  width: 100%;
+  height: 50vh;
+}
+
 @media screen and (max-width: 700px) {
   .rouleau-bottom {
     font-size: 16px;

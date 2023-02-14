@@ -1,4 +1,5 @@
 
+import {reset , idUser, setTokenUser, getTokenUser, newUserBdd } from "./gaming.js";
 
 import msgBox from "./msgbox.js";
 
@@ -8,17 +9,16 @@ import {loginUser,
     delToken, routeur}
     from "./function.js";
 
-let token = updateToken()
+// reset()
+
+    let token = getTokenUser()
 
 if (token !== null) {
 
-    getUser(token)
-
-    // routeur('./home.html')
+    routeur('./home.html')
 
 }
 
-    
 let userName = document.querySelector('#name');
 let userPsw = document.querySelector('#psw');
 let btn_connexion = document.querySelector('#valider');
@@ -47,7 +47,15 @@ btn_connexion.addEventListener('click', function(){
     }
 
 
-    loginUser(userData);
+  let idUserGame = idUser(userName.value) 
 
-    
+  if (idUserGame === 0) {
+
+    newUserBdd(userName.value, "Non renseigné")
+
+  }
+
+    setTokenUser(idUserGame)
+    loginUser(userData);
+   
 })

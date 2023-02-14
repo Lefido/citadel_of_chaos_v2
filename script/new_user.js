@@ -1,12 +1,9 @@
 
 
-// import {
-//     getListUser, removeListUser, reset
-// } from "./gaming.js"
-
 import { createUser, reGex } from "./function.js"
-
 import msgBox from "./msgbox.js"
+
+import {reset, newUserBdd } from "./gaming.js"
 
 // reset()
 
@@ -63,6 +60,7 @@ btn_connexion.addEventListener('click', function(){
         return
     }
 
+
     // Controle Regex
     // reGex(userPsw1.value)
 
@@ -79,7 +77,12 @@ btn_connexion.addEventListener('click', function(){
         "password" : userPsw1.value
     }
 
+
+   
+
     createUser(userData);
+
+    newUserBdd(userName.value, usermail.value)
 
     userName.value = ""
     usermail.value = ""
