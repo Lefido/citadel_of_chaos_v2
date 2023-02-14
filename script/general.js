@@ -55,9 +55,17 @@ console.log("Page en cours :", current_html)
 
 let num_etape = bddUser[IdUserGame].current_step
 
+
+
+
+
+
+
 affiche_etape(num_etape)
 
 function affiche_etape(num_etape) {
+  
+  encadrement(list_etape[num_etape].step_type)
 
   let etape = list_etape[num_etape];
 
@@ -134,6 +142,36 @@ function etape_pathways(pathways) {
     });
   
 });
+
+}
+
+function encadrement(step_type) {
+
+  let separateur = ""
+
+  for (let i=0; i < step_type.length + 3; i++) {
+
+    if (i === 0) {
+
+      separateur +="+"
+
+    } else {
+      separateur +="-"
+
+    } 
+
+  }
+
+  separateur +="+"
+
+  console.log(separateur)
+
+  console.log("|", step_type, "|")
+
+  console.log(separateur)
+
+  console.log(list_etape[num_etape])
+
 
 }
 
