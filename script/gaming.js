@@ -19,7 +19,7 @@ function reset() {
 
 function setListUserBdd(bddUser) {
 
-    console.log("Save Param User")
+    console.log("Sauvegarde Param User")
 
     let updateBddUser = bddUser
 
@@ -124,7 +124,8 @@ function loadUserDefault(pseudo, mail) {
     let userDefault = {
         "pseudo": pseudo,
         "mail": mail,
-        "num_perso": 0,
+        "id_avatar": 0,
+        "gaming": false,
         "current_step": 0,
         "ability_max": 0,
         "ability_current": 0,

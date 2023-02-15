@@ -18,23 +18,24 @@ const varChance = document.querySelector('#chance')
 let idUserGame = getTokenUser()
 let bddUser = getListUserBdd()
 
+
 console.log(bddUser[idUserGame])
 
 
-if (bddUser[idUserGame].current_step !== 0) {
+
+if (bddUser[idUserGame].current_step !== 0 && bddUser[idUserGame].gaming === true ) {
 
     window.location.href= './general.html';
+} 
 
-}
 
 user.innerHTML = bddUser[idUserGame].pseudo
 
 // Varibles des compétences
-let numAvatar = bddUser[idUserGame].num_perso
+let idAvatar = bddUser[idUserGame].id_avatar
 let habilite = bddUser[idUserGame].ability_current;
 let endurance = bddUser[idUserGame].life_current;
 let chance = bddUser[idUserGame].chance_current;
-
 
 // Chargement des images pour les avatar
 
@@ -50,21 +51,12 @@ for(let i = 1 ; i < 7; i++) {
 
 const list_personnage = document.querySelectorAll('.personnage');
 
-list_personnage.forEach((personnage, index) => {
-
-    if (index + 1 === numAvatar) {
-        personnage.classList.add("perso-actif");
-    }
-
-})
-
-
 list_personnage.forEach( (personnage, index) => {
     personnage.addEventListener('click', function() {
         console.log("J'ai cliqué sur le personnage", index);
         perso_actif()
         personnage.classList.add("perso-actif");
-        numAvatar = index +1 ;
+        idAvatar = index +1 ;
         
     })
 })
@@ -164,7 +156,7 @@ const playGame = document.querySelector('.btn-1');
 
 playGame.addEventListener('click', function() {
     
-    if(numAvatar === 0) {
+    if(idAvatar === 0) {
 
         msgBox("header", "Oups !!", "Tu as oublié des sélectionner ton avatar");
         return
@@ -180,7 +172,7 @@ playGame.addEventListener('click', function() {
 
 
 
-    bddUser[idUserGame].num_perso = numAvatar
+    bddUser[idUserGame].id_avatar = idAvatar
     bddUser[idUserGame].ability_current = habilite
     bddUser[idUserGame].ability_max = habilite
     bddUser[idUserGame].life_current = endurance
@@ -188,6 +180,7 @@ playGame.addEventListener('click', function() {
     bddUser[idUserGame].chance_current = chance
     bddUser[idUserGame].chance_max = chance
     bddUser[idUserGame].current_step = 1
+    bddUser[idUserGame].gaming = true
 
     setListUserBdd(bddUser)
 

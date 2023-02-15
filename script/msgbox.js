@@ -8,6 +8,10 @@ export default function msgBox(nameNoeud ,titleMsg, contentMsg) {
 
     let box = document.createElement('div');
     box.style.position = "absolute";
+    box.style.left = "50%"
+    box.style.top = "50%"
+    box.style.transform = "translate(-50%,-50%)"
+    box.style.transformOrigin = "left"
     // box.style.backgroundColor = "white";
     // box.style.width = "200px";
     box.style.borderRadius = "10px";
