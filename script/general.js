@@ -72,6 +72,8 @@ function affiche_etape(num_etape) {
   etape_narratif(etape.content);
   etape_pathways(etape.pathways);
 
+  analyse_etape(etape)
+
 }
 
 function etape_narratif(narratif) {
@@ -172,6 +174,72 @@ function encadrement(step_type) {
 
   console.log(list_etape[num_etape])
 
+
+}
+
+function analyse_etape(details_etape) {
+
+console.clear()
+
+// encadrement("Détails de l'étape")
+console.log("**********************")
+console.log("* Détails de l'étape *")
+console.log("**********************")
+
+let numObjet = 0
+
+for (let objet in details_etape) {
+
+  console.log("---", objet, "---------------------------------------------")
+  
+ 
+  switch(objet) {
+
+    case "step_type":
+      console.log(details_etape[objet])
+      break;
+
+    case "content":
+
+     console.log(details_etape[objet])
+     break;
+
+     case "pathways":
+      console.log(details_etape[objet])
+      let pathway = details_etape[objet]
+      for (let i in pathway) {
+        console.log(i, pathway[i].content)
+      }
+      break;
+
+    case "ennemies":
+      console.log(details_etape[objet])
+      let ennemies = details_etape[objet]
+      for (let i in ennemies) {
+       let pathway = details_etape[objet]
+      for (let i in pathway) {
+        console.log("id :" + i,
+          "Name :" + pathway[i].name,
+          "Life :" + pathway[i].life,
+          "Habilité :" +pathway[i].ability)
+    
+      }
+      }
+      break;
+    case "characteristic_balance":
+      console.log(details_etape[objet])
+      let char_balance = details_etape[objet]
+      for (let i in char_balance) {
+        console.log(i, char_balance[i])
+      }
+
+
+  }
+
+  // console.log("------ Fin", objet, "------")
+  // console.log("")
+  
+}
 
 }
 

@@ -270,8 +270,8 @@ header h2 {
 .choice .open-inventaire {
   display: none;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -8px;
+  right: 10px;
 }
 
 .general-col2 .list-inventaire {
@@ -281,8 +281,8 @@ header h2 {
 .general-col2 .list-inventaire .close-inventaire {
   display: none;
   position: absolute;
-  top: 20px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
 }
 .general-col2 .list-inventaire .inventaire-scroll::-webkit-scrollbar {
   width: auto;

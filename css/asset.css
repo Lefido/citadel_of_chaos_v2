@@ -136,6 +136,52 @@
 
 }
 
+.btn-inventaire-op {
+
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background: url("../assets/btn-inv-close.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    width: 45px;
+    height: 45px;
+    transition: 0.2s;
+
+}
+
+.btn-inventaire-op:hover {
+
+    cursor: pointer;
+    background: url("../assets/btn-inv-open.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    scale: 1.1;
+
+}
+
+.btn-inventaire-cl {
+
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background: url("../assets/btn-inv-open.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    width: 45px;
+    height: 45px;
+    transition: 0.2s;
+    scale: 1.1;
+
+}
+
+.btn-inventaire-cl:hover {
+
+    cursor: pointer;
+    background: url("../assets/btn-inv-close.png") no-repeat center / contain;
+    background-size: 100% 100%;
+    scale: 1;
+
+}
+
+
+
+
 .btn-1:hover,
 .btn-2:hover {
     cursor: pointer;
