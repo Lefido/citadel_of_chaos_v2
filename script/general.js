@@ -66,7 +66,7 @@ console.log("Page en cours :", current_html);
 
 // let num_etape = bddUser[IdUserGame].current_step
 
-let num_etape = 102;
+let num_etape = 66;
 
 bddUser[IdUserGame].current_step = num_etape
 
@@ -338,7 +338,7 @@ function MsgBalance_char(element, valeur) {
   if (valeur > 0) {
     msg = "Tu empoche";
   } else {
-    msg = "Tu as perdu";
+    msg = "Perte de";
   }
 
   valeur = Math.abs(valeur);
@@ -388,9 +388,14 @@ function setCharacteristicBalance(element, nbPoint) {
       setTimeout(()=> {
        
         endurance.classList.add('brillance')
+        userEndurance.classList.add('rotate-zoom')
+        userEndurance.innerHTML = bddUser[IdUserGame].life_current
         setTimeout(()=> {
+          
           endurance.classList.remove('brillance')
-          userEndurance.innerHTML = bddUser[IdUserGame].life_current
+          userEndurance.classList.remove('rotate-zoom')
+          
+
         }, 500)
       }, 5000)
 
@@ -414,11 +419,14 @@ function setCharacteristicBalance(element, nbPoint) {
       setTimeout(()=> {
        
         chance.classList.add('brillance')
+        userChance.classList.add('rotate-zoom')
+        userChance.innerHTML = bddUser[IdUserGame].chance_current
         setTimeout(()=> {
           chance.classList.remove('brillance')
-          userChance.innerHTML = bddUser[IdUserGame].chance_current
+          userChance.classList.remove('rotate-zoom')
+         
         }, 500)
-      }, 5500)
+      }, 5100)
 
      
       break;
@@ -441,11 +449,14 @@ function setCharacteristicBalance(element, nbPoint) {
       setTimeout(()=> {
        
         habilite.classList.add('brillance')
+        userHabilite.classList.add('rotate-zoom')
+        userHabilite.innerHTML = bddUser[IdUserGame].ability_current
         setTimeout(()=> {
           habilite.classList.remove('brillance')
-          userHabilite.innerHTML = bddUser[IdUserGame].ability_current
+          userHabilite.classList.remove('rotate-zoom')
+          
         }, 500)
-      }, 6000)
+      }, 5200)
       
       break;
 

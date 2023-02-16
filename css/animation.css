@@ -276,7 +276,7 @@
 
 .rotate-zoom {
 
-  animation: rotate-zoom 2s forwards;
+  animation: rotate-zoom 0.5s forwards;
 
 }
 
@@ -284,28 +284,20 @@
 @keyframes rotate-zoom {
 
   0% {
-    scale: 0;
-    rotate: 8turn;
-    text-shadow: 0 0 5px red;
-
-  }
-  25% {
-    scale: 2;
-    
+    scale: 1;
+    background-color: rgba(165, 42, 42, 0.842);;
   }
   50% {
-    scale: 4;
-    
+    scale: 0.5;
+    background-color: white;
+    color: black;
   }
-  75% {
-    scale: 2;
-
-  }
-  100% {
-    scale: 1;
-    font-size: 25px;
-  }
-
+ 100% {
+  scale: 1;
+  transform: rotate(2turn);
+  background-color: rgba(165, 42, 42, 0.842);;
+ }
+ 
 }
 
 .deroulant-bas {

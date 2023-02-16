@@ -16,6 +16,21 @@
   font-family: "medieval";
   src: url("./fonts/medieval.ttf");
 }
+span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(165, 42, 42, 0.842);
+  border-radius: 50%;
+  padding: 2.5px 5px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  border: 1px solid gray;
+  box-shadow: 0 0 15px 2px black;
+}
+
 body {
   width: 100%;
   background: url("./assets/cbg_ciel_bleu.jpg") no-repeat center/cover;
