@@ -77,9 +77,6 @@ btn_connexion.addEventListener('click', function(){
         "password" : userPsw1.value
     }
 
-
-   
-
     createUser(userData);
 
     newUserBdd(userName.value, usermail.value)

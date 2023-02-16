@@ -95,10 +95,10 @@ function loginUser(userData) {
           console.log("Connexion réussie");
 
           routeur("./home.html");
-        }, 2000);
+        }, 3000);
       } else {
         console.log("Erreur utilisateur ou mot de passe");
-        msgBox("header", "Erreur !", "Utilisateur ou mot de passe");
+        msgBox("header", "Erreur !", "Utilisateur ou mot de passe", 1500);
       }
     });
 }

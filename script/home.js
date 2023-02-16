@@ -31,11 +31,11 @@ if (bddUser[idUserGame].current_step === 0 || bddUser[idUserGame].current_step =
 
 start_game.addEventListener("click", function() {
 
-    msgBox("header", "Chargement de la partie", "Récupération de vos paramètres...")
+    msgBox("header", "Chargement de la partie", "Récupération de vos paramètres...", 3000)
 
     setTimeout(function() {
         window.location.href= './general.html'
-    }, 2000)
+    }, 3000)
 
 })
 
@@ -43,25 +43,25 @@ new_game.addEventListener("click", function() {
 
     console.log("J'ai cliqué sur start")
 
-    msgBox("header", "Préparation d'une nouvelle partie", "Chargement des paramètres...")
+    msgBox("header", "Préparation d'une nouvelle partie", "Chargement des paramètres...", 3000)
 
     setTimeout(function() {
         window.location.href= './player.html'
-    }, 2000)
+    }, 3000)
 
    
 })
 
 deconnexion.addEventListener("click", function() {
 
-    msgBox("header", "Information", "déconnextion en cours...")
+    msgBox("header", "Information", "déconnextion en cours...", 3000)
 
     removeToken()
 
     setTimeout(function() {
         routeur('./index.html')
         // window.location.href= './index.html'
-    }, 2000)
+    }, 3000)
 
    
 

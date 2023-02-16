@@ -1,7 +1,7 @@
 
 // export {msgBox}
 
-export default function msgBox(nameNoeud ,titleMsg, contentMsg) {
+export default function msgBox(nameNoeud ,titleMsg, contentMsg, timing = 3000) {
 
     let balise = document.querySelector(nameNoeud)
     balise.style.position = "relative"    
@@ -41,9 +41,9 @@ export default function msgBox(nameNoeud ,titleMsg, contentMsg) {
     
         setTimeout(() => {
             box.remove()
-        }, 700);
+        }, timing);
     
-    }, 2300);
+    }, timing/2);
     
     balise.appendChild(box)
     

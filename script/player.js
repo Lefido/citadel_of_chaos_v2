@@ -18,9 +18,7 @@ const varChance = document.querySelector('#chance')
 let idUserGame = getTokenUser()
 let bddUser = getListUserBdd()
 
-
 console.log(bddUser[idUserGame])
-
 
 
 if (bddUser[idUserGame].current_step !== 0 && bddUser[idUserGame].gaming === true ) {
@@ -148,8 +146,6 @@ list_btn_jouer.forEach((choix_btn, index) => {
 function lance_de() {
 
     return 1 + Math.round(Math.random() * 5);
-
-
 }
 
 const playGame = document.querySelector('.btn-1');
@@ -158,19 +154,17 @@ playGame.addEventListener('click', function() {
     
     if(idAvatar === 0) {
 
-        msgBox("header", "Oups !!", "Tu as oublié des sélectionner ton avatar");
+        msgBox("header", "Oups !!", "Tu as oublié des sélectionner ton avatar", 2000);
         return
  
      }
 
     if(habilite === 0 || endurance === 0 || chance === 0) {
 
-        msgBox("header", "Oups !!", "Tu n'as pas lancé tout les dés");
+        msgBox("header", "Oups !!", "Tu n'as pas lancé tout les dés", 2000);
         return
 
     }
-
-
 
     bddUser[idUserGame].id_avatar = idAvatar
     bddUser[idUserGame].ability_current = habilite
@@ -184,13 +178,15 @@ playGame.addEventListener('click', function() {
 
     setListUserBdd(bddUser)
 
-    msgBox("header", "C'est partie !", "Lancement de la partie...")
+    console.log(bddUser)
+
+    msgBox("header", "C'est partie !", "Lancement de la partie...",3000)
 
     setTimeout( function() {
 
         window.location.href= './general.html';
 
-    }, 2000)
+    }, 3000)
    
 })
 

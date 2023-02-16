@@ -34,6 +34,7 @@ function getListUserBdd() {
     let listUserBdd = localStorage.getItem('bddUser')
 
     listUserBdd = JSON.parse(listUserBdd)
+    console.log(listUserBdd)
 
     return listUserBdd
 

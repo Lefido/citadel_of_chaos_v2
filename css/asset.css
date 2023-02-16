@@ -208,7 +208,7 @@
 .btn-choice:hover {
     cursor: pointer;
     box-shadow: 0 0 20px 2px black;
-    scale: 0.9;
+    scale: 1.01;
 }
 
 .masqued {

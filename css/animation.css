@@ -116,7 +116,7 @@
 
 .extinction-msgBox {
 
-  animation: extinction-msgBox 2s ;
+  animation: extinction-msgBox 2s forwards ;
   transform-origin: center;
 
 }
@@ -390,4 +390,35 @@
     transform: matrix(1, -0.5, -0.5, 1, 0, 0);
   }
 
+}
+
+.brillance {
+
+ animation: brillance 0.25s infinite;
+
+}
+
+@keyframes brillance {
+    0% {
+      background-color: transparent;
+      box-shadow: 0 0 0 0 transparent;
+      /* rotate: 0; */
+    }
+    25%{
+      /* rotate: -1deg; */
+    }
+    50% {
+      background-color: rgba(165, 42, 42, 0.473);
+      box-shadow: 0 0 15px 2px brown;
+      scale: 1.1;
+      /* rotate: 0; */
+    }
+    75%{
+      /* rotate: 1deg; */
+    }
+    100% {
+      background-color: transparent;
+      box-shadow: 0 0 0 0 transparent;
+      /* rotate: 0; */
+    }
 }
