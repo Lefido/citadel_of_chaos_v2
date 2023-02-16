@@ -37,7 +37,7 @@ export default function msgBox(nameNoeud ,titleMsg, contentMsg) {
     
     setTimeout(() => {
         
-        box.classList.add("extinction")
+        box.classList.add("extinction-msgBox")
     
         setTimeout(() => {
             box.remove()

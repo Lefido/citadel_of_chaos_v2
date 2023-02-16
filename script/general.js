@@ -1,6 +1,8 @@
 
 import {reset, getTokenUser, getListUserBdd, setListUserBdd, idUser } from "./gaming.js";
 
+import { routeur } from "./function.js";
+
 import msgBox from "./msgbox.js";
 // reset()
 
@@ -59,8 +61,8 @@ console.log("Page en cours :", current_html)
 
 // console.log(list_etape);
 
-// let num_etape = bddUser[IdUserGame].current_step
-let num_etape = 347
+let num_etape = bddUser[IdUserGame].current_step
+// let num_etape = 162
 
 affiche_etape(num_etape)
 
@@ -123,6 +125,38 @@ function etape_pathways(pathways) {
       console.log("--------------------------------------------------------")
 
       console.log("J'ai cliqué sur l'étape", btn_selction);
+      console.log(typeof btn_selction)
+
+      if (num_etape === "0") {
+        console.log("Je suis mort")
+        msgBox(".narratif", "Aieeeee!", "Tu as pardu, il ne te reste plus qu'a recommencer une partie")
+
+        bddUser[IdUserGame].id_avatar = 0;
+        bddUser[IdUserGame].current_step = 0
+        bddUser[IdUserGame].gaming = false;
+        bddUser[IdUserGame].ability_current = 0;
+        bddUser[IdUserGame].ability_max = 0;
+        bddUser[IdUserGame].chance_current = 0;
+        bddUser[IdUserGame].chance_max = 0;
+        bddUser[IdUserGame].magic_current = 0;
+        bddUser[IdUserGame].magic_max = 0;
+        bddUser[IdUserGame].life_current = 0;
+        bddUser[IdUserGame].life_max = 0;
+
+        console.log(bddUser[IdUserGame])
+       
+        // setListUserBdd(bddUser)
+      
+        setTimeout(function() {
+        
+          setListUserBdd(bddUser)
+          routeur('./home.html')
+        
+  
+        }, 5000)
+
+      }
+
 
       bddUser[IdUserGame].current_step = num_etape
 
@@ -137,7 +171,9 @@ function etape_pathways(pathways) {
       })
 
       setTimeout(function() {
-
+        
+       
+        setListUserBdd(bddUser)
         affiche_etape(btn_selction)
 
       }, 800)
@@ -184,8 +220,6 @@ function analyse_etape(details_etape) {
 
 console.clear()
 
-
-
 // encadrement("Détails de l'étape")
 
 console.log("Détails User")
@@ -224,7 +258,9 @@ for (let objet in details_etape) {
 
     case "ennemies":
       console.log(details_etape[objet])
+      
       let ennemies = details_etape[objet]
+      console.log("Nombre Enemie", ennemies.length)
       for (let enemie in ennemies) {
         
         let info_Enemie = ennemies[enemie]
@@ -235,49 +271,49 @@ for (let objet in details_etape) {
       }
       break;
     case "characteristic_balance":
+
       console.log(details_etape[objet])
+
       let char_balance = details_etape[objet]
-      for (let i in char_balance) {
+
+      let msgTotal = ""
+
+      for (let element in char_balance) {
         
-        console.log(i, char_balance[i])
+        console.log(element, char_balance[element])
 
-        // console.log("Vie avant attaque  :", bddUser[IdUserGame].life_current)
-      
-        let msg = "";
+        let msg = ""
 
-        if (char_balance[i] <0 ) {
+        switch(element) {
 
-          bddUser[IdUserGame].life_current = bddUser[IdUserGame].life_current -  Math.abs(char_balance[i])
+          case "life_current":
+            msg = balance_char(element, char_balance[element])
+            break
 
-          msg =  "Vous allez perdre " +  Math.abs(char_balance[i]) + " poinst d'endurance"
+          case "ability_current":
+            msg = balance_char(element, char_balance[element])
+            break
 
-        } else {
-
-          bddUser[IdUserGame].life_current = bddUser[IdUserGame].life_current +  Math.abs(char_balance[i])
-
-          msg =  "Vous allez gagner " +  Math.abs(char_balance[i]) + " poinst d'endurance"
+          case "chance_current":
+           msg =  msg = balance_char(element, char_balance[element])
+            break
 
         }
 
-        // console.log("Vie après attaque  :", bddUser[IdUserGame].life_current)
-
-        setListUserBdd(bddUser)
-
-        
-        setTimeout(()=>{
-          msgBox(".narratif", "Ouillouillouille !", msg )
-          
-          endurance.classList.add("perso-actif")
-
-          setTimeout(()=> {
-            endurance.classList.remove("perso-actif")
-            userEndurance.innerHTML =  bddUser[IdUserGame].life_current
-          }, 3000)
-
-
-        }, 3000)
+        msgTotal +=msg
 
       }
+
+      console.log(msgTotal)
+
+      
+      // console.log("Nb characteristic_balance", i)
+
+      setTimeout(()=> {
+        msgBox(".narratif", "Oulalalala !", msgTotal)
+      }, 2000)
+
+      
       break;
       case "inventory_balance":
 
@@ -314,6 +350,50 @@ for (let objet in details_etape) {
   }
   
 }
+
+}
+
+function balance_char(element, valeur) {
+
+  let msgMemoire = ["Oulalalala !", "Outoutouille !", "Arf !", "Pas de bol !", "Grrrrr !"]
+
+  let nbAleatoire = Math.round(Math.random() * msgMemoire.length )
+
+  let msg = ""
+
+  if (valeur > 0 ) {
+
+    msg = "Tu as gagné"
+
+  } else {
+    msg = "Tu as perdu"
+  }
+
+  valeur = Math.abs(valeur)
+
+  let msg2 = ""
+  let pluriel = valeur > 0 ? "s" : "";
+
+  switch(element) {
+    
+    case "life_current":
+      
+      msg2 = `${msg} ${valeur} point${pluriel} de vie`
+      break;
+    
+    case "ability_current":
+      msg2 = `${msg} ${valeur} point${pluriel} d'habilité`
+      break;
+    
+    case "chance_current":
+      msg2 = `${msg} ${valeur} point${pluriel} de chance`
+      break;
+
+  }
+  
+
+  return  msg2 + "<br/>"
+
 
 }
 

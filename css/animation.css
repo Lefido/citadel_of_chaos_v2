@@ -114,6 +114,35 @@
 
 }
 
+.extinction-msgBox {
+
+  animation: extinction-msgBox 2s ;
+  transform-origin: center;
+
+}
+
+@keyframes extinction-msgBox {
+  0% {
+      /* scale: 1; */
+      opacity: 1;
+     
+  }
+
+  25%{
+    top: 30%;
+  }
+
+  75% {
+    scale: 0.4;
+  }
+
+  100% {
+      /* scale: 0; */
+      opacity: 0;
+  }
+
+}
+
 .destruction {
 
   animation: destruction 1s ;
@@ -336,8 +365,8 @@
 
 .anim-avatar {
 
-  animation: anim-avatar 2s infinite;
-  position: absolute;
+  /* animation: anim-avatar 2s infinite; */
+  /* position: absolute; */
   left: 0;
   z-index: 20;
   transform-origin: left;

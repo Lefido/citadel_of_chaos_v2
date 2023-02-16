@@ -9,8 +9,9 @@ import {reset, getTokenUser, getListUserBdd, removeToken} from "./gaming.js"
 
 
 let idUserGame = getTokenUser()
-
 let bddUser = getListUserBdd()
+
+console.log(bddUser[idUserGame])
 
 
 const start_game = document.querySelector('#start-game')
@@ -20,7 +21,7 @@ const user = document.querySelector("#user")
 
 user.innerHTML = bddUser[idUserGame].pseudo
 
-if (bddUser[idUserGame].current_step === 0) {
+if (bddUser[idUserGame].current_step === 0 || bddUser[idUserGame].current_step === "0") {
 
     start_game.style.display = "none";
 
