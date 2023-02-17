@@ -265,13 +265,7 @@ header {
     
     transition: 0.2s;
 
-    h1 {
-        margin: auto;
-        width: 98%;
-        padding: 5px 0 0px;
-        font-size: 20px;
-        
-    }
+   
 
     .player-avatar {
 
@@ -281,6 +275,14 @@ header {
         align-items: center;
         justify-content: space-around;
         padding: 10px;
+
+        h1 {
+            margin: auto;
+            width: 100%;
+            padding: 5px 0 0px;
+            font-size: 22px;
+            
+        }
 
         img {
             width: 75px;

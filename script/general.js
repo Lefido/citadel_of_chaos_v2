@@ -23,6 +23,8 @@ console.log(bddUser[IdUserGame]);
 
 const imgavatar = document.querySelector("#imgavatar");
 
+
+
 let newImg = "./assets/personnage/av_" + bddUser[IdUserGame].id_avatar + ".png";
 
 imgavatar.src = newImg;
@@ -43,19 +45,84 @@ userChance.innerHTML = bddUser[IdUserGame].chance_current;
 const narratif_content = document.querySelector(".narratif-content");
 const choice_content = document.querySelector(".choice-content");
 const general_col2 = document.querySelector(".general-col2");
+const general_col1 = document.querySelector(".general-col1");
+
+window.addEventListener("load", ()=> {
+  setTimeout(()=> {
+    general_col2.classList.remove('start-right')
+  },2000)
+ 
+});
+
+window.addEventListener('resize', function() {
+	// viewport and full window dimensions will change
+	
+	var viewport_width = window.innerWidth;
+	var viewport_height = window.innerHeight;
+
+  console.log(viewport_width)
+
+  if (viewport_width > 700) {
+
+    general_col1.classList.add("opacity-out")
+    general_col2.classList.add("cont-visible");
+    general_col2.classList.add("ouvre-inventaire")
+    general_col2.classList.remove("ferme-inventaire");
+
+  } else if(viewport_width < 700) {
+
+    general_col1.classList.add("opacity-out")
+    general_col2.classList.remove("cont-visible");
+    general_col2.classList.add("ouvre-inventaire")
+
+
+  }
+  console.log("Je modifie la taille de ma fenetre")
+
+});
+
+// Ouvre inventaire
 
 const open_inventaire = document.querySelector(".open-inventaire");
 
 open_inventaire.addEventListener("click", () => {
  
+  console.log("J'ouvre' l'inventaire")
+
+  general_col2.classList.remove("ferme-inventaire")
+ 
+  general_col2.classList.add("ouvre-inventaire")
+
   general_col2.classList.toggle("cont-visible");
+
+  general_col1.classList.remove("opacity-out")
+ 
+  general_col1.classList.add("opacity-in")
+  
+ 
 });
+
+// Close inventaire
 
 const close_inventaire = document.querySelector(".close-inventaire");
 
 close_inventaire.addEventListener("click", () => {
+  
   console.log("Je ferme l'inventaire")
-  general_col2.classList.toggle("cont-visible");
+
+  general_col2.classList.add("ferme-inventaire")
+
+  general_col2.classList.remove("ouvre-inventaire")
+
+  setTimeout(() => {
+    general_col2.classList.toggle("cont-visible");
+  }, 1000);
+
+  general_col1.classList.remove("opacity-in")
+
+  general_col1.classList.add("opacity-out")
+
+
 });
 
 var list_btn_pathways;
@@ -69,7 +136,7 @@ console.log("Page en cours :", current_html);
 let num_etape = bddUser[IdUserGame].current_step
 
 // let num_etape = 66;
-// let num_etape = 66;
+num_etape = 7;
 
 bddUser[IdUserGame].current_step = num_etape
 
@@ -212,6 +279,7 @@ function encadrement(step_type) {
 }
 
 function analyse_etape(details_etape) {
+
   console.clear();
 
   // encadrement("Détails de l'étape")
@@ -240,10 +308,29 @@ function analyse_etape(details_etape) {
 
       case "pathways":
         console.log(details_etape[objet]);
-        let list_id_btn = details_etape[objet]
-        for (let id_btn in list_id_btn) {
-          console.log(id_btn, list_id_btn[id_btn].content)
+        let lst_element = details_etape[objet]
+        for(let element in lst_element) {
+          console.log(element,lst_element[element])
+          let lst_content = lst_element[element]
+          for (let content in lst_content) {
+           
+            switch(content) {
+              case "content":
+                console.log(content, lst_content[content])
+                break;
+              case "inventory_required":
+                console.log(content)
+                let lst_objet = lst_content[content]
+                for (let objet in lst_objet) {
+                  console.log(objet, lst_objet[objet])
+                }
+                break;
+            }
+          }
         }
+
+
+
        
         break;
 

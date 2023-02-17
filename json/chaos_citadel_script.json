@@ -99,16 +99,16 @@
     "pathways": {
       "268": {
         "content": "Vous essayez de la défoncer à coups d'épaule. "
-      }
-    },
-    "116": {
-      "content": "vous utilisez la Formule de Force pour arracher la porte de ses gonds",
+      },
+    
+      "116": {
+        "content": "vous utilisez la Formule de Force pour arracher la porte de ses gonds",
 
-      "formula_balance": {
-        "formula_force": -1
-      }
+        "formula_balance": {
+          "formula_force": -1
+        }
     }
-  },
+  }},
 
   "8": {
     "step_type": "narrative",

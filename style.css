@@ -198,12 +198,6 @@ header h2 {
   height: 100vh;
   transition: 0.2s;
 }
-.detail-player h1 {
-  margin: auto;
-  width: 98%;
-  padding: 5px 0 0px;
-  font-size: 20px;
-}
 .detail-player .player-avatar {
   margin: auto;
   width: 50%;
@@ -211,6 +205,12 @@ header h2 {
   align-items: center;
   justify-content: space-around;
   padding: 10px;
+}
+.detail-player .player-avatar h1 {
+  margin: auto;
+  width: 100%;
+  padding: 5px 0 0px;
+  font-size: 22px;
 }
 .detail-player .player-avatar img {
   width: 75px;
