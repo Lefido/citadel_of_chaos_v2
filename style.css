@@ -43,7 +43,7 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  max-width: 1280px;
+  max-width: 1024px;
   height: 100vh;
   margin: auto;
   background: url("./assets/bg_citadel.jpg") no-repeat center/cover;
@@ -180,20 +180,22 @@ header h2 {
 
 .cont-general {
   width: 100%;
+  height: 100vh;
 }
 
 .general-col1 {
   width: 70%;
+  height: 100vh;
 }
 
 .general-col2 {
   width: 30%;
+  height: 100vh;
 }
 
 .detail-player {
   width: 100%;
-  padding: 10px 5px;
-  gap: 5px;
+  height: 100vh;
   transition: 0.2s;
 }
 .detail-player h1 {
@@ -204,7 +206,8 @@ header h2 {
 }
 .detail-player .player-avatar {
   margin: auto;
-  width: 49%;
+  width: 50%;
+  height: 15vh;
   align-items: center;
   justify-content: space-around;
   padding: 10px;
@@ -214,15 +217,15 @@ header h2 {
 }
 .detail-player .player-competence {
   margin: auto;
-  width: 49%;
-  height: 100%;
+  width: 50%;
+  height: 15vh;
   justify-content: space-around;
   padding: 10px;
-  gap: 5px;
 }
-.detail-player .player-competence button {
+.detail-player .player-competence h3 {
   margin: auto;
   width: 80%;
+  height: 32px;
 }
 
 .narratif, .choice {
@@ -249,7 +252,6 @@ header h2 {
 }
 .narratif .narratif-content, .narratif .choice-content, .choice .narratif-content, .choice .choice-content {
   overflow-y: auto;
-  gap: 5px;
   padding: 10px 20px 20px;
   color: black;
   text-shadow: 1px 1px 2px white;
@@ -269,18 +271,18 @@ header h2 {
 }
 
 .narratif {
-  height: 57vh;
+  height: 60vh;
 }
 .narratif .narratif-content {
-  height: 50vh;
+  height: 55vh;
 }
 
 .choice {
-  height: 24vh;
+  height: 25vh;
   position: relative;
 }
 .choice .choice-content {
-  height: 17vh;
+  height: 20vh;
 }
 .choice .open-inventaire {
   display: none;
@@ -291,7 +293,7 @@ header h2 {
 
 .general-col2 .list-inventaire {
   position: relative;
-  padding: 10px 0;
+  height: 100vh;
 }
 .general-col2 .list-inventaire .close-inventaire {
   display: none;
@@ -315,8 +317,7 @@ header h2 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 92vh;
-  gap: 5px;
+  height: 94vh;
   overflow-y: auto;
   padding: 0 5px;
 }
@@ -390,7 +391,6 @@ header h2 {
 }
 .cont-combat .cont-combat-central .cont-combat-central-haut, .cont-combat .cont-combat-central .cont-combat-central-bas {
   width: 100%;
-  height: 50vh;
 }
 
 @media screen and (max-width: 700px) {
@@ -398,15 +398,15 @@ header h2 {
     font-size: 16px;
     padding: 0 5px;
   }
-  .avatar {
-    display: none;
-  }
   .detail-player .player-avatar {
     width: 100%;
   }
-  .detail-player .player-avatar h1, .detail-player .player-avatar h2 {
-    width: auto;
+  .detail-player .player-avatar h1 {
+    width: 100%;
     padding: 5px 10px;
+  }
+  .detail-player .player-avatar h2 {
+    width: 50%;
   }
   .detail-player .player-competence {
     width: 100%;
@@ -414,7 +414,7 @@ header h2 {
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .detail-player .player-competence button {
+  .detail-player .player-competence h3 {
     width: auto;
   }
   .cont-general {
@@ -423,14 +423,39 @@ header h2 {
   .general-col1 {
     width: 100%;
   }
+  .general-col1 .player-competence {
+    height: 6vh;
+  }
+  .general-col1 .narratif {
+    height: 50vh;
+  }
+  .general-col1 .narratif .narratif-content {
+    height: 45vh;
+  }
+  .general-col1 .choice {
+    height: 25vh;
+  }
+  .general-col1 .choice .choice-content {
+    height: 20vh;
+  }
   .general-col2 {
     position: absolute;
     display: none;
-    width: 100%;
-    height: 90%;
+    width: 90%;
+    height: 80vh;
+    top: 10vh;
+  }
+  .general-col2 .list-inventaire {
+    height: 80vh;
   }
   .general-col2 .list-inventaire .close-inventaire {
     display: block;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
+  .general-col2 .list-inventaire .inventaire-scroll {
+    height: 75vh;
   }
   .cont-visible {
     display: block;
@@ -441,34 +466,28 @@ header h2 {
   .narratif-content p {
     font-size: 10px;
   }
-  .narratif {
-    height: 57vh;
-  }
-  .narratif .narratif-content {
-    height: 50vh;
-  }
-  .choice {
-    height: 25vh;
-  }
-  .choice .choice-content {
-    height: 20vh;
-  }
   .choice .open-inventaire {
     display: inline-block;
   }
 }
-@media screen and (max-width: 520px) {
-  .narratif {
-    height: 48vh;
+@media screen and (max-width: 371px) {
+  .general-col1 {
+    width: 100%;
   }
-  .narratif .narratif-content {
-    height: 41vh;
+  .general-col1 .player-competence {
+    height: 11vh;
   }
-  .choice {
-    height: 35vh;
+  .general-col1 .narratif {
+    height: 50vh;
   }
-  .choice .choice-content {
-    height: 29vh;
+  .general-col1 .narratif .narratif-content {
+    height: 45vh;
+  }
+  .general-col1 .choice {
+    height: 20vh;
+  }
+  .general-col1 .choice .choice-content {
+    height: 15vh;
   }
 }
 

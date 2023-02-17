@@ -248,6 +248,28 @@
 
 }
 
+.end-right {
+
+  animation: end-right 2s ;
+
+}
+
+@keyframes end-right {
+  from {
+    
+    opacity: 0;
+    transform: translateX(0%);
+     
+  }
+
+  to {
+    transform: translateX(200%);
+     opacity: 1;
+  }
+
+}
+
+
 .perso-actif {
 
   background-color: rgba(165, 42, 42, 0.308);
@@ -298,6 +320,38 @@
   background-color: rgba(165, 42, 42, 0.842);;
  }
  
+}
+
+.rotate-de {
+
+  animation: rotate-de 3s forwards;
+
+}
+
+@keyframes rotate-de {
+
+  0% {
+    scale: 0.2;
+    
+
+  }
+
+  50% {
+    rotate: 5turn;
+    scale: 4;
+    text-shadow: 0 0 2px white, 0 0 10px red;
+    
+  }
+
+  100% {
+
+    scale: 1;
+    font-size: 25px;
+   
+
+  }
+
+  
 }
 
 .deroulant-bas {

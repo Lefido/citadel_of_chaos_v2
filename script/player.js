@@ -114,7 +114,7 @@ list_btn_jouer.forEach((choix_btn, index) => {
         switch (index) {
             case 0:
                 habilite = Valeurde
-                list_competence[index].classList.add("rotate-zoom")
+                list_competence[index].classList.add("rotate-de")
                 list_competence[index].innerHTML = habilite
                 console.log("Habilite", habilite)
                 
@@ -122,14 +122,14 @@ list_btn_jouer.forEach((choix_btn, index) => {
 
             case 1:
                 endurance = Valeurde
-                list_competence[index].classList.add("rotate-zoom")
+                list_competence[index].classList.add("rotate-de")
                 list_competence[index].innerHTML = endurance
                 console.log("Endurance", endurance)
                 break;
 
             case 2:
                 chance = Valeurde
-                list_competence[index].classList.add("rotate-zoom")
+                list_competence[index].classList.add("rotate-de")
                 list_competence[index].innerHTML = chance
                 console.log("Chance", chance)
             break;
@@ -154,14 +154,14 @@ playGame.addEventListener('click', function() {
     
     if(idAvatar === 0) {
 
-        msgBox("header", "Oups !!", "Tu as oublié des sélectionner ton avatar", 2000);
+        msgBox("header", "Oups !!", "Tu as oublié des sélectionner ton avatar", 3000);
         return
  
      }
 
     if(habilite === 0 || endurance === 0 || chance === 0) {
 
-        msgBox("header", "Oups !!", "Tu n'as pas lancé tout les dés", 2000);
+        msgBox("header", "Oups !!", "Tu n'as pas lancé tout les dés", 3000);
         return
 
     }

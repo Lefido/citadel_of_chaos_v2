@@ -47,12 +47,14 @@ const general_col2 = document.querySelector(".general-col2");
 const open_inventaire = document.querySelector(".open-inventaire");
 
 open_inventaire.addEventListener("click", () => {
+ 
   general_col2.classList.toggle("cont-visible");
 });
 
 const close_inventaire = document.querySelector(".close-inventaire");
 
 close_inventaire.addEventListener("click", () => {
+  console.log("Je ferme l'inventaire")
   general_col2.classList.toggle("cont-visible");
 });
 
@@ -64,9 +66,10 @@ console.log("Page en cours :", current_html);
 
 // console.log(list_etape);
 
-// let num_etape = bddUser[IdUserGame].current_step
+let num_etape = bddUser[IdUserGame].current_step
 
-let num_etape = 66;
+// let num_etape = 66;
+// let num_etape = 66;
 
 bddUser[IdUserGame].current_step = num_etape
 

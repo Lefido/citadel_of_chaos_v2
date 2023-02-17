@@ -53,7 +53,7 @@ header {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    max-width: 1280px;
+    max-width: 1024px;
     height: 100vh;
     margin: auto;
     background: url("./assets/bg_citadel.jpg") no-repeat center / cover;
@@ -240,26 +240,29 @@ header {
 .cont-general {
     
     width: 100%;
-
+    height: 100vh;
+    
 }
 
 .general-col1 {
     
     width: 70%;
+    height: 100vh;
     
     
 }
 
 .general-col2 {
     width: 30%;
+    height: 100vh;
   
 }
 
 .detail-player {
 
     width: 100%;
-    padding: 10px 5px;
-    gap: 5px;
+    height: 100vh;
+    
     transition: 0.2s;
 
     h1 {
@@ -273,8 +276,8 @@ header {
     .player-avatar {
 
         margin: auto;
-        width: 49%;
-        // height: 100%;
+        width: 50%;
+        height: 15vh;
         align-items: center;
         justify-content: space-around;
         padding: 10px;
@@ -288,17 +291,18 @@ header {
     .player-competence {
 
         margin: auto;
-        width: 49%;
-        height: 100%;
+        width: 50%;
+        height: 15vh;
         justify-content: space-around;
 
         padding: 10px;
-        gap: 5px;
+        // gap: 5px;
 
 
-        button {
+        h3 {
             margin: auto;
             width: 80%;
+            height: 32px;
         }
 
     }
@@ -340,7 +344,7 @@ header {
 
             overflow-y: auto;
             
-            gap: 5px;
+            // gap: 5px;
             padding: 10px 20px 20px;
             color: black;
             text-shadow: 1px 1px 2px white;
@@ -369,13 +373,13 @@ header {
 
 .narratif {
 
-    height: 57vh;
+    height: 60vh;
 
     .narratif-content {
 
-        height: 50vh;
+        height: 55vh;
+        // border: 1px solid red;
 
-        
      
     }
 
@@ -383,13 +387,17 @@ header {
 
 .choice {
 
-    height: 24vh;
+    height: 25vh;
 
     position: relative;
 
     .choice-content {
 
-        height: 17vh;
+        height: 20vh;
+        // border: 1px solid red;
+
+       
+
 
     }
 
@@ -408,11 +416,12 @@ header {
 
 .general-col2 {
 
-
+    // border: 1px solid red;
     .list-inventaire {
-
+        // border: 1px solid red;
         position: relative;
-        padding: 10px 0;
+        // padding: 0px 0;
+        height: 100vh;
 
         .close-inventaire {
             display: none;
@@ -442,8 +451,9 @@ header {
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 92vh;
-            gap: 5px;
+            // border: 1px solid red;
+            height: 94vh;
+            // gap: 5px;
             overflow-y: auto;
             padding: 0 5px;
         }
@@ -528,8 +538,6 @@ header {
 
         }
 
-        
-
     }
 
     .cont-combat-central {
@@ -540,11 +548,10 @@ header {
 
         .cont-combat-central-haut, .cont-combat-central-bas {
             width: 100%;
-            height: 50vh;
+            // height: 50vh;
             // border: 1px solid black;
         }
 
-        
     }
 
 }
@@ -558,19 +565,27 @@ header {
         padding: 0 5px;
     }
 
-    .avatar {
-        display: none;
-    }
+    // .avatar {
+    //     display: none;
+    // }
 
     .detail-player { 
 
+
         .player-avatar  {
             width: 100%;
+            // gap: 5px;
 
-            h1, h2 {
-                width: auto;
+            h1 {
+                width: 100%;
                 padding: 5px 10px;
             }
+
+            h2 {
+                width: 50%;
+            }
+
+
         }
 
         .player-competence {
@@ -579,12 +594,13 @@ header {
             flex-wrap: wrap;
             flex-direction: row;
 
-            button {
+            h3 {
                 width: auto;
             }
         }
 
     }
+
 
     .cont-general {
         position: relative;
@@ -592,35 +608,75 @@ header {
 
     .general-col1 {
         width: 100%;
+
+        .player-competence {
+            height: 6vh;
+        }
+
+        .narratif {
+          
+            height: 50vh;
+
+            .narratif-content {
+                height: 45vh;
+            }
+        }
+
+        .choice {
+          
+            height: 25vh;
+
+            .choice-content {
+
+                height: 20vh;
+
+            }
+        }
+
     }
-    
+
     .general-col2 {
 
-        
         position: absolute;
         display: none;
-        width: 100%;
-        height: 90%;
+        width: 90%;
+        height: 80vh;
+        top: 10vh;
+        // border: 1px solid red;
+
 
         .list-inventaire {
 
+            height: 80vh;
+
+            // border: 1px solid red;
+
             .close-inventaire {
                 display: block;
-                // position: absolute;
-                // top : 20px;
-                // right: 5px;
+                position: absolute;
+                top : 0px;
+                right: 10px;
             }
+
+            .inventaire-scroll {
+                height: 75vh;
+                // border: 1px solid red;
+            }
+
         }
    
     }
 
     .cont-visible {
+
         display: block;
     }
 
     .parchemin-1::after {
         opacity: 1;
     }
+
+    ///////////////
 
     .narratif-content {
 
@@ -629,28 +685,8 @@ header {
         }
     }
 
-    .narratif { 
-
-        height: 57vh;
-
-
-        .narratif-content {
-
-            height: 50vh;
-        
-        }
-
-    }
 
     .choice {
-
-        height: 25vh;
-    
-        .choice-content {
-
-            height: 20vh;
-        
-        }
 
         .open-inventaire {
 
@@ -665,28 +701,36 @@ header {
    
 }
 
-@media screen and (max-width:520px) {
+@media screen and (max-width:371px) {
 
-    .narratif { 
+    .general-col1 {
 
-        height: 48vh;
+        width: 100%;
 
-        .narratif-content {
+        .player-competence {
 
-            height: 41vh;
-           
+            height: 11vh;
         }
 
-    }
+        .narratif {
 
-    .choice {
+            height: 50vh;
 
-        height: 35vh;
-    
-        .choice-content {
+            .narratif-content {
 
-            height: 29vh;
-        
+                height: 45vh;
+            }
+        }
+
+        .choice {
+          
+            height: 20vh;
+
+            .choice-content {
+
+                height: 15vh;
+
+            }
         }
 
     }

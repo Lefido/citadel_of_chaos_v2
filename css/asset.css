@@ -113,6 +113,7 @@
     background: url("../assets/btn_magie_old.png") no-repeat center / contain;
     padding: 10px 20px;
     background-size: 100% 100%;
+    margin: 2px 2px;
 
 }
 
@@ -122,6 +123,7 @@
     background: url("../assets/objet.png") no-repeat center / contain;
     padding: 5px 10px;
     background-size: 100% 100%;
+    margin: 2px 2px;
 
 }
 
