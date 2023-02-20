@@ -201,7 +201,7 @@ header h2 {
 .detail-player .player-avatar {
   margin: auto;
   width: 50%;
-  height: 15vh;
+  height: 18vh;
   align-items: center;
   justify-content: space-around;
   padding: 10px;
@@ -218,7 +218,7 @@ header h2 {
 .detail-player .player-competence {
   margin: auto;
   width: 50%;
-  height: 15vh;
+  height: 18vh;
   justify-content: space-around;
   padding: 10px;
 }
@@ -271,10 +271,10 @@ header h2 {
 }
 
 .narratif {
-  height: 60vh;
+  height: 57vh;
 }
 .narratif .narratif-content {
-  height: 55vh;
+  height: 52vh;
 }
 
 .choice {
@@ -415,7 +415,7 @@ header h2 {
     flex-direction: row;
   }
   .detail-player .player-competence h3 {
-    width: auto;
+    max-width: 145px;
   }
   .cont-general {
     position: relative;
@@ -424,29 +424,29 @@ header h2 {
     width: 100%;
   }
   .general-col1 .player-competence {
-    height: 6vh;
+    height: 8vh;
   }
   .general-col1 .narratif {
-    height: 50vh;
+    height: 46vh;
   }
   .general-col1 .narratif .narratif-content {
-    height: 45vh;
+    height: 40vh;
   }
   .general-col1 .choice {
-    height: 25vh;
+    height: 27vh;
   }
   .general-col1 .choice .choice-content {
-    height: 20vh;
+    height: 22vh;
   }
   .general-col2 {
     position: absolute;
     display: none;
     width: 90%;
-    height: 80vh;
+    height: 85vh;
     top: 10vh;
   }
   .general-col2 .list-inventaire {
-    height: 80vh;
+    height: 85vh;
   }
   .general-col2 .list-inventaire .close-inventaire {
     display: block;
@@ -455,7 +455,7 @@ header h2 {
     right: 10px;
   }
   .general-col2 .list-inventaire .inventaire-scroll {
-    height: 75vh;
+    height: 77vh;
   }
   .cont-visible {
     display: block;
@@ -470,24 +470,24 @@ header h2 {
     display: inline-block;
   }
 }
-@media screen and (max-width: 371px) {
+@media screen and (max-width: 455px) {
   .general-col1 {
     width: 100%;
   }
   .general-col1 .player-competence {
-    height: 11vh;
+    height: 13vh;
   }
   .general-col1 .narratif {
-    height: 50vh;
-  }
-  .general-col1 .narratif .narratif-content {
     height: 45vh;
   }
+  .general-col1 .narratif .narratif-content {
+    height: 40vh;
+  }
   .general-col1 .choice {
-    height: 20vh;
+    height: 23vh;
   }
   .general-col1 .choice .choice-content {
-    height: 15vh;
+    height: 18vh;
   }
 }
 

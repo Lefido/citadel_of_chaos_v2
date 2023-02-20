@@ -47,12 +47,40 @@ const choice_content = document.querySelector(".choice-content");
 const general_col2 = document.querySelector(".general-col2");
 const general_col1 = document.querySelector(".general-col1");
 
+const newObjet = document.querySelector("#objet")
+const newMagie = document.querySelector("#magie")
+
 window.addEventListener("load", ()=> {
   setTimeout(()=> {
     general_col2.classList.remove('start-right')
   },2000)
  
 });
+
+window.addEventListener('mousedown', (e) => {
+ 
+  console.log(e)
+  switch (e.button) {
+    case 0:
+      console.log ( 'Left button clicked.');
+      num_etape++
+      affiche_etape(num_etape);
+      break;
+    case 1:
+      console.log ( 'Middle button clicked.');
+      
+      break;
+    case 2:
+      console.log ( 'Right button clicked.');
+      num_etape--
+      if (num_etape < 1) { num_etape = 1}
+      affiche_etape(num_etape);
+      
+      break;
+    default:
+      
+  }
+})
 
 window.addEventListener('resize', function() {
 	// viewport and full window dimensions will change
@@ -136,7 +164,7 @@ console.log("Page en cours :", current_html);
 let num_etape = bddUser[IdUserGame].current_step
 
 // let num_etape = 66;
-num_etape = 7;
+num_etape = 1;
 
 bddUser[IdUserGame].current_step = num_etape
 
@@ -313,18 +341,65 @@ function analyse_etape(details_etape) {
           console.log(element,lst_element[element])
           let lst_content = lst_element[element]
           for (let content in lst_content) {
-           
+            console.log("Valeur attendu :",content)
             switch(content) {
               case "content":
                 console.log(content, lst_content[content])
                 break;
               case "inventory_required":
                 console.log(content)
-                let lst_objet = lst_content[content]
-                for (let objet in lst_objet) {
-                  console.log(objet, lst_objet[objet])
+                let inventory_required = lst_content[content]
+                for (let objet in inventory_required) {
+                  console.log(objet, inventory_required[objet])
                 }
                 break;
+              case "formula_balance":
+                console.log(content)
+                let formula_balance = lst_content[content]
+                let detailFormule = ""
+                for (let objet in formula_balance) {
+                  console.log(objet, formula_balance[objet])
+
+                  
+                  if (formula_balance[objet] === 1) {
+                    let posString = objet.indexOf('_') + 1
+                    let newString = objet.substring(posString)
+                    // console.log("Position:",posString, "newString", newString)
+                    let btn = document.createElement('btn')
+                    btn.innerHTML = newString + "<span>" + formula_balance[objet] + "</span>"
+                    btn.classList.add(objet)
+                    btn.classList.add("btn-objet")
+                    btn.classList.add("zoom-in")
+                    newMagie.appendChild(btn)
+                    detailFormule += newString + ", "
+                    msgBox(".narratif", "Yessss !", "Ajout des formules " + detailFormule + " dans votre inventaire", 4000 )
+                  }
+
+                  if (formula_balance[objet] === -1) {
+                    let posString = objet.indexOf('_') + 1
+                    let newString = objet.substring(posString)
+                    detailFormule += newString + ", "
+                    msgBox(".narratif", "Ouill !", "Retrait des formules " + detailFormule + " dans votre inventaire", 4000 )
+                  }
+
+                }
+                
+                break;
+              case "is_victory_default":
+                // console.log(content)
+                let is_victory_defaul = lst_content[content]
+                for (let objet in is_victory_defaul) {
+                  console.log(objet, is_victory_defaul[objet])
+                }
+              break;
+              case "is_victory_default":
+              // console.log(content)
+              let is_victory_default = lst_content[content]
+              for (let objet in is_victory_default) {
+                console.log(objet, is_victory_default[objet])
+              }
+              break;
+              
             }
           }
         }

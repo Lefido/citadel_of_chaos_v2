@@ -271,7 +271,7 @@ header {
 
         margin: auto;
         width: 50%;
-        height: 15vh;
+        height: 18vh;
         align-items: center;
         justify-content: space-around;
         padding: 10px;
@@ -294,7 +294,7 @@ header {
 
         margin: auto;
         width: 50%;
-        height: 15vh;
+        height: 18vh;
         justify-content: space-around;
 
         padding: 10px;
@@ -375,11 +375,11 @@ header {
 
 .narratif {
 
-    height: 60vh;
+    height: 57vh;
 
     .narratif-content {
 
-        height: 55vh;
+        height: 52vh;
         // border: 1px solid red;
 
      
@@ -595,9 +595,10 @@ header {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+            // border: 1px solid red;
 
             h3 {
-                width: auto;
+                max-width: 145px;
             }
         }
 
@@ -612,25 +613,25 @@ header {
         width: 100%;
 
         .player-competence {
-            height: 6vh;
+            height: 8vh;
         }
 
         .narratif {
           
-            height: 50vh;
+            height: 46vh;
 
             .narratif-content {
-                height: 45vh;
+                height: 40vh;
             }
         }
 
         .choice {
           
-            height: 25vh;
+            height: 27vh;
 
             .choice-content {
 
-                height: 20vh;
+                height: 22vh;
 
             }
         }
@@ -642,16 +643,16 @@ header {
         position: absolute;
         display: none;
         width: 90%;
-        height: 80vh;
+        height: 85vh;
         top: 10vh;
         // border: 1px solid red;
 
 
         .list-inventaire {
 
-            height: 80vh;
+            height: 85vh;
 
-            // border: 1px solid red;
+            // border: 1px solid green;
 
             .close-inventaire {
                 display: block;
@@ -661,8 +662,8 @@ header {
             }
 
             .inventaire-scroll {
-                height: 75vh;
-                // border: 1px solid red;
+                height: 77vh;
+                // border: 1px solid yellow;
             }
 
         }
@@ -703,7 +704,7 @@ header {
    
 }
 
-@media screen and (max-width:371px) {
+@media screen and (max-width:455px) {
 
     .general-col1 {
 
@@ -711,26 +712,26 @@ header {
 
         .player-competence {
 
-            height: 11vh;
+            height: 13vh;
         }
 
         .narratif {
 
-            height: 50vh;
+            height: 45vh;
 
             .narratif-content {
 
-                height: 45vh;
+                height: 40vh;
             }
         }
 
         .choice {
           
-            height: 20vh;
+            height: 23vh;
 
             .choice-content {
 
-                height: 15vh;
+                height: 18vh;
 
             }
         }
