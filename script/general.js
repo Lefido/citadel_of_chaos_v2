@@ -366,13 +366,15 @@ function analyse_etape(details_etape) {
                     let newString = objet.substring(posString)
                     // console.log("Position:",posString, "newString", newString)
                     let btn = document.createElement('btn')
-                    btn.innerHTML = newString + "<span>" + formula_balance[objet] + "</span>"
+                    btn.innerHTML = newString + "&nbsp;<span>" + formula_balance[objet] + "</span>"
                     btn.classList.add(objet)
-                    btn.classList.add("btn-objet")
+                    btn.classList.add("btn-magie")
                     btn.classList.add("zoom-in")
+
                     newMagie.appendChild(btn)
                     detailFormule += newString + ", "
                     msgBox(".narratif", "Yessss !", "Ajout des formules " + detailFormule + " dans votre inventaire", 4000 )
+                   
                   }
 
                   if (formula_balance[objet] === -1) {

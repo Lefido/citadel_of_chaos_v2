@@ -88,7 +88,8 @@ function loginUser(userData) {
         msgBox(
           "header",
           "Youpi !",
-          "Connexion réussie, chargement de votre position"
+          "Connexion réussie, chargement de votre position",
+          3000
         );
 
         setTimeout(() => {
@@ -98,7 +99,7 @@ function loginUser(userData) {
         }, 3000);
       } else {
         console.log("Erreur utilisateur ou mot de passe");
-        msgBox("header", "Erreur !", "Utilisateur ou mot de passe", 1500);
+        msgBox("header", "Erreur !", "Utilisateur ou mot de passe", 3000);
       }
     });
 }
@@ -152,7 +153,7 @@ function reGex(getPassword) {
     var item = listRe[i];
     var match = pwd.match(item.re);
     if (null === match || match.length < item.count) {
-      msgBox("header", "Oups !!", item.msg);
+      msgBox("header", "Oups !!", item.msg, 3000);
       // alert(item.msg);
       return false;
     }
