@@ -1,12 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Analyse JSON</title>
 </head>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+        padding: 10px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 50%;
+        padding: 10px;
+        margin: auto;
+    }
+
+    #validation, #choice-etape{
+        margin: 0;
+        width: 120px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    #former-etape, #next-etape {
+        width: 45%;
+        padding: 10px 20px;
+    }
+
+    input {
+        width: 25%;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        padding: 5px 10px;
+    }
+
+
+    h2 {
+        
+        padding: 5px 10px;
+        background-color: black;
+        color: white;
+    }
+
+    h3 {
+        width: 100%;
+        padding: 5px 10px;
+        background-color: yellow;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+       
+    }
+
+    h4 {
+        width: 100% - calc(10px);
+        padding: 5px 10px;
+        background-color: lightgreen;
+        margin-left: 10px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        
+    }
+
+    h5 {
+        width: 100% - calc(15px);
+        padding: 5px 10px;
+        background-color: black;
+        color: white;
+        margin-left: 15px;
+        border-left: 1px solid black;
+    }
+
+    h6 {
+        width: 100% - calc(20px);
+        padding: 5px 10px;
+        background-color: lightseagreen;
+        color: black;
+        margin-left: 20px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        font-size: 14px;
+    }
+
+
+    li {
+        width: 100% - calc(25px);
+        padding: 5px 10px;
+        background-color: lightblue;
+        margin-left: 25px;
+        border-left: 1px solid black;
+    }
+
+    article {
+        width: 90%;
+        margin: auto;
+        /* background-color: lightgray; */
+    }
+
+
+
+</style>
 <body>
+
+    <header>
+
+        <nav>
+
+            <div>
+                <h1 id="display-etape">1</h1>
+                <input id="choice-etape" type="number" value="1">
+                <button id="validation">ok</button>
+            </div>
+
+            <div>
+                <button id="former-etape">Foward Pathway</button>
+                <button id="next-etape">Next Pathway</button>
+            </div>
+
+        </nav>
+       
+       
+        
+    </header>
+
+    <article id="content">
+
+
+    </article>
+
+    
     
     <script src="./script/analyse_json.js" type="module"></script>
 </body>
