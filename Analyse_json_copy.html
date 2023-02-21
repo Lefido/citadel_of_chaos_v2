@@ -24,7 +24,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         margin: auto;
-        padding: 10px;
+        padding: 0px;
     }
 
     nav {
@@ -34,27 +34,56 @@
         margin: auto;
         border: 1px solid black;
         border-radius: 5px;
+        position: fixed;
+        background-color: white;
     }
 
-    div {
+    #col-1, #col-2 {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        
         width: 50%;
-        padding: 10px;
+        
         margin: auto;
     }
 
+    #col-1 {
+
+        justify-content: center;
+
+    }
+
+    #display-etape {
+        padding: 0;
+        margin: 0;
+    }
+
+    #col-2 {
+
+        justify-content: space-around;
+        padding: 10px;
+
+    }
+
+    #col-3 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+
     #validation, #choice-etape{
         margin: 0;
-        width: 120px;
+        width: 50%;
         padding: 10px 20px;
         text-align: center;
     }
 
     #former-etape, #next-etape {
-        width: 45%;
-        padding: 10px 20px;
+        width: 50%;
+        padding: 5px 5px;
     }
 
     input {
@@ -73,14 +102,19 @@
         padding: 5px 10px;
         background-color: black;
         color: white;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        border-radius: 5px 0 0 5px;
+
     }
 
     h3 {
-        width: 100%;
+        width: 100% - calc(5px);
         padding: 5px 10px;
         background-color: yellow;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        border: 1px solid black;
+        margin-left: 5px;
+        border-radius: 0 0 0 5px;
        
     }
 
@@ -89,19 +123,19 @@
         padding: 5px 10px;
         background-color: lightgreen;
         margin-left: 10px;
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        border: 1px solid black;
+        border-radius: 0 0 0 5px;
         
     }
 
     h5 {
         width: 100% - calc(15px);
         padding: 5px 10px;
-        background-color: black;
-        color: white;
+        background-color: lightskyblue;
+        color: black;
         margin-left: 15px;
-        border-left: 1px solid black;
+        border: 1px solid black;
+        border-radius: 0 0 0 5px;
     }
 
     h6 {
@@ -110,24 +144,26 @@
         background-color: lightseagreen;
         color: black;
         margin-left: 20px;
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        border: 1px solid black;
         font-size: 14px;
+        border-radius: 0 0 0 5px;
     }
 
 
     li {
         width: 100% - calc(25px);
         padding: 5px 10px;
-        background-color: lightblue;
+        background-color: lightpink;
         margin-left: 25px;
-        border-left: 1px solid black;
+        border: 1px solid black;
+        font-size: 14px;
+        border-radius: 0 0 0 5px;
     }
 
     article {
         width: 90%;
-        margin: auto;
+        margin: 110px auto;
+
         /* background-color: lightgray; */
     }
 
@@ -140,15 +176,19 @@
 
         <nav>
 
-            <div>
+            <div id="col-1">
                 <h1 id="display-etape">1</h1>
-                <input id="choice-etape" type="number" value="1">
-                <button id="validation">ok</button>
             </div>
 
-            <div>
+            <div id="col-2">
                 <button id="former-etape">Foward Pathway</button>
                 <button id="next-etape">Next Pathway</button>
+                
+                <div id="col-3">
+                    <input id="choice-etape" type="number" value="1">
+                <button id="validation">ok</button>
+                </div>
+                
             </div>
 
         </nav>
@@ -162,8 +202,6 @@
 
     </article>
 
-    
-    
-    <script src="./script/analyse_json.js" type="module"></script>
+    <script src="./script/analyse_json_copy.js" type="module"></script>
 </body>
 </html>

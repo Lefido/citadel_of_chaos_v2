@@ -405,10 +405,6 @@ function analyse_etape(details_etape) {
             }
           }
         }
-
-
-
-       
         break;
 
       case "ennemies":

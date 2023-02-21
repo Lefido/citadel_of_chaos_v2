@@ -172,7 +172,6 @@ function detailsEtape(num_Etape) {
 
     }
 
-
     /// Lecture next Pathway
 
     msgElement = "Next Pathways :"
@@ -180,6 +179,8 @@ function detailsEtape(num_Etape) {
     add_element_h4(msgElement)
 
     for (let pathway in step_current.pathways) {
+
+
 
         /// Lecture Step_Pathways
 
@@ -192,6 +193,15 @@ function detailsEtape(num_Etape) {
         msgElement = "Content : " + step_current.pathways[pathway].content
         console.log(msgElement);
         add_element_h6(msgElement)
+
+
+        /// Lecture is_end_of_the_game
+
+        msgElement = "is_end_of_the_game : " + step_current.pathways[pathway].is_end_of_the_game
+        console.log(msgElement);
+        add_element_h6(msgElement)
+
+
 
         /// Lecture is_max_round_default
 
@@ -214,8 +224,6 @@ function detailsEtape(num_Etape) {
             add_element_li(msgElement)
 
         }
-
-
 
         /// Lecture is_escape_default 
 
@@ -261,8 +269,6 @@ function detailsEtape(num_Etape) {
 
         }
 
-        
-
         /// Lecture inventory_balance - button action
 
         if (step_current.pathways[pathway].inventory_balance !== undefined) {
@@ -298,11 +304,7 @@ function detailsEtape(num_Etape) {
             add_element_li(msgElement)
             
         }
-
         
-        
-        
-
     }
 }
 
