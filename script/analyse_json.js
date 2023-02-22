@@ -17,13 +17,15 @@ let numEtape = 1;
 formerEtape.addEventListener('click',()=> {
     numEtape--
     choiceEtape.value = numEtape
-    detailsEtape(numEtape)
+    detailsEtape(numEtape);
+    
 })
 
 nextEtape.addEventListener('click',()=> {
     numEtape++
     choiceEtape.value = numEtape
-    detailsEtape(numEtape)
+    detailsEtape(numEtape);
+   
 })
 
 choiceEtape.addEventListener('keyup', (e)=> {
@@ -31,15 +33,9 @@ choiceEtape.addEventListener('keyup', (e)=> {
 
     if(e.which === 13) {
         console.log("J'ai appuyé sur la touche entrée")
-        detailsEtape(choiceEtape.value)
-
-    }
-
-    if(e.which === 13) {
-        console.log("J'ai appuyé sur la touche entrée")
 
         numEtape = choiceEtape.value
-        detailsEtape(numEtape)
+        detailsEtape(numEtape);
 
     }
 
@@ -47,7 +43,7 @@ choiceEtape.addEventListener('keyup', (e)=> {
 
 validation.addEventListener('click',()=> {
     numEtape = choiceEtape.value
-    detailsEtape(numEtape)
+    detailsEtape(numEtape);
 })
 
 
@@ -64,248 +60,223 @@ function detailsEtape(num_Etape) {
     let step_current = list_etape[num_Etape];
     console.log(step_current);
 
-    /// Lecture Pathway
+    let msg;
 
-    let msgElement = "Pathway :" +num_Etape
-    console.log(msgElement);
-    add_element_h2(msgElement)
+    for (let etape in step_current) {
 
-    /// Lecture Narrative
+        switch(etape) {
 
-    msgElement = "Step_type : " + step_current.step_type
-    console.log(msgElement);
-    add_element_h3(msgElement)
-
-    /// Lecture Content
-
-    msgElement = "Content : " + step_current.content
-    console.log(msgElement);
-    add_element_h3(msgElement)
-
-    /// Lecture characteristic_balance
-
-    if (step_current.characteristic_balance !== undefined) {
-
-        msgElement = "characteristic_balance : "
-
-        console.log(msgElement);
-        add_element_h3(msgElement)
-
-        let list_characteristic_balance = step_current.characteristic_balance
-
-        for (let characteristic_balance in list_characteristic_balance) {
-
-            msgElement = characteristic_balance + " = " +list_characteristic_balance[characteristic_balance]
-
-            console.log(characteristic_balance,list_characteristic_balance[characteristic_balance] )
-            add_element_li(msgElement)
-
-        }
-        
-    }
-
-    /// Lecture inventory_balance 
-
-    if (step_current.inventory_balance !== undefined) {
-
-        msgElement = "inventory_balance"
-        console.log(msgElement)
-        add_element_h3(msgElement)
-
-        let list_inventory_balance = step_current.inventory_balance
-
-        for (let inventory_balance in list_inventory_balance) {
-
-            msgElement = inventory_balance + " = " + list_inventory_balance[inventory_balance]
-            console.log(msgElement)
-            add_element_li(msgElement)
-
-        }
-
-        console.log(step_current.inventory_balance)
-
-    }
-
-    /// Lecture is_escapable
-
-    if (step_current.is_escapable !== undefined) {
-
-        msgElement = "is_escapable : " + step_current.is_escapable
-        console.log(msgElement);
-        add_element_h3(msgElement)
-
-    }
-
-    // Lecture max_rounds
-
-    if (step_current.max_rounds !== undefined) {
-
-        msgElement = "max_rounds : " + step_current.max_rounds
-        console.log(msgElement);
-        add_element_h3(msgElement)
-
-    }
-
-
-    /// Lecture ennemies
-
-    let list_ennemies = step_current.ennemies
-
-    if (list_ennemies !== undefined) {
-
-        msgElement = "Enemie : " + list_ennemies.length
-        
-        console.log(msgElement)
-        
-        add_element_h3(msgElement)
-
-        for (let ennemies in list_ennemies) {
-
-            let list_details_enemies = list_ennemies[ennemies]
-
-            for (let detail_enemie in list_details_enemies) {
-                msgElement = detail_enemie + " : " + list_details_enemies[detail_enemie]
-                console.log(msgElement)
-                add_element_li(msgElement)
-            }
-        }
-
-    }
-
-    /// Lecture next Pathway
-
-    msgElement = "Next Pathways :"
-    console.log(msgElement);
-    add_element_h4(msgElement)
-
-    for (let pathway in step_current.pathways) {
-
-
-
-        /// Lecture Step_Pathways
-
-        msgElement = "Step_Pathways : " + pathway
-        console.log(msgElement);
-        add_element_h5(msgElement)
-
-        /// Lecture Pathway Content
-
-        msgElement = "Content : " + step_current.pathways[pathway].content
-        console.log(msgElement);
-        add_element_h6(msgElement)
-
-
-        /// Lecture is_end_of_the_game
-
-        msgElement = "is_end_of_the_game : " + step_current.pathways[pathway].is_end_of_the_game
-        console.log(msgElement);
-        add_element_h6(msgElement)
-
-
-
-        /// Lecture is_max_round_default
-
-        if (step_current.pathways[pathway].is_max_round_default !== undefined) {
-
-            msgElement = "is_max_round_default : " + step_current.pathways[pathway].is_max_round_default
-            console.log(msgElement);
-            add_element_li(msgElement)
-            
-        }
-
-        /// Lecture is_victory_default
-
-        let is_victory_default = step_current.pathways[pathway].is_victory_default
-
-        if (is_victory_default !== undefined) {
-            
-            msgElement = "is_victory_default: " +  is_victory_default
-            console.log(msgElement);
-            add_element_li(msgElement)
-
-        }
-
-        /// Lecture is_escape_default 
-
-        let is_escape_default = step_current.pathways[pathway].is_escape_default
-
-        if (is_escape_default !== undefined) {
-            
-            msgElement = "is_escape_default: " +  is_escape_default
-            console.log(msgElement);
-            add_element_li(msgElement)
-
-        }
-
-        /// Lecture is_fail_default
-
-        let is_fail_default = step_current.pathways[pathway].is_fail_default
-
-        if (is_fail_default !== undefined) {
-            
-            msgElement = "is_fail_default: " +  is_fail_default
-            console.log(msgElement);
-            add_element_li(msgElement)
-
-        }
-
-        /// Lecture inventory_required
-
-        let list_inventory_required =
-        step_current.pathways[pathway].inventory_required;
-
-        if (step_current.pathways[pathway].inventory_required !== undefined) {
-
-            msgElement = "inventory_required - Next pathway"
-            console.log(msgElement);
-            add_element_h6(msgElement)
-
-            for (let inventory_required in list_inventory_required) {
-
-                msgElement = list_inventory_required[inventory_required]
-                console.log(msgElement);
-                add_element_li(msgElement)
-            }
-
-        }
-
-        /// Lecture inventory_balance - button action
-
-        if (step_current.pathways[pathway].inventory_balance !== undefined) {
-
-            let list_inventory_balance =
-            step_current.pathways[pathway].inventory_balance;
+            case "step_type":
+                msg = etape
+                console.log(msg)
+                add_element_h2(msg)
     
-            msgElement = "inventory_balance : button action"
-            console.log(msgElement);
-            add_element_h6(msgElement)
-    
-            for (let inventory_balance in list_inventory_balance) {
-    
-                msgElement = inventory_balance + " = " + list_inventory_balance[inventory_balance]
-                console.log(msgElement);
-                add_element_li(msgElement)
-            }
+                msg = step_current[etape]
+                console.log(msg)
+                add_element_h3(msg)
+                break
+
+            case "content":
+                msg = etape
+                console.log(msg)
+                add_element_h2(msg)
+                msg = step_current[etape]
+                console.log(msg)
+                add_element_h3(msg)
+                break
+
+            case "inventory_balance":
+                msg = etape
+                console.log(msg)
+                add_element_h2(msg)
+                let list_inventory_balance = step_current[etape]
+                for (let inventory_balance in list_inventory_balance) {
+                    msg = inventory_balance
+                    console.log(msg)
+                    add_element_h3(msg)
+                    msg = list_inventory_balance[inventory_balance]
+                    console.log(msg)
+                    add_element_h4(msg)
+                }
+                break
+
+            case "ennemies":
+                msg = etape
+                console.log(msg)
+                add_element_h2(msg)
+                let list_ennemies = step_current[etape]
+                for (let idEnemie in list_ennemies) {
+                    msg = idEnemie
+                    console.log(msg)
+                    add_element_h3(msg)
+                    let detail_enemie = list_ennemies[idEnemie]
+                    for (let detail in detail_enemie) {
+                        msg = detail
+                        console.log(msg)
+                        add_element_h4(msg)
+                        msg = detail_enemie[detail]
+                        console.log(msg)
+                        add_element_h5(msg)
+                    }
+                    
+
+                }
+                break
+
+            case "max_rounds":
+                msg = etape
+                console.log(msg)
+                add_element_h2(msg)
+                msg =  step_current[etape]
+                console.log(msg)
+                add_element_h3(msg)
+
+                break
+
+            case "is_escapable":
+                msg = etape
+                console.log(msg)
+                add_element_h2(msg)
+                msg = step_current[etape]
+                console.log(msg)
+                add_element_h3(msg)
+                break
+
+            case "characteristic_balance":
+                msg = etape
+                console.log(msg)
+                add_element_h2(msg)
+
+                let list_characteristic_balance =  step_current[etape]
+                for (let characteristic_balance in list_characteristic_balance) {
+                    msg = characteristic_balance
+                    console.log(msg)
+                    add_element_h3(msg)
+                    msg = list_characteristic_balance[characteristic_balance]
+                    console.log(msg)
+                    add_element_h4(msg)
+                }
+                break
+
+            case "pathways":
+                msg = etape
+                add_element_h2(msg)
+                console.log(etape)
+                let list_pathways = step_current[etape]
+                for (let pathway in list_pathways) {
+
+                    msg = pathway
+                    add_element_h3(msg)
+                    let list_content =  list_pathways[pathway]
+
+                    for (let content in list_content) {
+
+                        switch(content) {
+
+                            case "content":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                msg = list_content[content]
+                                add_element_h5(msg)
+                                console.log(list_content[content])
+                                break;
+                            case "inventory_required":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                msg = list_content[content]
+                                add_element_h5(msg)
+                                console.log(list_content[content])
+                                break;
+                            case "is_end_of_the_game":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                msg = list_content[content]
+                                add_element_h5(msg)
+                                console.log(list_content[content])
+                                break;
+                            case "formula_balance":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                // msg = list_content[content]
+
+                                let list_formula_balance = list_content[content]
+                                for (let formula_balance in list_formula_balance) {
+                                    msg = formula_balance
+                                    add_element_h5(msg)
+                                    console.log(msg)
+                                    msg = list_formula_balance[formula_balance]
+                                    add_element_h6(msg)
+                                    console.log(msg)
+                                }
+                                // add_element_h5(msg)
+                                // console.log(list_content[content])
+                                break;
+                            case "is_victory_default":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                msg = list_content[content]
+                                add_element_h5(msg)
+                                console.log(list_content[content])
+                                break;
+
+                            case "is_escape_default":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                msg = list_content[content]
+                                add_element_h5(msg)
+                                console.log(list_content[content])
+                                break;
+
+                            case "is_fail_default":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                msg = list_content[content]
+                                add_element_h5(msg)
+                                console.log(msg)
+                                break;
+
+                            case "inventory_balance":
+                                msg = content
+                                add_element_h4(msg)
+                                console.log(msg)
+                                // msg = list_content[content]
+
+                                let list_inventory_balance = list_content[content]
+                                for (let inventory_balance in list_inventory_balance) {
+                                    msg = inventory_balance
+                                    add_element_h5(msg)
+                                    console.log(msg)
+                                    msg = list_inventory_balance[inventory_balance]
+                                    add_element_h6(msg)
+                                    console.log(msg)
+                                }
+                                // add_element_h5(msg)
+                                // console.log(list_content[content])
+                                break;
+                            
+                            
+                                
+                        }
+
+                        // msg = list_content[content]
+                        // add_element_h5(msg)
+                        // console.log(list_content[content])
 
 
+                        
+                    }
+                }
         }
-       
-        /// Lecture formula_balance
 
-        let list_formula_balance = step_current.pathways[pathway].formula_balance;
-        for (let formula_balance in list_formula_balance) {
-
-            msgElement = "formula_balance - button"
-            console.log(msgElement);
-            add_element_h6(msgElement)
-
-            msgElement = formula_balance + " = " + list_formula_balance[formula_balance] 
-            console.log(msgElement);
-            add_element_li(msgElement)
-            
-        }
-        
     }
+
 }
 
 function add_element_h2(element) {

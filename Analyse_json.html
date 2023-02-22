@@ -24,7 +24,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         margin: auto;
-        padding: 10px;
+        padding: 0px;
     }
 
     nav {
@@ -34,6 +34,8 @@
         margin: auto;
         border: 1px solid black;
         border-radius: 5px;
+        position: fixed;
+        background-color: white;
     }
 
     #col-1, #col-2 {
@@ -100,61 +102,70 @@
         padding: 5px 10px;
         background-color: black;
         color: white;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        border-radius: 15px 0 0 15px;
+
     }
 
     h3 {
-        width: 100%;
+        width: 100% - calc(20px);
         padding: 5px 10px;
         background-color: yellow;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        border: 1px solid black;
+        margin-left: 20px;
+        border-radius: 15px 0 0 15px;
        
     }
 
     h4 {
-        width: 100% - calc(10px);
+        width: 100% - calc(40px);
         padding: 5px 10px;
         background-color: lightgreen;
-        margin-left: 10px;
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        margin-left: 40px;
+        border: 1px solid black;
+        border-radius: 15px 0 0 15px;
         
     }
 
     h5 {
-        width: 100% - calc(15px);
+        width: 100% - calc(60px);
         padding: 5px 10px;
-        background-color: black;
-        color: white;
-        margin-left: 15px;
-        border-left: 1px solid black;
+        background-color: lightskyblue;
+        color: black;
+        margin-left: 60px;
+        border: 1px solid black;
+        border-radius: 15px 0 0 15px;
     }
 
     h6 {
-        width: 100% - calc(20px);
+        width: 100% - calc(80px);
         padding: 5px 10px;
         background-color: lightseagreen;
         color: black;
-        margin-left: 20px;
-        border-top: 1px solid black;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        margin-left: 80px;
+        border: 1px solid black;
         font-size: 14px;
+        border-radius: 15px 0 0 15px;
     }
 
 
     li {
-        width: 100% - calc(25px);
+        width: 100% - calc(60px);
         padding: 5px 10px;
-        background-color: lightblue;
-        margin-left: 25px;
-        border-left: 1px solid black;
+        background-color: lightpink;
+        margin-left: 60px;
+        border: 1px solid black;
+        font-size: 14px;
+        border-radius: 15px 0 0 15px;
     }
 
     article {
+        /* display: flex;
+        flex-wrap: wrap; */
         width: 90%;
-        margin: auto;
+        margin: 110px auto;
+
         /* background-color: lightgray; */
     }
 
@@ -183,8 +194,6 @@
             </div>
 
         </nav>
-       
-       
         
     </header>
 
@@ -193,8 +202,6 @@
 
     </article>
 
-    
-    
     <script src="./script/analyse_json.js" type="module"></script>
 </body>
 </html>
