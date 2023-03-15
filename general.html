@@ -1,133 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jeu interactif basé sur le livre de Steve Jackso écrit en 1983">
     <title>Citadek of chaos - Général</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="dsp-flex">
+      <div class="dsp-flex cont-general">
+        <div class="general-col1">
+          <div class="dsp-flex-lg detail-player">
+            <div class="dsp-flex player-avatar parchemin-1 start-top">
+              <h1 class="cadre-bois">CITADEL OF CHAOS</h1>
 
-        <div class="dsp-flex cont-general">
+              <img id="imgavatar" class="avatar anim-avatar" src="" alt="" />
 
-            <div class="general-col1">
-
-                <div class="dsp-flex-lg detail-player">
-
-                    <div class="dsp-flex player-avatar parchemin-1 start-top">
-        
-                        <h1 class="cadre-bois">CITADEL OF CHAOS</h1>
-                        
-        
-                        <img id="imgavatar" class="avatar anim-avatar" src="" alt="">
-                        <!-- <img id="avatar" class="avatar" src="./assets/personnage/av_1.png" alt=""> -->
-
-                        <h2 id="username" class="bouclier-gris zoom"></h2>
-        
-                    </div>
-        
-                    <div class="dsp-flex-col player-competence parchemin-1 start-top">
-        
-                        <h3 id="habilite" class="rouleau-bottom">Habilité :&nbsp;<span id="userhabilite">0</span></h3>
-                        <h3 id="endurance" class="rouleau-bottom">Endurance :&nbsp;<span id="userendurance">0</span></h3>
-                        <h3 id="chance" class="rouleau-bottom">Chance :&nbsp;<span id="userchance">0</span></h3>
-        
-                    </div>
-
-                    <div class="narratif parchemin-1 start-left">
-
-                        <h2 class="cadre-bois">NARRATIF</h2>
-            
-                        <div class="narratif-content">
-            
-                           <p></p>
-            
-                        </div>
-            
-                    </div>
-            
-                    <div class="choice parchemin-1 start-bottom">
-            
-                        <h2 class="cadre-bois">CHOICE</h2>
-
-                        <button class="open-inventaire btn-inventaire-op"></button>
-            
-                        <div class="dsp-flex choice-content">
-            
-                            <p></p>
-            
-                        </div>
-            
-                    </div>
-        
-        
-                </div>
-
-                
-               
-            </div>
-    
-            <div class="general-col2 start-right">
-
-                <div class="list-inventaire parchemin-1">
-
-                    <h2 class="cadre-bois">INVENTAIRE</h2>
-
-                    <button class="close-inventaire btn-inventaire-cl"></button>
-
-                    <div class="inventaire-scroll">
-
-                        <h3  class="stick rouleau-top">OBJET</h3>
-
-                        <div id="objet" class="dsp-flex"></div>
-
-                        <!-- <button class="btn-objet">Myriade</button>
-                        <button class="btn-objet">Bocal contenant l’homme araignée</button>
-                        <button class="btn-objet">Poignée de baies</button>
-                        <button class="btn-objet">Dague enchantée</button>
-                        <button class="btn-objet">Vin chaud et amer</button>
-                        <button class="btn-objet">Bouteille d’essence de berce</button>
-                        <button class="btn-objet">Flacon rempli d’un liquide vert translucide</button>
-                        <button class="btn-objet">Toison d’or</button>
-                        <button class="btn-objet">Mirroir en argent</button>
-                        <button class="btn-objet">Brosse a cheveux</button>
-                        <button class="btn-objet">Pot d’onguent</button>
-                        <button class="btn-objet">Pieces d’or</button>
-                        <button class="btn-objet">Amulette enchantée / ensorcelée</button>
-                        <button class="btn-objet">Clef de cuiv</button> -->
-
-                        <h3 class="stick rouleau-top">MAGIE</h3>
-
-                        <div id="magie" class="dsp-flex"></div>
-                        <!-- <button class="btn-magie">Chance</button>
-                        <button class="btn-magie">Copie conforme</button>
-                        <button class="btn-magie">Endurance</button>
-                        <button class="btn-magie">Faiblesse</button>
-                        <button class="btn-magie">Feu</button> 
-                        <button class="btn-magie">Force</button>
-                        <button class="btn-magie">Habilité</button>
-                        <button class="btn-magie">Illusion</button>
-                        <button class="btn-magie">Lévitation</button>
-                        <button class="btn-magie">L'or du sot</button>
-                        <button class="btn-magie">Protection</button> -->
-
-                    </div>
-
-
-                </div>
-               
+              <h2 id="username" class="bouclier-gris zoom"></h2>
             </div>
 
+            <div class="dsp-flex-col player-competence parchemin-1 start-top">
+              <h3 id="habilite" class="rouleau-bottom">
+                Habilité :&nbsp;<span id="userhabilite">0</span>
+              </h3>
+              <h3 id="endurance" class="rouleau-bottom">
+                Endurance :&nbsp;<span id="userendurance">0</span>
+              </h3>
+              <h3 id="chance" class="rouleau-bottom">
+                Chance :&nbsp;<span id="userchance">0</span>
+              </h3>
+            </div>
+
+            <div class="narratif parchemin-1 start-left">
+              <h2 class="cadre-bois">NARRATIF</h2>
+
+              <div class="narratif-content">
+                <p></p>
+              </div>
+            </div>
+
+            <div class="choice parchemin-1 start-bottom">
+              <h2 class="cadre-bois">CHOICE</h2>
+
+              <button class="open-inventaire btn-inventaire-op"></button>
+
+              <div class="dsp-flex choice-content">
+                <p></p>
+              </div>
+            </div>
+          </div>
         </div>
-       
+
+        <div class="general-col2 start-right">
+          <div class="list-inventaire parchemin-1">
+            <h2 class="cadre-bois">INVENTAIRE</h2>
+
+            <button class="close-inventaire btn-inventaire-cl"></button>
+
+            <div class="inventaire-scroll">
+              <h3 class="stick rouleau-top">OBJET</h3>
+
+              <div id="objet" class="dsp-flex"></div>
+
+              <button class="btn-objet">Myriade</button>
+              <button class="btn-objet">
+                Bocal contenant l’homme araignée
+              </button>
+              <button class="btn-objet">Poignée de baies</button>
+              <button class="btn-objet">Dague enchantée</button>
+              <button class="btn-objet">Vin chaud et amer</button>
+              <button class="btn-objet">Bouteille d’essence de berce</button>
+              <button class="btn-objet">
+                Flacon rempli d’un liquide vert translucide
+              </button>
+              <button class="btn-objet">Toison d’or</button>
+              <button class="btn-objet">Mirroir en argent</button>
+              <button class="btn-objet">Brosse a cheveux</button>
+              <button class="btn-objet">Pot d’onguent</button>
+              <button class="btn-objet">Pieces d’or</button>
+              <button class="btn-objet">Amulette enchantée / ensorcelée</button>
+              <button class="btn-objet">Clef de cuiv</button>
+
+              <h3 class="stick rouleau-top">MAGIE</h3>
+
+              <div id="magie" class="dsp-flex"></div>
+              <button class="btn-magie">Chance</button>
+              <button class="btn-magie">Copie conforme</button>
+              <button class="btn-magie">Endurance</button>
+              <button class="btn-magie">Faiblesse</button>
+              <button class="btn-magie">Feu</button>
+              <button class="btn-magie">Force</button>
+              <button class="btn-magie">Habilité</button>
+              <button class="btn-magie">Illusion</button>
+              <button class="btn-magie">Lévitation</button>
+              <button class="btn-magie">L'or du sot</button>
+              <button class="btn-magie">Protection</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    
     <script src="./script/general.js" type="module"></script>
-    
-</body>
+  </body>
 </html>

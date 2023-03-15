@@ -370,7 +370,6 @@
 
 }
 
-
 @keyframes rotate-zoom {
 
   0% {
@@ -435,14 +434,14 @@
     background-color: white;
     opacity: 0;
     transform: scaleX(0%) rotate(-2deg);
-    /* transform: rotate3d(0, 20, 0.5, 270deg); */
+  
   }
   
   to {
     background-color: transparent;
     opacity: 1;
     transform: scaleX(100%);
-    /* transform: rotate3d(0, 0, 0, 0deg); */
+   
   }
 
 }

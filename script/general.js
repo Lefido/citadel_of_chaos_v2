@@ -57,30 +57,30 @@ window.addEventListener("load", ()=> {
  
 });
 
-window.addEventListener('mousedown', (e) => {
+// window.addEventListener('mousedown', (e) => {
  
-  console.log(e)
-  switch (e.button) {
-    case 0:
-      console.log ( 'Left button clicked.');
-      num_etape++
-      affiche_etape(num_etape);
-      break;
-    case 1:
-      console.log ( 'Middle button clicked.');
+//   console.log(e)
+//   switch (e.button) {
+//     case 0:
+//       console.log ( 'Left button clicked.');
+//       num_etape++
+//       affiche_etape(num_etape);
+//       break;
+//     case 1:
+//       console.log ( 'Middle button clicked.');
       
-      break;
-    case 2:
-      console.log ( 'Right button clicked.');
-      num_etape--
-      if (num_etape < 1) { num_etape = 1}
-      affiche_etape(num_etape);
+//       break;
+//     case 2:
+//       console.log ( 'Right button clicked.');
+//       num_etape--
+//       if (num_etape < 1) { num_etape = 1}
+//       affiche_etape(num_etape);
       
-      break;
-    default:
+//       break;
+//     default:
       
-  }
-})
+//   }
+// })
 
 window.addEventListener('resize', function() {
 	// viewport and full window dimensions will change
